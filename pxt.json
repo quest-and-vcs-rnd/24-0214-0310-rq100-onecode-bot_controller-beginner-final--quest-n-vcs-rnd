@@ -1,5 +1,6 @@
 {
     "name": "24-0214-0310-RQ100-OneCode-Bot_Controller-Beginner-FINAL-S46813-05185-83792-68957--EEE_a-2_12",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "core": "*",
