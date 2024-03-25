@@ -1,0 +1,33 @@
+{
+    "name": "24-0214-0310-RQ100-OneCode-Bot_Controller-Beginner-FINAL-S46813-05185-83792-68957--EEE_a-2_12",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.11.3",
+        "joystickbit": "github:tinkertanker/pxt-joystickbit#v1.0.2",
+        "microbit-pxt-rotate": "github:bsiever/microbit-pxt-rotate#v0.1.6"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main_backend.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v6.0.19",
+        "tag": "v6.0.19",
+        "commits": "https://github.com/microsoft/pxt-microbit/commits/19507cc84a19f2a882b2fbe58b4ae3a5cb79cbf9",
+        "target": "6.0.25",
+        "pxt": "9.0.12",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
