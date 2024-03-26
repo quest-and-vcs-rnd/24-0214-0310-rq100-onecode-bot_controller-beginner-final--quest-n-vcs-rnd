@@ -1,12 +1,77 @@
 
+# Header
+## Sub_Header
+### Sub_Sub_Header
+
 ## Add your tutorial here
 
 ``` blocks
 basic.forever(function () {
-basic.showIcon(IconNames.Heart)
-basic.pause(20)
-basic.showIcon(IconNames.SmallHeart)
+    basic.showIcon(IconNames.Heart)
+    basic.pause(20)
+    basic.showIcon(IconNames.SmallHeart)
 })
+
+
+if (true) {
+    quest_Note_4.quest_Show_String_For_Note_Small_Func(
+    "For exclusive activation, place this 'on start' stack higher than other 'on start' stacks"
+    )
+    quest_Note_3.quest_Show_String_For_Note_Big_Func(
+    "Bot & Controller_Joystick: All_in_One Code"
+    )
+    quest_Note_5.quest_Show_String_For_Note_Small_Func(
+    "Bot & Controller_Joystick Stack: 'on start'"
+    )
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        "setup_VariablesAndConstants_UserCustomizable: Yes"
+        )
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Set GroupChannel_# for Both Bot & Controller_Joystick: Default = 1"
+            )
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
+            )
+            network_GroupChannel_MyBotAndController_Base0_Int = 1
+        }
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Was 15, try 30 to accomodate off_calibrated controllers"
+            )
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
+            )
+            controller_Joystick__Polar_OriginAtCenter__Directional_MagnitudePixel__Deadzone_OutOf_512Pixels_AsIdle__INT = 30
+        }
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Gears are not used in Level_1 but need these null declarations... "
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "...to allow Level_2 code to compile (though unused in Level_1)"
+            )
+            // jwc needed to fix compiler issue
+            motor_Power_Gear_01_MAX = 0
+            // jwc needed to fix compiler issue
+            motor_Power_Gear_02_MAX = 0
+        }
+    }
+    if (true) {
+        setup_VariablesAndConstants_UserCustomizableNot_Func()
+        setup_Network_Func()
+        setup_BotAndController_Func()
+    }
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    "Level 1: Variables_n_Constants_Not (Hardcode)"
+    )
+}
+
+
 ```
 
 <!--- n ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
