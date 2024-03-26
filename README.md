@@ -9,6 +9,12 @@ basic.showIcon(IconNames.SmallHeart)
 })
 ```
 
+<!--- n ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
+![AltTag_Makecode-ClickToCloseSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png?raw=true)
+
+<script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png"></script>
+
+
 <!--- jwc o 
 
 > Open this page at [https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
