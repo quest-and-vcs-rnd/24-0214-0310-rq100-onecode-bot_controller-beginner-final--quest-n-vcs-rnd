@@ -197,8 +197,8 @@ function setup_ControllerOnly_Func() {
         controller_Joystick__Raw_OriginAtBottomRight__XandY_Center = 512
     }
     if (true) {
-        controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__AsIncremented_By__Int = 90
-        ////jwc o controller_Joystick__Polar_OriginAtCenter__Directional_MagnitudePixel__Deadzone_OutOf_512Pixels_AsIdle__INT = 15
+        controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 90
+        ////jwc o controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 15
     }
 }
 
@@ -771,7 +771,7 @@ function convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Sc
 }
 
 function convert_Controller_Joystick__Cartesian_To_Polar__Directional_AngleDegree__AsIncremented_Int_Func_NOPARAMETERS() {
-    return convert_Controller_Joystick__Cartesian_To_Polar__Directional_AngleDegree__AsIncremented_Int_Func(controller_Joystick__Cartesian_OriginAtCenter__X_Int, controller_Joystick__Cartesian_OriginAtCenter__Y_Int, controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__AsIncremented_By__Int)
+    return convert_Controller_Joystick__Cartesian_To_Polar__Directional_AngleDegree__AsIncremented_Int_Func(controller_Joystick__Cartesian_OriginAtCenter__X_Int, controller_Joystick__Cartesian_OriginAtCenter__Y_Int, controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int)
 }
 function convert_Controller_Joystick__Cartesian_To_Polar__Directional_MagnitudePixel_Int_Func_NOPARAMETERS() {
     return convert_Controller_Joystick__Cartesian_To_Polar__Directional_MagnitudePixel_Int_Func(controller_Joystick__Cartesian_OriginAtCenter__X_Int, controller_Joystick__Cartesian_OriginAtCenter__Y_Int)
@@ -1082,8 +1082,8 @@ radio.onReceivedValue(function (name, value) {
             network_Message_Received_Ok_Bool = false
             if (name == "joystick") {
                 network_Message_Received_Ok_Bool = true
-                controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int = value
-                convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int)
+                controller__Polar_OriginAtCenter__AngleDegree__Int = value
+                convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)
             } else if (name == "gear") {
                 motor_Power_Gear_Number_Int = value
                 if (motor_Power_Gear_Number_Int == 1) {
@@ -1113,7 +1113,7 @@ radio.onReceivedValue(function (name, value) {
                         quest_Note_2.quest_Show_String_For_Note_Big_Func(
                             "Convert Network Message to Operate 'B'ot: "
                         )
-                        if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 0 || controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 360) {
+                        if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: East"
@@ -1121,7 +1121,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_Full_Current_Pos
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_Full_Current_Neg
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 45) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 45) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: North_East"
@@ -1129,7 +1129,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_Full_Current_Pos
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_ZERO_INT
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 90) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: North"
@@ -1137,7 +1137,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_Full_Current_Pos
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_Full_Current_Pos
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 135) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 135) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: North_West"
@@ -1145,7 +1145,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_ZERO_INT
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_Full_Current_Pos
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 180) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: West"
@@ -1153,7 +1153,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_Full_Current_Neg
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_Full_Current_Pos
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 225) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 225) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: South_West"
@@ -1161,7 +1161,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_ZERO_INT
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_Full_Current_Neg
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 270) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: South"
@@ -1169,7 +1169,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_Full_Current_Neg
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_Full_Current_Neg
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == 315) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 315) {
                             if (true) {
                                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                     "Controller_Joystick: South_East"
@@ -1177,7 +1177,7 @@ radio.onReceivedValue(function (name, value) {
                                 motor_Power_L_Neg100toPos100_Int = motor_Power_Full_Current_Neg
                                 motor_Power_R_Neg100toPos100_Int = motor_Power_ZERO_INT
                             }
-                        } else if (controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int == -1) {
+                        } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == -1) {
                             quest_Note_2.quest_Show_String_For_Note_Small_Func(
                                 "Controller_Joystick: None = Idle"
                             )
@@ -1187,8 +1187,8 @@ radio.onReceivedValue(function (name, value) {
                             quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Invalid 'controller_Joystick_Angle_Degrees_AsIncremented_Int'"
                             )
-                            ////jwc n may cause compiler bug, auto_creates 'let controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int = 0' at Blocks: on start stack: root level: error_Message_Func("2024-0212-1732", convertToText(controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int))
-                            error_Message_Func("2024-0212-1732", "Invalid 'controller_Joystick__Polar_OriginAtCenter__Directional_AngleDegree__Int'")
+                            ////jwc n may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at Blocks: on start stack: root level: error_Message_Func("2024-0212-1732", convertToText(controller__Polar_OriginAtCenter__AngleDegree__Int))
+                            error_Message_Func("2024-0212-1732", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
                         }
                         if (motor_Power_Gear_Number_Int == 1) {
                             motor_Power_Full_Current_Pos = motor_Power_Gear_01_MAX * 1
