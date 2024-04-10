@@ -109,6 +109,9 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                 screenBrightness_Heartbeat_Count_Int = 0
             }
             if (true) {
+                screen_Delay_MSEC_INT = 20
+            }
+            if (true) {
                 _system_Sw_ModeState__Null__ID_INT = 0
                 _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 1
                 _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 2
@@ -215,6 +218,7 @@ radio.onReceivedString(function (receivedString) {
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
                             led.plot(2, 0)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "Clear Screen Right After"
                             )
@@ -234,29 +238,11 @@ radio.onReceivedString(function (receivedString) {
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
                             led.plot(2, 4)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "Clear Screen Right After"
                             )
                             led.unplot(2, 4)
-                        }
-                    } else if (receivedString == "right") {
-                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                        "Following Block_Code Moddable"
-                        )
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        15,
-                        0
-                        )
-                        if (true) {
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            led.plot(4, 2)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            led.unplot(4, 2)
                         }
                     } else if (receivedString == "left") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
@@ -272,10 +258,31 @@ radio.onReceivedString(function (receivedString) {
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
                             led.plot(0, 2)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "Clear Screen Right After"
                             )
                             led.unplot(0, 2)
+                        }
+                    } else if (receivedString == "right") {
+                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
+                        "Following Block_Code Moddable"
+                        )
+                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        15,
+                        0
+                        )
+                        if (true) {
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
+                            )
+                            led.plot(4, 2)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            led.unplot(4, 2)
                         }
                     } else if (receivedString == "stop") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
@@ -566,6 +573,7 @@ let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
+let screen_Delay_MSEC_INT = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let motor_Power_Gear_Number_Int = 0
 let motor_Power_ZERO_INT = 0
@@ -687,6 +695,7 @@ basic.forever(function () {
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
                                 led.plot(2, 4)
+                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Clear Screen Right After"
                                 )
@@ -704,6 +713,7 @@ basic.forever(function () {
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
                                 led.plot(2, 4)
+                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Clear Screen Right After"
                                 )
@@ -721,6 +731,7 @@ basic.forever(function () {
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
                                 led.plot(0, 2)
+                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Clear Screen Right After"
                                 )
@@ -738,6 +749,7 @@ basic.forever(function () {
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
                                 led.plot(4, 2)
+                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Clear Screen Right After"
                                 )
