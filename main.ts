@@ -110,9 +110,9 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
             }
             if (true) {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "15msec = 66.7 fps (20msec = 50.0fps)"
+                "20msec = 50.0fps (More Noticeable Flicker vs 15msec = 66.7 fps)"
                 )
-                screen_Delay_MSEC_INT = 15
+                screen_Delay_MSEC_INT = 20
             }
             if (true) {
                 _system_Sw_ModeState__Null__ID_INT = 0
