@@ -109,7 +109,10 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                 screenBrightness_Heartbeat_Count_Int = 0
             }
             if (true) {
-                screen_Delay_MSEC_INT = 20
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "15msec = 66.7 fps (20msec = 50.0fps)"
+                )
+                screen_Delay_MSEC_INT = 15
             }
             if (true) {
                 _system_Sw_ModeState__Null__ID_INT = 0
@@ -694,12 +697,12 @@ basic.forever(function () {
                                 quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
-                                led.plot(2, 4)
+                                led.toggle(2, 0)
                                 quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Clear Screen Right After"
                                 )
-                                led.unplot(2, 4)
+                                led.toggle(2, 0)
                             }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
@@ -712,12 +715,12 @@ basic.forever(function () {
                                 quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
-                                led.plot(2, 4)
+                                led.toggle(2, 4)
                                 quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Clear Screen Right After"
                                 )
-                                led.unplot(2, 4)
+                                led.toggle(2, 4)
                             }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
