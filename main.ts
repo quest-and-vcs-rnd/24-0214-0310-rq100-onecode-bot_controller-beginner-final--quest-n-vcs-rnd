@@ -112,6 +112,9 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "20msec = 50.0fps (More Noticeable Flicker vs 15msec = 66.7 fps)"
                 )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "30fps is min for real-time response"
+                )
                 screen_Delay_MSEC_INT = 20
             }
             if (true) {
