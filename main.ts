@@ -219,17 +219,26 @@ radio.onReceivedString(function (receivedString) {
                         15,
                         15
                         )
-                        if (true) {
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            led.toggle(2, 0)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            led.toggle(2, 0)
-                        }
+                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                        )
+                        basic.showLeds(`
+                            . . # . .
+                            . # # # .
+                            . . # . .
+                            . . # . .
+                            . . . . .
+                            `)
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Clear Screen Right After"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            `)
                     } else if (receivedString == "backward") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -239,17 +248,26 @@ radio.onReceivedString(function (receivedString) {
                         -15,
                         -15
                         )
-                        if (true) {
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            led.toggle(2, 4)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            led.toggle(2, 4)
-                        }
+                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . . # . .
+                            . . # . .
+                            . # # # .
+                            . . # . .
+                            `)
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Clear Screen Right After"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            `)
                     } else if (receivedString == "left") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -259,17 +277,26 @@ radio.onReceivedString(function (receivedString) {
                         0,
                         15
                         )
-                        if (true) {
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            led.toggle(0, 2)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            led.toggle(0, 2)
-                        }
+                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . # . . .
+                            # # # # .
+                            . # . . .
+                            . . . . .
+                            `)
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Clear Screen Right After"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            `)
                     } else if (receivedString == "right") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -279,17 +306,26 @@ radio.onReceivedString(function (receivedString) {
                         15,
                         0
                         )
-                        if (true) {
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            led.toggle(4, 2)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            led.toggle(4, 2)
-                        }
+                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . . . # .
+                            . # # # #
+                            . . . # .
+                            . . . . .
+                            `)
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Clear Screen Right After"
+                        )
+                        basic.showLeds(`
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            . . . . .
+                            `)
                     } else if (receivedString == "stop") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -340,7 +376,7 @@ screen_IconMessage_Func("error")
             }
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 1.1: Variables_n_Constants_Not (Hardcode) ~ No: 1-Sec Lag 'show leds'"
+        "Level 1.0: Variables_n_Constants_Not (Hardcode) ~ Yes: 1-Sec Lag 'show leds'"
         )
     }
 })
@@ -696,17 +732,26 @@ basic.forever(function () {
                             "Controller_Joystick: North"
                             )
                             radio.sendString("forward")
-                            if (true) {
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                led.toggle(2, 0)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
-                                )
-                                led.toggle(2, 0)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                . . # . .
+                                . . . . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
                         if (true) {
@@ -714,17 +759,26 @@ basic.forever(function () {
                             "Controller_Joystick: South"
                             )
                             radio.sendString("backward")
-                            if (true) {
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                led.toggle(2, 4)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
-                                )
-                                led.toggle(2, 4)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . # . .
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
                         if (true) {
@@ -732,17 +786,26 @@ basic.forever(function () {
                             "Controller_Joystick: West"
                             )
                             radio.sendString("left")
-                            if (true) {
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                led.toggle(0, 2)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
-                                )
-                                led.toggle(0, 2)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . # . . .
+                                # # # # .
+                                . # . . .
+                                . . . . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
                         if (true) {
@@ -750,17 +813,26 @@ basic.forever(function () {
                             "Controller_Joystick: East"
                             )
                             radio.sendString("right")
-                            if (true) {
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                led.toggle(4, 2)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
-                                )
-                                led.toggle(4, 2)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . # .
+                                . # # # #
+                                . . . # .
+                                . . . . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else {
                         quest_Note_5.quest_Show_String_For_Note_Small_Func(
@@ -795,7 +867,7 @@ basic.forever(function () {
             network__CpuCycle_Post__Management_Func()
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
+        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
         )
     }
 })
@@ -839,6 +911,9 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes"
         )
     }
+})
+basic.forever(function () {
+	
 })
 loops.everyInterval(3600000, function () {
     quest_Note_5.quest_Show_String_For_Note_Small_Func(
