@@ -1,12 +1,26 @@
 
-# Header
-## Sub_Header
-### Sub_Sub_Header
 
-## Add your tutorial here
+<!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
+<!--- add suffix '?raw=true' --->
+
+###  
+![AltTag_Makecode-ClickToCloseSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png?raw=true)
+<!-- SEEMS NOT NEEDED <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png"></script> -->
+### .
+### .
+![AltTag_Rq100-ERG-Lesson02D-NonPreFlashed-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/Rq100-EducatorResourceGuide-Lesson_2D-JoyRide-NonPreFlashed-FrontScreen-2024-04-26_08-22-12.png?raw=true)
+<!-- SEEMS NOT NEEDED: <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/Rq100-EducatorResourceGuide-Lesson_2D-JoyRide-NonPreFlashed-FrontScreen-2024-04-26_08-22-12.png"></script> -->
 
 
-## Open [Downloading/Flashing Code (Ver2.1+) & Quick_Start Guide](https://prezi.com/view/ryiN0EuSnWTzvwA65MKo/)
+### .
+## Open Above: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
+###  .
+
+
+
+# THE END
+
+# EXTRAS
 
 <!--- add suffix '?raw=true' --->
 <!--- jwc n ![https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing?raw=true) --->
@@ -19,13 +33,12 @@
 <img src="https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing" width="40" height="40" />
 <img src="https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing?raw=true" width="40" height="40" />
 
-<!--- n ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 
-<!--- add suffix '?raw=true' --->
-![AltTag_Makecode-ClickToCloseSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png?raw=true)
+# Header
+## Sub_Header
+### Sub_Sub_Header
 
-<script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png"></script>
-
+## Add your tutorial here
 
 ``` blocks
 basic.forever(function () {
