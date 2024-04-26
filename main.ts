@@ -667,8 +667,8 @@ if (true) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Was 15, try 30 to accomodate off_calibrated controllers"
             )
-            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-            "Following Block_Code Moddable"
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "Optional Advanced Coding: Following Block_Code Moddable"
             )
             controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
         }
