@@ -189,17 +189,6 @@ function setup_ControllerOnly_Func() {
 }
 
 
-function screen_Clear_Func() {
-    for (let index_X = 0; index_X <= 4; index_X++) {
-        for (let index_Y = 0; index_Y <= 4; index_Y++) {
-            if (led.point(index_X, index_Y)) {
-                led.unplot(index_X, index_Y)
-            }
-        }
-    }
-}
-
-
 function network_GroupChannel_Show_Func(screenBrightness_int_in: number) {
     ////jwc o laggy: basic.clearScreen()
     screen_Clear_Func()

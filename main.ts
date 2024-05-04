@@ -5,6 +5,15 @@ function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: num
     screen_XY_Brightness_Old_Num = led.pointBrightness(screen_x_new_num, screen_y_new_num)
     led.plotBrightness(screen_x_new_num, screen_y_new_num, screenBrightness_Heartbeat_Count_Int)
 }
+function screen_Clear_Func () {
+    for (let index_X = 0; index_X <= 4; index_X++) {
+        for (let index_Y = 0; index_Y <= 4; index_Y++) {
+            if (led.point(index_X, index_Y)) {
+                led.unplot(index_X, index_Y)
+            }
+        }
+    }
+}
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
@@ -60,7 +69,7 @@ input.onButtonPressed(Button.A, function () {
             _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Controller_Joystick__ID_INT
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
             screen_Clear_Func()
-setup_ControllerOnly_Func()
+            setup_ControllerOnly_Func()
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes"
@@ -465,7 +474,7 @@ radio.onReceivedString(function (receivedString) {
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
-                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
+                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
                             quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "Clear Screen Right After"
@@ -504,6 +513,7 @@ radio.onReceivedString(function (receivedString) {
                         0
                         )
                         if (true) {
+                            screen_Clear_Func()
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
@@ -568,7 +578,7 @@ input.onButtonPressed(Button.B, function () {
             _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Controller_Joystick__ID_INT
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
             screen_Clear_Func()
-setup_ControllerOnly_Func()
+            setup_ControllerOnly_Func()
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes"
