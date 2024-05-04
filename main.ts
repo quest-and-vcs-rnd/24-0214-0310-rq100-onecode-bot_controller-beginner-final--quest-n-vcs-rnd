@@ -513,7 +513,6 @@ radio.onReceivedString(function (receivedString) {
                         0
                         )
                         if (true) {
-                            screen_Clear_Func()
                             quest_Note_1.quest_Show_String_For_Note_Small_Func(
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
