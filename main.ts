@@ -229,26 +229,17 @@ radio.onReceivedString(function (receivedString) {
                         15,
                         15
                         )
-                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                        )
-                        basic.showLeds(`
-                            . . # . .
-                            . # # # .
-                            . . # . .
-                            . . # . .
-                            . . . . .
-                            `)
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Clear Screen Right After"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            `)
+                        if (true) {
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
+                            )
+                            led.toggle(2, 0)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            led.toggle(2, 0)
+                        }
                     } else if (receivedString == "backward") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -258,26 +249,17 @@ radio.onReceivedString(function (receivedString) {
                         -15,
                         -15
                         )
-                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . . # . .
-                            . . # . .
-                            . # # # .
-                            . . # . .
-                            `)
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Clear Screen Right After"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            `)
+                        if (true) {
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
+                            )
+                            led.toggle(2, 4)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            led.toggle(2, 4)
+                        }
                     } else if (receivedString == "left") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -287,26 +269,17 @@ radio.onReceivedString(function (receivedString) {
                         0,
                         15
                         )
-                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . # . . .
-                            # # # # .
-                            . # . . .
-                            . . . . .
-                            `)
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Clear Screen Right After"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            `)
+                        if (true) {
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
+                            )
+                            led.toggle(0, 2)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            led.toggle(0, 2)
+                        }
                     } else if (receivedString == "right") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -316,26 +289,17 @@ radio.onReceivedString(function (receivedString) {
                         15,
                         0
                         )
-                        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . . . # .
-                            . # # # #
-                            . . . # .
-                            . . . . .
-                            `)
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Clear Screen Right After"
-                        )
-                        basic.showLeds(`
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            . . . . .
-                            `)
+                        if (true) {
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
+                            )
+                            led.toggle(4, 2)
+                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            led.toggle(4, 2)
+                        }
                     } else if (receivedString == "stop") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
                         "Following Block_Code Moddable"
@@ -386,7 +350,7 @@ screen_IconMessage_Func("error")
             }
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 1.0: Variables_n_Constants_Not (Hardcode) ~ Yes: 1-Sec Lag 'show leds'"
+        "Level 1.1: Variables_n_Constants_Not (Hardcode) ~ No: 1-Sec Lag 'show leds'"
         )
     }
 })
