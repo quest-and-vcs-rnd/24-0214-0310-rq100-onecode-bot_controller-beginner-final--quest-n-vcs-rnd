@@ -1,3 +1,13 @@
+function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: number, screen_y_new_num: number) {
+    quest_Note_4.quest_Show_String_For_Note_Small_Func(
+    "TODO: Migrate to 'Main_Backend.ts'"
+    )
+    led.plotBrightness(screen_X_Old_Num, screen_Y_Old_Num, screen_XY_Brightness_Old_Num)
+    screen_X_Old_Num = screen_x_new_num
+    screen_Y_Old_Num = screen_y_new_num
+    screen_XY_Brightness_Old_Num = led.pointBrightness(screen_x_new_num, screen_y_new_num)
+    led.plotBrightness(screen_x_new_num, screen_y_new_num, screenBrightness_Heartbeat_Count_Int)
+}
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
@@ -616,7 +626,6 @@ let _system_Sw_ModeState__Autonomous__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
-let screenBrightness_Heartbeat_Count_Int = 0
 let motor_Power_Gear_Number_Int = 0
 let motor_Power_ZERO_INT = 0
 let motor_Power_Half_Current = 0
@@ -633,6 +642,10 @@ let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
+let screenBrightness_Heartbeat_Count_Int = 0
+let screen_XY_Brightness_Old_Num = 0
+let screen_Y_Old_Num = 0
+let screen_X_Old_Num = 0
 let servoArm_UP_DEGREES_INT = 0
 let servoArm_DOWN_DEGREES_INT = 0
 let motor_Power_Gear_02_MAX = 0

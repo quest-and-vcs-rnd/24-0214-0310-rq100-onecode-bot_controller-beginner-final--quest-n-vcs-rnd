@@ -33,9 +33,6 @@ let screenBrightness_Heartbeat_Count_DELTA_INT = 0
 let screenBrightness_HeartBeat_Count_MIN_INT = 0
 let screenBrightness_Heartbeat_Count_MAX_INT = 0
 
-let screen_XY_Brightness_Old_Num = 0
-let screen_Y_Old_Num = 0
-let screen_X_Old_Num = 0
 
 // //jwc ? // jwc: add to fix compiler error
 // //jwc ? motor_Power_Gear_01_MAX = 0
@@ -72,17 +69,6 @@ basic.forever(function () {
         screenBrightness_Heartbeat_Count_DELTA_INT = -1 * screenBrightness_Heartbeat_Count_DELTA_INT
     }
 })
-function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(screen_x_new_num: number, screen_y_new_num: number) {
-    quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "TODO: Migrate to 'Main_Backend.ts'"
-    )
-    led.plotBrightness(screen_X_Old_Num, screen_Y_Old_Num, screen_XY_Brightness_Old_Num)
-    screen_X_Old_Num = screen_x_new_num
-    screen_Y_Old_Num = screen_y_new_num
-    screen_XY_Brightness_Old_Num = led.pointBrightness(screen_x_new_num, screen_y_new_num)
-    led.plotBrightness(screen_x_new_num, screen_y_new_num, screenBrightness_Heartbeat_Count_Int)
-}
-
 
 function network__CpuCycle_Post__Management_Func() {
     if (true) {
