@@ -633,6 +633,8 @@ let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
+let servoArm_UP_DEGREES_INT = 0
+let servoArm_DOWN_DEGREES_INT = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
@@ -667,22 +669,39 @@ if (true) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Was 15, try 30 to accomodate off_calibrated controllers"
             )
-            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-            "Optional Advanced Coding: Following Block_Code Moddable"
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
             )
             controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
         }
+        // //jwc debug:  serial.writeLine("*** 24-0323-1921: " + convertToText(motor_Power_Gear_01_MAX) + " " + convertToText(motor_Power_Full_Current_Pos))
         if (true) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Gears are not used in Level_1 but need these null declarations... "
+            "Perhaps too fast: 30 & 60 for Gears 1 & 2, Respectively"
             )
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
+            )
+            // Was 30
+            motor_Power_Gear_01_MAX = 15
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
+            )
+            // Was 60
+            motor_Power_Gear_02_MAX = 30
+        }
+        if (true) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "...to allow Level_2 code to compile (though unused in Level_1)"
+            "Values Vary for Each Bot"
             )
-            // jwc needed to fix compiler issue
-            motor_Power_Gear_01_MAX = 0
-            // jwc needed to fix compiler issue
-            motor_Power_Gear_02_MAX = 0
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
+            )
+            servoArm_DOWN_DEGREES_INT = 90
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Following Block_Code Moddable"
+            )
+            servoArm_UP_DEGREES_INT = 0
         }
     }
     if (true) {
@@ -690,10 +709,10 @@ if (true) {
         setup_Network_Func()
 setup_BotAndController_Func()
     }
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    "Level 1: Variables_n_Constants_Not (Hardcode)"
-    )
 }
+quest_Note_6.quest_Show_String_For_Note_Big_Func(
+"Level 2: Variables_n_Constants_Yes"
+)
 basic.forever(function () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
