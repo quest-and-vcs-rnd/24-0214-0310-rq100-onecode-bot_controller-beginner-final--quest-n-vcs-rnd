@@ -5,81 +5,7 @@ function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: num
     screen_XY_Brightness_Old_Num = led.pointBrightness(screen_x_new_num, screen_y_new_num)
     led.plotBrightness(screen_x_new_num, screen_y_new_num, screenBrightness_Heartbeat_Count_Int)
 }
-function screen_Clear_Func () {
-    for (let index_X = 0; index_X <= 4; index_X++) {
-        for (let index_Y = 0; index_Y <= 4; index_Y++) {
-            if (led.point(index_X, index_Y)) {
-                led.unplot(index_X, index_Y)
-            }
-        }
-    }
-}
-input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Software Reset"
-        )
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Give time for other stacks to complete under different concurrent 'SW_ModeState' ..."
-            )
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "... to not conflict with following LED Display"
-            )
-            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Reset__ID_INT
-            quest_Note_3.quest_Show_String_For_Note_Small_Func(
-            "Continue Current State for Time Below"
-            )
-            // 1.0 too slow, 0.5 not bad, try 0.20
-            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(0.2, quest_Time_Units_Enum.Seconds)
-        }
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
-        if (true) {
-            quest_Note_3.quest_Show_String_For_Note_Small_Func(
-            "Continue Current State for Time Below"
-            )
-            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(3, quest_Time_Units_Enum.Seconds)
-        }
-        control.reset()
-    }
-})
-input.onButtonPressed(Button.A, function () {
-    if (true) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Important Coding Note: Only 1 Input Stack for Button A||B Allowed for 'main/main_backend.ts'"
-        )
-        if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
-            quest_Note_3.quest_Show_String_For_Note_Big_Func(
-            "Buttons A & B Dual Usage: Usage #2: Given Network_Paired, Increment 'GroupChannelNum' when in Respective Edit Mode"
-            )
-            device_Mode_Edit_GroupChannelNum_ButtonA_Func()
-        } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
-            quest_Note_3.quest_Show_String_For_Note_Big_Func(
-            "Buttons A & B Dual Usage: Usage #1: Designate this micro:bit as Controller_Joystick to *Start* Network_Pairing w/ Bot"
-            )
-            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-            "Code Activation of Controller_Joystick:: 1of2 : 1st micro:bit Being Pressed of Button A||B is Designated as Device:Controller_Joystick"
-            )
-            _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Controller_Joystick__ID_INT
-            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
-            screen_Clear_Func()
-            setup_ControllerOnly_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
-    }
-})
-function Activate_Stack_via_Forever_Stack_Header_Fake_Function () {
-	
-}
-function Activate_Stack_via_Forever_Stack_Header_Fake_Function_2 () {
+function Activate_Stack__via_Forever_Stack_Header__Fake_Function_2 () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
@@ -256,6 +182,77 @@ function Activate_Stack_via_Forever_Stack_Header_Fake_Function_2 () {
         )
     }
 }
+function screen_Clear_Func () {
+    for (let index_X = 0; index_X <= 4; index_X++) {
+        for (let index_Y = 0; index_Y <= 4; index_Y++) {
+            if (led.point(index_X, index_Y)) {
+                led.unplot(index_X, index_Y)
+            }
+        }
+    }
+}
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Software Reset"
+        )
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Give time for other stacks to complete under different concurrent 'SW_ModeState' ..."
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "... to not conflict with following LED Display"
+            )
+            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Reset__ID_INT
+            quest_Note_3.quest_Show_String_For_Note_Small_Func(
+            "Continue Current State for Time Below"
+            )
+            // 1.0 too slow, 0.5 not bad, try 0.20
+            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(0.2, quest_Time_Units_Enum.Seconds)
+        }
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+        if (true) {
+            quest_Note_3.quest_Show_String_For_Note_Small_Func(
+            "Continue Current State for Time Below"
+            )
+            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(3, quest_Time_Units_Enum.Seconds)
+        }
+        control.reset()
+    }
+})
+input.onButtonPressed(Button.A, function () {
+    if (true) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Important Coding Note: Only 1 Input Stack for Button A||B Allowed for 'main/main_backend.ts'"
+        )
+        if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
+            quest_Note_3.quest_Show_String_For_Note_Big_Func(
+            "Buttons A & B Dual Usage: Usage #2: Given Network_Paired, Increment 'GroupChannelNum' when in Respective Edit Mode"
+            )
+            device_Mode_Edit_GroupChannelNum_ButtonA_Func()
+        } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
+            quest_Note_3.quest_Show_String_For_Note_Big_Func(
+            "Buttons A & B Dual Usage: Usage #1: Designate this micro:bit as Controller_Joystick to *Start* Network_Pairing w/ Bot"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+            "Code Activation of Controller_Joystick:: 1of2 : 1st micro:bit Being Pressed of Button A||B is Designated as Device:Controller_Joystick"
+            )
+            _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Controller_Joystick__ID_INT
+            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
+            screen_Clear_Func()
+            setup_ControllerOnly_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
+        )
+    }
+})
 // BUG FIX: Switch from BlockCode vs TextCode
 // let device_Type_Controller_Bool = 0
 // 
@@ -785,6 +782,9 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         }
     }
 })
+function Activate_Stack__via_Forever_Stack_Header__Fake_Function () {
+	
+}
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
@@ -798,16 +798,16 @@ let motor_Power_Full_Current_Neg = 0
 let motor_Power_Full_Current_Pos = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
+let _system_Hw_DeviceType__Null__ID_INT = 0
+let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
+let _system_Sw_ModeState__Reset__ID_INT = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
-let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
-let _system_Hw_DeviceType__Null__ID_INT = 0
-let _system_Hw_DeviceType__Now__Id_Int = 0
-let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
-let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
+let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
+let _system_Hw_DeviceType__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
@@ -1065,9 +1065,6 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes ~ No: 1-Sec Lag 'show leds'"
         )
     }
-})
-basic.forever(function () {
-	
 })
 loops.everyInterval(3600000, function () {
     quest_Note_5.quest_Show_String_For_Note_Small_Func(
