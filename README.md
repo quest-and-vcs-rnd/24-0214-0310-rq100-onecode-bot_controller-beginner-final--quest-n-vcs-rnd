@@ -1,45 +1,33 @@
-
 <!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 <!--- add suffix '?raw=true' --->
 
-###  
+# Side_Panel Guide
 ![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel.png?raw=true)
-### ----------------------------------------
-![24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A.png?raw=true)
-### .
-![AltTag_24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B.png?raw=true)
-### .
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+--- 
+# * Bright_Green Comment Blocks Mark the Following Block_Code as Moddable
+![24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A-02.png?raw=true)
+ 
+![AltTag_24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B-02.png?raw=true)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+--- 
+# _Open Below: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
-### .
-![AltTag_Makecode-ClickToCloseSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png?raw=true)
-<!-- SEEMS NOT NEEDED <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png"></script> -->
-### .
-### .
-![AltTag_Rq100-ERG-Lesson02D-NonPreFlashed-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/Rq100-EducatorResourceGuide-Lesson_2D-JoyRide-NonPreFlashed-FrontScreen-2024-04-26_08-22-12.png?raw=true)
-<!-- SEEMS NOT NEEDED: <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/Rq100-EducatorResourceGuide-Lesson_2D-JoyRide-NonPreFlashed-FrontScreen-2024-04-26_08-22-12.png"></script> -->
-
-
-### .
-## Open Above: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
-###  .
-
-
 
 # THE END
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
+--- 
 # EXTRAS
 
 <!--- add suffix '?raw=true' --->
 <!--- jwc n ![https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing?raw=true) --->
 
-![Gif Test](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2022-04-28_11-57-02--Snagit-Gif-RqNvidia-JupyterTeleOp.gif)
 ![Gif Test2](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2022-04-28_11-57-02--Snagit-Gif-RqNvidia-JupyterTeleOp.gif?raw=true)
 
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
-
-<img src="https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing" width="40" height="40" />
-<img src="https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing?raw=true" width="40" height="40" />
-
 
 # Header
 ## Sub_Header
@@ -53,8 +41,6 @@ basic.forever(function () {
     basic.pause(20)
     basic.showIcon(IconNames.SmallHeart)
 })
-
-
 if (true) {
     quest_Note_4.quest_Show_String_For_Note_Small_Func(
     "For exclusive activation, place this 'on start' stack higher than other 'on start' stacks"
@@ -115,6 +101,12 @@ if (true) {
 
 ```
 
+![AltTag_Makecode-ClickToCloseSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png?raw=true)
+<!-- SEEMS NOT NEEDED <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png"></script> -->
+### .
+### .
+![AltTag_Rq100-ERG-Lesson02D-NonPreFlashed-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/Rq100-EducatorResourceGuide-Lesson_2D-JoyRide-NonPreFlashed-FrontScreen-2024-04-26_08-22-12.png?raw=true)
+<!-- SEEMS NOT NEEDED: <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/Rq100-EducatorResourceGuide-Lesson_2D-JoyRide-NonPreFlashed-FrontScreen-2024-04-26_08-22-12.png"></script> -->
 
 <!--- jwc o 
 
@@ -143,3 +135,9 @@ To edit this repository in MakeCode.
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 
 --->
+
+# BROKEN
+<img src="https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing" width="40" height="40" />
+<img src="https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing?raw=true" width="40" height="40" />
+
+![Gif Test](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2022-04-28_11-57-02--Snagit-Gif-RqNvidia-JupyterTeleOp.gif)
