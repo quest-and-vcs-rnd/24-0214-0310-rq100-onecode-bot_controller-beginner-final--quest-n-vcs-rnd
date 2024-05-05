@@ -424,6 +424,10 @@ radio.onReceivedString(function (receivedString) {
                         15
                         )
                         if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right Before"
+                            )
+                            screen_Clear_Func()
                             quest_Note_4.quest_Show_String_For_Note_Small_Func(
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
@@ -431,10 +435,6 @@ radio.onReceivedString(function (receivedString) {
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
                             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
                         }
                     } else if (receivedString == "backward") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
@@ -446,6 +446,10 @@ radio.onReceivedString(function (receivedString) {
                         -15
                         )
                         if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right Before"
+                            )
+                            screen_Clear_Func()
                             quest_Note_4.quest_Show_String_For_Note_Small_Func(
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
@@ -453,10 +457,6 @@ radio.onReceivedString(function (receivedString) {
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
                             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
                         }
                     } else if (receivedString == "left") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
@@ -468,6 +468,10 @@ radio.onReceivedString(function (receivedString) {
                         15
                         )
                         if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right Before"
+                            )
+                            screen_Clear_Func()
                             quest_Note_4.quest_Show_String_For_Note_Small_Func(
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
@@ -475,10 +479,6 @@ radio.onReceivedString(function (receivedString) {
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
                             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
                         }
                     } else if (receivedString == "right") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
@@ -490,6 +490,10 @@ radio.onReceivedString(function (receivedString) {
                         0
                         )
                         if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right Before"
+                            )
+                            screen_Clear_Func()
                             quest_Note_4.quest_Show_String_For_Note_Small_Func(
                             "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                             )
@@ -497,10 +501,6 @@ radio.onReceivedString(function (receivedString) {
                             "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                             )
                             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
-                            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
                         }
                     } else if (receivedString == "stop") {
                         quest_Note_2.quest_Show_String_For_Note_Small_Func(
@@ -956,15 +956,17 @@ basic.forever(function () {
                             )
                             radio.sendString("forward")
                             if (true) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Clear Screen Right Before"
+                                )
+                                screen_Clear_Func()
                                 quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
-                                led.toggle(2, 0)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                                 )
-                                led.toggle(2, 0)
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
                             }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
@@ -974,15 +976,17 @@ basic.forever(function () {
                             )
                             radio.sendString("backward")
                             if (true) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Clear Screen Right Before"
+                                )
+                                screen_Clear_Func()
                                 quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
-                                led.toggle(2, 4)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                                 )
-                                led.toggle(2, 4)
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
                             }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
@@ -992,15 +996,17 @@ basic.forever(function () {
                             )
                             radio.sendString("left")
                             if (true) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Clear Screen Right Before"
+                                )
+                                screen_Clear_Func()
                                 quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
-                                led.toggle(0, 2)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                                 )
-                                led.toggle(0, 2)
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
                             }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
@@ -1010,15 +1016,17 @@ basic.forever(function () {
                             )
                             radio.sendString("right")
                             if (true) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Clear Screen Right Before"
+                                )
+                                screen_Clear_Func()
                                 quest_Note_4.quest_Show_String_For_Note_Small_Func(
                                 "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
                                 )
-                                led.toggle(4, 2)
-                                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(screen_Delay_MSEC_INT, quest_Time_Units_Enum.Milliseconds)
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right After"
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                                 )
-                                led.toggle(4, 2)
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
                             }
                         }
                     } else {
@@ -1057,6 +1065,9 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes ~ No: 1-Sec Lag 'show leds'"
         )
     }
+})
+basic.forever(function () {
+	
 })
 loops.everyInterval(3600000, function () {
     quest_Note_5.quest_Show_String_For_Note_Small_Func(

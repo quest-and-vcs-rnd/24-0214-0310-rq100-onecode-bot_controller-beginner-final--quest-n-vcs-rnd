@@ -280,10 +280,14 @@ basic.forever(function () {
 
             if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT) {
                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Just entered the above_conditioned 'if then' state and will process accordingly as needed:"
+                    "Just completed the above_conditioned 'if then' state and will move on to the next mode_state"
                 )
+                //
+                // '_system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT'
+                //
                 // //jwc n: seems timing issue, place earlier before state checking: quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(5, quest_Time_Units_Enum.Seconds)
                 _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
+
                 network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int, 10)
                 network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = network_GroupChannel_MyBotAndController_Base0_Int % 10
 
@@ -293,8 +297,12 @@ basic.forever(function () {
 
             } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT) {
                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Just exited the above_conditioned 'if then' state and will process accordingly as needed:"
+                    "Just completed the above_conditioned 'if then' state and will move on to the next mode_state"
                 )
+                //
+                // '_system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT'
+                //
+                _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
 
                 ////jwc y do at lower level: screen_Clear_Func()
                 if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT) {
@@ -304,14 +312,12 @@ basic.forever(function () {
                 } else {
                     screen_IconMessage_Func("error")
                 }
-
-                _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
             }
 
             ////jwc o: allow for sleep_timer to be aborted as needed: quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(5, quest_Time_Units_Enum.Seconds)
-            for (let index = 0; index < 50; index++) {
+            for (let index = 0; index < 30; index++) {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Sleep Timer: 50 x 0.1 sec = 5.0 sec (0.1sec to allow for real-time abort, when requested)"
+                    "Sleep Timer: 50 x 0.1 sec = 5.0 sec (0.1sec to allow for real-time abort, when requested) >> try 3.0sec"
                 )
                 quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(0.1, quest_Time_Units_Enum.Seconds)
                 if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
