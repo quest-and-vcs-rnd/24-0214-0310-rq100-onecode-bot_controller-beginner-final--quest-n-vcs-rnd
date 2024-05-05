@@ -5,183 +5,6 @@ function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: num
     screen_XY_Brightness_Old_Num = led.pointBrightness(screen_x_new_num, screen_y_new_num)
     led.plotBrightness(screen_x_new_num, screen_y_new_num, screenBrightness_Heartbeat_Count_Int)
 }
-function Activate_Stack__via_Forever_Stack_Header__Fake_Function_2 () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
-        )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 1of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (true) {
-                controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
-                quest_Controller_Joystick_Directional_AngelDegree_Increment_Enum.degree_90
-                )
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_MagnitudePixel_AsIntOut_Func(
-                )
-                if (false) {
-                    controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOfDegree90_AsIntOut_Func(
-                    )
-                }
-            }
-            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-            "Convert Network Message to Operate 'B'ot: "
-            )
-            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int >= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                    "Motion: Yes"
-                    )
-                    if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: North"
-                            )
-                            radio.sendString("forward")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                . . # . .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: South"
-                            )
-                            radio.sendString("backward")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . # . .
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: West"
-                            )
-                            radio.sendString("left")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . # . . .
-                                # # # # .
-                                . # . . .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: East"
-                            )
-                            radio.sendString("right")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . # .
-                                . # # # #
-                                . . . # .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        }
-                    } else {
-                        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-                        "Invalid 'controller_Joystick_Angle_Degrees_AsIncremented_Int'"
-                        )
-                        error_Message_Func("2024-0212-1731", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
-                    }
-                    if (false) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
-                        )
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "jwc ? may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at inactive free space"
-                        )
-                    }
-                }
-            } else if (controller__Polar_OriginAtCenter__MagnitudePixel__Int < controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Motion: Not"
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Zero values if not exceed 'Deadzone_AsIdle'"
-                )
-                radio.sendString("stop")
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                    )
-                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
-                }
-            }
-            network__CpuCycle_Post__Management_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
-        )
-    }
-}
 function screen_Clear_Func () {
     for (let index_X = 0; index_X <= 4; index_X++) {
         for (let index_Y = 0; index_Y <= 4; index_Y++) {
@@ -782,13 +605,11 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         }
     }
 })
-function Activate_Stack__via_Forever_Stack_Header__Fake_Function () {
-	
-}
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
@@ -796,18 +617,17 @@ let motor_Power_ZERO_INT = 0
 let motor_Power_Half_Current = 0
 let motor_Power_Full_Current_Neg = 0
 let motor_Power_Full_Current_Pos = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
+let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
+let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
+let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
-let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
-let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
-let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
-let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
-let _system_Hw_DeviceType__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
