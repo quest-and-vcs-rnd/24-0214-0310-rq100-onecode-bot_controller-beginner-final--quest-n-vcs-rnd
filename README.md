@@ -1,9 +1,16 @@
 
-
 <!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 <!--- add suffix '?raw=true' --->
 
 ###  
+![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel.png?raw=true)
+### ----------------------------------------
+![24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A.png?raw=true)
+### .
+![AltTag_24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B.png?raw=true)
+### .
+![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
+### .
 ![AltTag_Makecode-ClickToCloseSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png?raw=true)
 <!-- SEEMS NOT NEEDED <script src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png"></script> -->
 ### .
