@@ -874,47 +874,6 @@ setup_BotAndController_Func()
     )
 }
 basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
-        )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 2of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_lo"
-                )
-                motor_Power_Gear_Number_Int = 1
-                radio.sendString("gear_lo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_hi"
-                )
-                motor_Power_Gear_Number_Int = 2
-                radio.sendString("gear_hi")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
-            }
-            network__CpuCycle_Post__Management_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
-    }
-})
-basic.forever(function () {
     quest_Note_4.quest_Show_String_For_Note_Small_Func(
     "Activate Stack via 'Forever' Stack_Header"
     )
@@ -1063,6 +1022,47 @@ basic.forever(function () {
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes ~ No: 1-Sec Lag 'show leds'"
+        )
+    }
+})
+basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
+        )
+        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 2of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Controller_Joystick: gear_lo"
+                )
+                motor_Power_Gear_Number_Int = 1
+                radio.sendString("gear_lo")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Controller_Joystick: gear_hi"
+                )
+                motor_Power_Gear_Number_Int = 2
+                radio.sendString("gear_hi")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
         )
     }
 })
