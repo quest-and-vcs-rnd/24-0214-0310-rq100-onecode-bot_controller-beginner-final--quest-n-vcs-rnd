@@ -1,7 +1,9 @@
 <!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 <!--- add suffix '?raw=true' --->
 
-# Side_Panel Guide
+# Side_Panel Guide: 
+# [RQ100: RnDTutorial_08: Lesson_01A: EasyToCode, SlowToDrive (also WebLink)](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+
 ![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel-03.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
@@ -13,7 +15,7 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
-# _Open Below: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
+# Open Below: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
 
 # THE END
