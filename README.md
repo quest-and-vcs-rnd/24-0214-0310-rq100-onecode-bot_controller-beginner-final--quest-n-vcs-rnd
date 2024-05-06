@@ -2,7 +2,7 @@
 <!--- add suffix '?raw=true' --->
 
 # Side_Panel Guide
-![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel.png?raw=true)
+![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel-02.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
