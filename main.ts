@@ -67,7 +67,7 @@ input.onButtonPressed(Button.A, function () {
             "Code Activation of Controller_Joystick:: 1of2 : 1st micro:bit Being Pressed of Button A||B is Designated as Device:Controller_Joystick"
             )
             _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Controller_Joystick__ID_INT
-            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
+            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
             screen_Clear_Func()
             setup_ControllerOnly_Func()
         }
@@ -395,7 +395,10 @@ screen_IconMessage_Func("error")
                 )
                 // //jwc o device_Type_Bot_Bool = true
                 _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Bot__ID_INT
-                _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Start with 'DeviceType' Status to allow screen to stabilize & not clobber a LED for 'GroupChannelNum' Status"
+                )
+                _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
                 setup_BotOnly_Func()
             }
         }
@@ -423,7 +426,7 @@ input.onButtonPressed(Button.B, function () {
             "Code Activation of Controller_Joystick:: 1of2 : 1st micro:bit Being Pressed of Button A||B is Designated as Device:Controller_Joystick"
             )
             _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Controller_Joystick__ID_INT
-            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
+            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
             screen_Clear_Func()
             setup_ControllerOnly_Func()
         }
@@ -637,7 +640,7 @@ let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
@@ -649,7 +652,7 @@ let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
 let _system_Hw_DeviceType__Now__Id_Int = 0
@@ -685,7 +688,7 @@ if (true) {
             quest_Note_2.quest_Show_String_For_Note_Small_Func(
             "Following Block_Code Moddable"
             )
-            network_GroupChannel_MyBotAndController_Base0_Int = 1
+            network_GroupChannel_MyBotAndController_Base0_Int = 16
         }
         if (true) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
