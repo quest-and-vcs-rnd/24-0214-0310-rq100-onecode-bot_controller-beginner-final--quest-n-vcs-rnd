@@ -18,6 +18,25 @@
 # Open Below: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
 
+---
+
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/vt5fpE0bzSY)
+
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+
+[![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
+
+Mixture Variants:
+
+https://user-images.githubusercontent.com/6877923/115474571-03c75800-a23e-11eb-8096-8973aad5fa9f.mp4
+
+Earth Heightmap node:
+
+https://user-images.githubusercontent.com/6877923/123006036-64e2e780-d3b7-11eb-922e-018994b32da5.mov
+
+
+
+
 # THE END
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
@@ -30,6 +49,14 @@
 ![Gif Test2](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2022-04-28_11-57-02--Snagit-Gif-RqNvidia-JupyterTeleOp.gif?raw=true)
 
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
+
+# NOT WORK: BEGIN
+![mp4 Test](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4?raw=true)
+
+<img src="https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4" width="40" height="40" />
+
+[![AltTag_Q-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4)
+# NOT WORK: END
 
 # Header
 ## Sub_Header
