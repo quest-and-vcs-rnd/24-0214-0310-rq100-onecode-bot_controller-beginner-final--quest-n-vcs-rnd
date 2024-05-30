@@ -217,166 +217,194 @@ input.onButtonPressed(Button.AB, function () {
 })
 radio.onReceivedString(function (receivedString) {
     if (true) {
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "For exclusive activation, place this 'on radio received' stack higher than other 'on radio received' stacks"
-        )
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Network_Message Received' Dual Usage:: Usage #1: Operate Bot from Controller_Joystick"
         )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-        "Bot Stack: Main 1of1 ~ 'on radio received(receivedString)'"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-        if (true) {
-            // //jwc o if (device_Type_Bot_Bool && _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT) {
-            // //jwc o } else if (!(device_Type_Bot_Bool)) {
-            if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-                if (true) {
-                    if (receivedString == "forward") {
-                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                        "Following Block_Code Moddable"
-                        )
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        50,
-                        50
-                        )
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right Before"
-                            )
-                            screen_Clear_Func()
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                            )
-                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
-                        }
-                    } else if (receivedString == "backward") {
-                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                        "Following Block_Code Moddable"
-                        )
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        -50,
-                        -50
-                        )
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right Before"
-                            )
-                            screen_Clear_Func()
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                            )
-                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
-                        }
-                    } else if (receivedString == "left") {
-                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                        "Following Block_Code Moddable"
-                        )
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        0,
-                        50
-                        )
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right Before"
-                            )
-                            screen_Clear_Func()
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                            )
-                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
-                        }
-                    } else if (receivedString == "right") {
-                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                        "Following Block_Code Moddable"
-                        )
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        50,
-                        0
-                        )
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right Before"
-                            )
-                            screen_Clear_Func()
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                            )
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                            )
-                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
-                        }
-                    } else if (receivedString == "stop") {
-                        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                        "Following Block_Code Moddable"
-                        )
-                        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        0,
-                        0
-                        )
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                            )
-                            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
-                        }
-                    } else {
+        // //jwc o if (device_Type_Bot_Bool && _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT) {
+        // //jwc o } else if (!(device_Type_Bot_Bool)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (true) {
+                if (receivedString == "forward") {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                } else if (receivedString == "backward") {
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    15,
+                    15
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                    )
+                    basic.showLeds(`
+                        . . # . .
+                        . # # # .
+                        . . # . .
+                        . . # . .
+                        . . . . .
+                        `)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Clear Screen Right After"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        `)
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    -15,
+                    -15
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . # . .
+                        . . # . .
+                        . # # # .
+                        . . # . .
+                        `)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Clear Screen Right After"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else if (receivedString == "left") {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    0,
+                    15
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . # . . .
+                        # # # # .
+                        . # . . .
+                        . . . . .
+                        `)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Clear Screen Right After"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else if (receivedString == "right") {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    15,
+                    0
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . # .
+                        . # # # #
+                        . . . # .
+                        . . . . .
+                        `)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Clear Screen Right After"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else if (receivedString == "stop") {
+                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    0,
+                    0
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                    )
+                    if (true) {
                         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Error: Unknown Msg"
+                        "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                         )
-                        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                        0,
-                        0
-                        )
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "For now, all 4 corners = Error: Unknown Msg"
-                            )
-                            error_Message_Func("2024-0213-1700", receivedString)
-screen_IconMessage_Func("error")
-                        }
+                        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                     }
-                    network__CpuCycle_Post__Management_Func()
+                } else {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Error: Unknown Msg"
+                    )
+                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    0,
+                    0
+                    )
+                    if (true) {
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "For now, all 4 corners = Error: Unknown Msg"
+                        )
+                        error_Message_Func("2024-0213-1700", receivedString)
+screen_IconMessage_Func("error")
+                    }
                 }
-            } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
-                quest_Note_3.quest_Show_String_For_Note_Big_Func(
-                "Network_Message Received' Dual Usage:: Usage #2: Designate this micro:bit as Bot to *Complete* Network_Pairing w/ Bot"
-                )
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Code Activation of Bot:: 1of1 : 1st micro:bit Having Received a Network_Message is Designated as Device:Bot"
-                )
-                // //jwc o device_Type_Bot_Bool = true
-                _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Bot__ID_INT
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Start with 'DeviceType' Status to allow screen to stabilize & not clobber a LED for 'GroupChannelNum' Status"
-                )
-                _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
-                setup_BotOnly_Func()
+                network__CpuCycle_Post__Management_Func()
             }
+        } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
+            quest_Note_3.quest_Show_String_For_Note_Big_Func(
+            "Network_Message Received' Dual Usage:: Usage #2: Designate this micro:bit as Bot to *Complete* Network_Pairing w/ Bot"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+            "Code Activation of Bot:: 1of1 : 1st micro:bit Having Received a Network_Message is Designated as Device:Bot"
+            )
+            // //jwc o device_Type_Bot_Bool = true
+            _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Bot__ID_INT
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Start with 'DeviceType' Status to allow screen to stabilize & not clobber a LED for 'GroupChannelNum' Status"
+            )
+            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
+            setup_BotOnly_Func()
         }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 1.1: Variables_n_Constants_Not (Hardcode) ~ No: 1-Sec Lag 'show leds'"
-        )
+        if (true) {
+            quest_Note_6.quest_Show_String_For_Note_Big_Func(
+            "Level 1.0: Variables_n_Constants_Not (Hardcode) ~ Yes: 1-Sec Lag 'show leds'"
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "For exclusive activation, place this 'on radio received' stack higher than other 'on radio received' stacks"
+            )
+            quest_Note_5.quest_Show_String_For_Note_Small_Func(
+            "Bot Stack: Main 1of1 ~ 'on radio received(receivedString)'"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Network Message Max_Character_Length: 19"
+            )
+        }
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -640,61 +668,61 @@ let motor_Power_Gear_01_MAX = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let network_GroupChannel_MyBotAndController_Base0_Int = 0
 if (true) {
-    quest_Note_4.quest_Show_String_For_Note_Small_Func(
-    "For exclusive activation, place this 'on start' stack higher than other 'on start' stacks"
-    )
     quest_Note_3.quest_Show_String_For_Note_Big_Func(
     "Bot & Controller_Joystick: All_in_One Code"
     )
-    quest_Note_5.quest_Show_String_For_Note_Small_Func(
-    "Bot & Controller_Joystick Stack: 'on start'"
-    )
     if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Small_Func(
-        "setup_VariablesAndConstants_UserCustomizable: Yes"
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Set GroupChannel_# for Both Bot & Controller_Joystick: Default = 1"
         )
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Set GroupChannel_# for Both Bot & Controller_Joystick: Default = 1"
-            )
-            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-            "Following Block_Code Moddable"
-            )
-            network_GroupChannel_MyBotAndController_Base0_Int = 1
-        }
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
-            )
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Was 15, try 30 to accomodate off_calibrated controllers"
-            )
-            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-            "Optional Advanced Coding: Following Block_Code Moddable"
-            )
-            controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
-        }
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Gears are not used in Level_1 but need these null declarations... "
-            )
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "...to allow Level_2 code to compile (though unused in Level_1)"
-            )
-            // jwc needed to fix compiler issue
-            motor_Power_Gear_01_MAX = 0
-            // jwc needed to fix compiler issue
-            motor_Power_Gear_02_MAX = 0
-        }
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Following Block_Code Moddable"
+        )
+        network_GroupChannel_MyBotAndController_Base0_Int = 1
+    }
+    if (true) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Was 15, try 30 to accomodate off_calibrated controllers"
+        )
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "Optional Advanced Coding: Following Block_Code Moddable"
+        )
+        controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
+    }
+    if (true) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following Gears are not used in Level_1 but need these null declarations... "
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "...to allow Level_2 code to compile (though unused in Level_1)"
+        )
+        // jwc needed to fix compiler issue
+        motor_Power_Gear_01_MAX = 0
+        // jwc needed to fix compiler issue
+        motor_Power_Gear_02_MAX = 0
     }
     if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
         setup_Network_Func()
 setup_BotAndController_Func()
     }
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    "Level 1: Variables_n_Constants_Not (Hardcode)"
-    )
+    if (true) {
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 1: Variables_n_Constants_Not (Hardcode)"
+        )
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "For exclusive activation, place this 'on start' stack higher than other 'on start' stacks"
+        )
+        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+        "Bot & Controller_Joystick Stack: 'on start'"
+        )
+        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        "setup_VariablesAndConstants_UserCustomizable: Yes"
+        )
+    }
 }
 basic.forever(function () {
     if (true) {
@@ -737,19 +765,26 @@ basic.forever(function () {
                             "Controller_Joystick: North"
                             )
                             radio.sendString("forward")
-                            if (true) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right Before"
-                                )
-                                screen_Clear_Func()
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                . . # . .
+                                . . . . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
                         if (true) {
@@ -757,19 +792,26 @@ basic.forever(function () {
                             "Controller_Joystick: South"
                             )
                             radio.sendString("backward")
-                            if (true) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right Before"
-                                )
-                                screen_Clear_Func()
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . # . .
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
                         if (true) {
@@ -777,19 +819,26 @@ basic.forever(function () {
                             "Controller_Joystick: West"
                             )
                             radio.sendString("left")
-                            if (true) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right Before"
-                                )
-                                screen_Clear_Func()
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . # . . .
+                                # # # # .
+                                . # . . .
+                                . . . . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
                         if (true) {
@@ -797,19 +846,26 @@ basic.forever(function () {
                             "Controller_Joystick: East"
                             )
                             radio.sendString("right")
-                            if (true) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Clear Screen Right Before"
-                                )
-                                screen_Clear_Func()
-                                quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                                "Faster Response If Use 'plot x _ y _ ' vs 'show leds' -as well as- After Important Action Blocks Above"
-                                )
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
-                            }
+                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . # .
+                                . # # # #
+                                . . . # .
+                                . . . . .
+                                `)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Clear Screen Right After"
+                            )
+                            basic.showLeds(`
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                . . . . .
+                                `)
                         }
                     } else {
                         quest_Note_5.quest_Show_String_For_Note_Small_Func(
@@ -844,7 +900,7 @@ basic.forever(function () {
             network__CpuCycle_Post__Management_Func()
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes ~ No: 1-Sec Lag 'show leds'"
+        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
         )
     }
 })
