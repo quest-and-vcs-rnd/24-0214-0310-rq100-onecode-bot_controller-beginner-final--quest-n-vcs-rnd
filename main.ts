@@ -223,159 +223,157 @@ radio.onReceivedString(function (receivedString) {
         // //jwc o if (device_Type_Bot_Bool && _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT) {
         // //jwc o } else if (!(device_Type_Bot_Bool)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (true) {
-                if (receivedString == "forward") {
-                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                    "Following Block_Code Moddable"
-                    )
-                } else if (receivedString == "backward") {
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    15,
-                    15
-                    )
+            if (receivedString == "forward") {
+                quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                "Following Block_Code Moddable"
+                )
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                15,
+                15
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                )
+                basic.showLeds(`
+                    . . # . .
+                    . # # # .
+                    . . # . .
+                    . . # . .
+                    . . . . .
+                    `)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Clear Screen Right After"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    `)
+            } else if (receivedString == "backward") {
+                quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                "Following Block_Code Moddable"
+                )
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                -15,
+                -15
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . . # . .
+                    . . # . .
+                    . # # # .
+                    . . # . .
+                    `)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Clear Screen Right After"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    `)
+            } else if (receivedString == "left") {
+                quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                "Following Block_Code Moddable"
+                )
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                0,
+                15
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . # . . .
+                    # # # # .
+                    . # . . .
+                    . . . . .
+                    `)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Clear Screen Right After"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    `)
+            } else if (receivedString == "right") {
+                quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                "Following Block_Code Moddable"
+                )
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                15,
+                0
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . . . # .
+                    . # # # #
+                    . . . # .
+                    . . . . .
+                    `)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Clear Screen Right After"
+                )
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    `)
+            } else if (receivedString == "stop") {
+                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                0,
+                0
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                )
+                if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                     )
-                    basic.showLeds(`
-                        . . # . .
-                        . # # # .
-                        . . # . .
-                        . . # . .
-                        . . . . .
-                        `)
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Clear Screen Right After"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        `)
-                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    -15,
-                    -15
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . # . .
-                        . . # . .
-                        . # # # .
-                        . . # . .
-                        `)
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Clear Screen Right After"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        `)
-                } else if (receivedString == "left") {
-                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    0,
-                    15
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . # . . .
-                        # # # # .
-                        . # . . .
-                        . . . . .
-                        `)
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Clear Screen Right After"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        `)
-                } else if (receivedString == "right") {
-                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    15,
-                    0
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . # .
-                        . # # # #
-                        . . . # .
-                        . . . . .
-                        `)
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Clear Screen Right After"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        `)
-                } else if (receivedString == "stop") {
-                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    0,
-                    0
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                    )
-                    if (true) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                        )
-                        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
-                    }
-                } else {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Error: Unknown Msg"
-                    )
-                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    0,
-                    0
-                    )
-                    if (true) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "For now, all 4 corners = Error: Unknown Msg"
-                        )
-                        error_Message_Func("2024-0213-1700", receivedString)
-screen_IconMessage_Func("error")
-                    }
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                 }
-                network__CpuCycle_Post__Management_Func()
+            } else {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Error: Unknown Msg"
+                )
+                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                0,
+                0
+                )
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "For now, all 4 corners = Error: Unknown Msg"
+                    )
+                    error_Message_Func("2024-0213-1700", receivedString)
+screen_IconMessage_Func("error")
+                }
             }
+            network__CpuCycle_Post__Management_Func()
         } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
             quest_Note_3.quest_Show_String_For_Note_Big_Func(
             "Network_Message Received' Dual Usage:: Usage #2: Designate this micro:bit as Bot to *Complete* Network_Pairing w/ Bot"
