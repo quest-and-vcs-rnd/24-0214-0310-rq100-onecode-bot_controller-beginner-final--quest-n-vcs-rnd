@@ -227,11 +227,7 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                15,
-                15
-                )
+                wuKong.mecanumRun(wuKong.RunList.Front, 100)
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -256,11 +252,7 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                -15,
-                -15
-                )
+                wuKong.mecanumRun(wuKong.RunList.rear, 100)
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -285,11 +277,7 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                0,
-                15
-                )
+                wuKong.mecanumRun(wuKong.RunList.left, 100)
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -314,11 +302,7 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                15,
-                0
-                )
+                wuKong.mecanumRun(wuKong.RunList.right, 100)
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -340,12 +324,7 @@ radio.onReceivedString(function (receivedString) {
                     . . . . .
                     `)
             } else if (receivedString == "stop") {
-                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                0,
-                0
-                )
+                wuKong.mecanumRun(wuKong.RunList.stop, 0)
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -355,6 +334,12 @@ radio.onReceivedString(function (receivedString) {
                     )
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                 }
+            } else if (receivedString == "serv_lft") {
+                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, 0)
+                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, 0)
+            } else if (receivedString == "serv_rgt") {
+                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, 45)
+                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, 45)
             } else {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Error: Unknown Msg"
@@ -703,6 +688,14 @@ if (true) {
         motor_Power_Gear_02_MAX = 0
     }
     if (true) {
+        wuKong.mecanumWheel(
+        wuKong.ServoList.S1,
+        wuKong.ServoList.S3,
+        wuKong.ServoList.S0,
+        wuKong.ServoList.S2
+        )
+    }
+    if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
         setup_Network_Func()
 setup_BotAndController_Func()
@@ -724,17 +717,8 @@ setup_BotAndController_Func()
 }
 basic.forever(function () {
     if (true) {
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "Activate Stack via 'Forever' Stack_Header"
-        )
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
-        )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 1of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
         )
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
@@ -900,6 +884,15 @@ basic.forever(function () {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
         )
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "Activate Stack via 'Forever' Stack_Header"
+        )
+        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 1of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
     }
 })
 basic.forever(function () {
@@ -935,6 +928,12 @@ basic.forever(function () {
                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                 )
                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
+                radio.sendString("serv_lft")
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
+                radio.sendString("serv_rgt")
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
             }
             network__CpuCycle_Post__Management_Func()
         }
