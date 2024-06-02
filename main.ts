@@ -335,21 +335,24 @@ radio.onReceivedString(function (receivedString) {
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                 }
             } else if (receivedString == "serv_lft") {
-                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, 0)
-                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, 0)
+                if (servoArm_Left_Up_Bool) {
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
+                } else {
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
+                }
+                servoArm_Left_Up_Bool = !(servoArm_Left_Up_Bool)
             } else if (receivedString == "serv_rgt") {
-                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, 45)
-                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, 45)
+                if (servoArm_Right_Up_Bool) {
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_DOWN_DEGREES_INT)
+                } else {
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_Right_UP_DEGREES_INT)
+                }
+                servoArm_Right_Up_Bool = !(servoArm_Right_Up_Bool)
             } else {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Error: Unknown Msg"
                 )
-                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                0,
-                0
-                )
+                wuKong.mecanumRun(wuKong.RunList.stop, 0)
                 if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "For now, all 4 corners = Error: Unknown Msg"
@@ -646,6 +649,11 @@ let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
 let screen_X_Old_Num = 0
+let servoArm_Right_Up_Bool = false
+let servoArm_Left_Up_Bool = false
+let servoArm_Right_UP_DEGREES_INT = 0
+let servoArm_Left_UP_DEGREES_INT = 0
+let servoArm_DOWN_DEGREES_INT = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
@@ -694,6 +702,15 @@ if (true) {
         wuKong.ServoList.S0,
         wuKong.ServoList.S2
         )
+    }
+    if (true) {
+        servoArm_DOWN_DEGREES_INT = 0
+        servoArm_Left_UP_DEGREES_INT = 20
+        servoArm_Right_UP_DEGREES_INT = 45
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_Right_UP_DEGREES_INT)
+        servoArm_Left_Up_Bool = true
+        servoArm_Right_Up_Bool = true
     }
     if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
@@ -931,9 +948,17 @@ basic.forever(function () {
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
                 radio.sendString("serv_lft")
                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Debouncing Delay: 3s >> 100ms"
+                )
+                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(100, quest_Time_Units_Enum.Milliseconds)
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
                 radio.sendString("serv_rgt")
                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Debouncing Delay"
+                )
+                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(100, quest_Time_Units_Enum.Milliseconds)
             }
             network__CpuCycle_Post__Management_Func()
         }
