@@ -159,6 +159,13 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
         )
     }
 }
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.up, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        radio.sendString("serv_rgt")
+        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
+    }
+})
 input.onButtonPressed(Button.AB, function () {
     // //jwc o if (device_Type_Controller_Bool || device_Type_Bot_Bool) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT || _system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT) {
@@ -419,6 +426,13 @@ input.onButtonPressed(Button.B, function () {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes"
         )
+    }
+})
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.up, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        radio.sendString("serv_lft")
+        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
@@ -945,20 +959,6 @@ basic.forever(function () {
                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                 )
                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
-                radio.sendString("serv_lft")
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Debouncing Delay: 3s >> 100ms"
-                )
-                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(100, quest_Time_Units_Enum.Milliseconds)
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-                radio.sendString("serv_rgt")
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Debouncing Delay"
-                )
-                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(100, quest_Time_Units_Enum.Milliseconds)
             }
             network__CpuCycle_Post__Management_Func()
         }
