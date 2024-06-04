@@ -153,6 +153,49 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                 screen_Y_Old_Num = 0
                 screen_X_Old_Num = 0
             }
+            if (true) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Variable & Constant: Customizable Settings"
+                )
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Gears are not used in Level_1 but need these null declarations... "
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "...to allow Level_2 code to compile (though unused in Level_1)"
+                    )
+                    // jwc needed to fix compiler issue
+                    motor_Power_Gear_01_MAX = 0
+                    // jwc needed to fix compiler issue
+                    motor_Power_Gear_02_MAX = 0
+                }
+                if (true) {
+                    wuKong.mecanumWheel(
+                    wuKong.ServoList.S1,
+                    wuKong.ServoList.S3,
+                    wuKong.ServoList.S0,
+                    wuKong.ServoList.S2
+                    )
+                }
+                if (true) {
+                    servoArm_DOWN_DEGREES_INT = 0
+                    servoArm_Left_UP_DEGREES_INT = 20
+                    servoArm_Right_UP_DEGREES_INT = 45
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_Right_UP_DEGREES_INT)
+                    servoArm_Left_Up_Bool = true
+                    servoArm_Right_Up_Bool = true
+                }
+                if (true) {
+                    quest_Dashboard.quest_Show_Oled_Cleared_Func(
+                    )
+                    quest_Dashboard.quest_Show_String_For_Oled_BigFont_Func(
+                    "Hello  : )",
+                    0,
+                    0
+                    )
+                }
+            }
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes"
@@ -638,6 +681,13 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
+let servoArm_Right_Up_Bool = false
+let servoArm_Left_Up_Bool = false
+let servoArm_Right_UP_DEGREES_INT = 0
+let servoArm_Left_UP_DEGREES_INT = 0
+let servoArm_DOWN_DEGREES_INT = 0
+let motor_Power_Gear_02_MAX = 0
+let motor_Power_Gear_01_MAX = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
@@ -663,13 +713,6 @@ let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
 let screen_X_Old_Num = 0
-let servoArm_Right_Up_Bool = false
-let servoArm_Left_Up_Bool = false
-let servoArm_Right_UP_DEGREES_INT = 0
-let servoArm_Left_UP_DEGREES_INT = 0
-let servoArm_DOWN_DEGREES_INT = 0
-let motor_Power_Gear_02_MAX = 0
-let motor_Power_Gear_01_MAX = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let network_GroupChannel_MyBotAndController_Base0_Int = 0
 if (true) {
@@ -696,35 +739,6 @@ if (true) {
         "Optional Advanced Coding: Following Block_Code Moddable"
         )
         controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
-    }
-    if (true) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following Gears are not used in Level_1 but need these null declarations... "
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "...to allow Level_2 code to compile (though unused in Level_1)"
-        )
-        // jwc needed to fix compiler issue
-        motor_Power_Gear_01_MAX = 0
-        // jwc needed to fix compiler issue
-        motor_Power_Gear_02_MAX = 0
-    }
-    if (true) {
-        wuKong.mecanumWheel(
-        wuKong.ServoList.S1,
-        wuKong.ServoList.S3,
-        wuKong.ServoList.S0,
-        wuKong.ServoList.S2
-        )
-    }
-    if (true) {
-        servoArm_DOWN_DEGREES_INT = 0
-        servoArm_Left_UP_DEGREES_INT = 20
-        servoArm_Right_UP_DEGREES_INT = 45
-        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
-        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_Right_UP_DEGREES_INT)
-        servoArm_Left_Up_Bool = true
-        servoArm_Right_Up_Bool = true
     }
     if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
