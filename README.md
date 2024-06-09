@@ -12,9 +12,17 @@
 ![24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A-02.png?raw=true)
  
 ![AltTag_24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B-02.png?raw=true)
+
+# THE END
+
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
+# 
+# 
+# 
+# EXTRAS
+
 # Open Below: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
 
@@ -35,13 +43,6 @@ Earth Heightmap node:
 https://user-images.githubusercontent.com/6877923/123006036-64e2e780-d3b7-11eb-922e-018994b32da5.mov
 
 
-
-
-# THE END
-<!--- Need following dummy blank line above for this upcoming divider_line to work --->
-
---- 
-# EXTRAS
 
 <!--- add suffix '?raw=true' --->
 <!--- jwc n ![https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing](https://drive.google.com/file/d/1zM5SMDPCR5Q0jfn8FCYk-BVg2lthovb9/view?usp=sharing?raw=true) --->
