@@ -266,6 +266,9 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 radio.onReceivedString(function (receivedString) {
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    "24-0609-0640 jwc obsolete: replaced with new stack with servo_lft & servo_rht."
+    )
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Network_Message Received' Dual Usage:: Usage #1: Operate Bot from Controller_Joystick"
@@ -277,7 +280,11 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                wuKong.mecanumRun(wuKong.RunList.Front, 100)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                15,
+                15
+                )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -302,7 +309,11 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                wuKong.mecanumRun(wuKong.RunList.rear, 100)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                -15,
+                -15
+                )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -327,7 +338,11 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                wuKong.mecanumRun(wuKong.RunList.left, 100)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                0,
+                15
+                )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -352,7 +367,11 @@ radio.onReceivedString(function (receivedString) {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
                 )
-                wuKong.mecanumRun(wuKong.RunList.right, 100)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                15,
+                0
+                )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -374,7 +393,12 @@ radio.onReceivedString(function (receivedString) {
                     . . . . .
                     `)
             } else if (receivedString == "stop") {
-                wuKong.mecanumRun(wuKong.RunList.stop, 0)
+                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                0,
+                0
+                )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
@@ -382,27 +406,18 @@ radio.onReceivedString(function (receivedString) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                     )
-                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 1)
                 }
-            } else if (receivedString == "serv_lft") {
-                if (servoArm_Left_Up_Bool) {
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
-                } else {
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
-                }
-                servoArm_Left_Up_Bool = !(servoArm_Left_Up_Bool)
-            } else if (receivedString == "serv_rgt") {
-                if (servoArm_Right_Up_Bool) {
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_DOWN_DEGREES_INT)
-                } else {
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_Right_UP_DEGREES_INT)
-                }
-                servoArm_Right_Up_Bool = !(servoArm_Right_Up_Bool)
             } else {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Error: Unknown Msg"
                 )
-                wuKong.mecanumRun(wuKong.RunList.stop, 0)
+                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                0,
+                0
+                )
                 if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "For now, all 4 corners = Error: Unknown Msg"
