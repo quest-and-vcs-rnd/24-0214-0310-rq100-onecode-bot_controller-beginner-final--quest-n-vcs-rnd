@@ -35,13 +35,10 @@
 [![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
 
 Mixture Variants:
-
 https://user-images.githubusercontent.com/6877923/115474571-03c75800-a23e-11eb-8096-8973aad5fa9f.mp4
 
 Earth Heightmap node:
-
 https://user-images.githubusercontent.com/6877923/123006036-64e2e780-d3b7-11eb-922e-018994b32da5.mov
-
 
 
 <!--- add suffix '?raw=true' --->
@@ -50,6 +47,34 @@ https://user-images.githubusercontent.com/6877923/123006036-64e2e780-d3b7-11eb-9
 ![Gif Test2](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2022-04-28_11-57-02--Snagit-Gif-RqNvidia-JupyterTeleOp.gif?raw=true)
 
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
+
+24-0702-0630
+
+Y B100 Video:
+https://drive.google.com/file/d/1KJumywfV1-d1zkXxHNkKA9eEUC-9-BP9/view?usp=sharing
+
+? B100 Video-GIF: NEED EXT GIF VIEWER
+https://drive.google.com/file/d/1ZwvWgVwbhkRiV728-W117L56DvE0GhHL/view?usp=sharing
+
+N Gif Test 3
+![Gif Test3](https://drive.google.com/file/d/1ZwvWgVwbhkRiV728-W117L56DvE0GhHL/view?usp=sharing?raw=true)
+
+24-0702-0450
+<img src="https://drive.google.com/file/d/1ZwvWgVwbhkRiV728-W117L56DvE0GhHL/view?usp=sharing" width="40" height="40" />
+
+24-0702-0650
+<video src='https://drive.google.com/file/d/1KJumywfV1-d1zkXxHNkKA9eEUC-9-BP9/view?usp=sharing' width=180/>
+
+24-0702-0700
+[![Watch the video](https://raw.githubusercontent.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png)](https://raw.githubusercontent.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4)
+24-0702-0701
+[![Watch the video]](https://raw.githubusercontent.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4)
+24-0702-0702
+[![Watch the video]](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4)
+
+Y 24-0702-0710 8MB 380x180 GIF: 
+![24-0702-0710](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0605-2031-B100-Demo-DualArms-MecanumWheels_Sideway_Fwd_Rev-03-320x180-10Fps.gif?raw=true)
+
 
 # NOT WORK: BEGIN
 ![mp4 Test](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ-MerryGoRound-WhackAMole-ArenaAndBotCams-Final-2020-0617-0945-AddTitle.mp4?raw=true)
