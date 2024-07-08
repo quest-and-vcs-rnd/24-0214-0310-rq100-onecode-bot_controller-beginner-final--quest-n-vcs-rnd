@@ -2,23 +2,48 @@
 <!--- add suffix '?raw=true' --->
 
 # Side_Panel Guide: 
-# [RQ100: RnDTutorial_08: Lesson_01A: EasyToCode, SlowToDrive (also WebLink)](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
 
 ![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel-03.png?raw=true)
+
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
-# * Bright_Green Comment Blocks Mark the Following Block_Code as Moddable
+
+# * A. Modding Basic Code: Bright_Green Comment Blocks Mark the Following Block_Code as Moddable
 ![24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A-02.png?raw=true)
  
 ![AltTag_24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B-02.png?raw=true)
 
-# THE END
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+
+# * Quick-Start to Flash/Download Code to 'micro:bit' USB-Cable-Connected w/ Computer
+# ** One-Time Setup: Chrome Browser
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-08_12-24-16.png?raw=true)
+
+# ** 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-06_04-00-43.png?raw=true)
+
+# ** 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_06-13-17.png?raw=true)
+
+# ** 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-08_12-26-45.png?raw=true)
+
+# ** 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_03-48-31.png?raw=true)
+
+# ** How to Read the Group-Channel-# (Bot_Id) on your LED-Screen for both Both and Controller_Joystick
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_06-19-21.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
---- 
-# 
+---
+
+# [* Staff Reference Prezi-Map: RQ100 ~ R&D-Tutorial_07: Lesson_01A: EasyToCode, SlowToDrive (WebLink)](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+
+# THE END
 # 
 # 
 # EXTRAS
