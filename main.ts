@@ -109,6 +109,18 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                 }
             }
             if (true) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Was 15, try 30 to accomodate off_calibrated controllers"
+                )
+                quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                "Optional Advanced Coding: Following Block_Code Moddable"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
+            }
+            if (true) {
                 controller__Polar_OriginAtCenter__AngleDegree__Int = 0
                 controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
                 controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
@@ -285,26 +297,24 @@ radio.onReceivedString(function (receivedString) {
                 15,
                 15
                 )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                )
-                basic.showLeds(`
-                    . . # . .
-                    . # # # .
-                    . . # . .
-                    . . # . .
-                    . . . . .
-                    `)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Clear Screen Right After"
-                )
-                basic.showLeds(`
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    `)
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . # . .
+                        . # # # .
+                        . . # . .
+                        . . # . .
+                        . . . . .
+                        `)
+                } else {
+                    screen_Clear_Func()
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
+                }
             } else if (receivedString == "backward") {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
@@ -314,26 +324,27 @@ radio.onReceivedString(function (receivedString) {
                 -15,
                 -15
                 )
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . # . .
+                        . . # . .
+                        . # # # .
+                        . . # . .
+                        `)
+                } else {
+                    screen_Clear_Func()
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
+                }
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
-                basic.showLeds(`
-                    . . . . .
-                    . . # . .
-                    . . # . .
-                    . # # # .
-                    . . # . .
-                    `)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Clear Screen Right After"
-                )
-                basic.showLeds(`
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    `)
             } else if (receivedString == "left") {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
@@ -343,26 +354,24 @@ radio.onReceivedString(function (receivedString) {
                 0,
                 15
                 )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                )
-                basic.showLeds(`
-                    . . . . .
-                    . # . . .
-                    # # # # .
-                    . # . . .
-                    . . . . .
-                    `)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Clear Screen Right After"
-                )
-                basic.showLeds(`
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    `)
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . # . . .
+                        # # # # .
+                        . # . . .
+                        . . . . .
+                        `)
+                } else {
+                    screen_Clear_Func()
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
+                }
             } else if (receivedString == "right") {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
@@ -372,26 +381,27 @@ radio.onReceivedString(function (receivedString) {
                 15,
                 0
                 )
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . # .
+                        . # # # #
+                        . . . # .
+                        . . . . .
+                        `)
+                } else {
+                    screen_Clear_Func()
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
+                }
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
                 )
-                basic.showLeds(`
-                    . . . . .
-                    . . . # .
-                    . # # # #
-                    . . . # .
-                    . . . . .
-                    `)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Clear Screen Right After"
-                )
-                basic.showLeds(`
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    . . . . .
-                    `)
             } else if (receivedString == "stop") {
                 // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
                 quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
@@ -406,7 +416,7 @@ radio.onReceivedString(function (receivedString) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                     )
-                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 1)
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                 }
             } else {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -716,6 +726,7 @@ let motor_Power_Full_Current_Pos = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
@@ -728,7 +739,6 @@ let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
 let screen_X_Old_Num = 0
-let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let network_GroupChannel_MyBotAndController_Base0_Int = 0
 if (true) {
     quest_Note_3.quest_Show_String_For_Note_Big_Func(
@@ -742,18 +752,6 @@ if (true) {
         "Following Block_Code Moddable"
         )
         network_GroupChannel_MyBotAndController_Base0_Int = 1
-    }
-    if (true) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Was 15, try 30 to accomodate off_calibrated controllers"
-        )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "Optional Advanced Coding: Following Block_Code Moddable"
-        )
-        controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
     }
     if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
