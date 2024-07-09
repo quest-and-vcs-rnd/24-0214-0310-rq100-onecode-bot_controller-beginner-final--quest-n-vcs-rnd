@@ -805,26 +805,24 @@ basic.forever(function () {
                             "Controller_Joystick: North"
                             )
                             radio.sendString("forward")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                . . # . .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . # . .
+                                    . # # # .
+                                    . . # . .
+                                    . . # . .
+                                    . . . . .
+                                    `)
+                            } else {
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
+                            }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
                         if (true) {
@@ -832,26 +830,24 @@ basic.forever(function () {
                             "Controller_Joystick: South"
                             )
                             radio.sendString("backward")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . # . .
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . . . .
+                                    . . # . .
+                                    . . # . .
+                                    . # # # .
+                                    . . # . .
+                                    `)
+                            } else {
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
+                            }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
                         if (true) {
@@ -859,26 +855,24 @@ basic.forever(function () {
                             "Controller_Joystick: West"
                             )
                             radio.sendString("left")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . # . . .
-                                # # # # .
-                                . # . . .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . . . .
+                                    . # . . .
+                                    # # # # .
+                                    . # . . .
+                                    . . . . .
+                                    `)
+                            } else {
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
+                            }
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
                         if (true) {
@@ -886,26 +880,24 @@ basic.forever(function () {
                             "Controller_Joystick: East"
                             )
                             radio.sendString("right")
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . # .
-                                . # # # #
-                                . . . # .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . . . .
+                                    . . . # .
+                                    . # # # #
+                                    . . . # .
+                                    . . . . .
+                                    `)
+                            } else {
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
+                            }
                         }
                     } else {
                         quest_Note_5.quest_Show_String_For_Note_Small_Func(
