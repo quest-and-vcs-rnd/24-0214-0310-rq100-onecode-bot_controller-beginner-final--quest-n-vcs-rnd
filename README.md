@@ -1,7 +1,9 @@
 <!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 <!--- add suffix '?raw=true' --->
 
-# Side_Panel Guide: 
+# **** ** Side-Panel Guide ** 
+
+# A. Coding-Editor Setup
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-09_19-45-36-CloseLeftSidePanel.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
@@ -11,43 +13,62 @@
 
 --- 
 
-# * A. Modding Basic Code: Bright_Green Comment Blocks Mark the Following Block_Code as Moddable
+# B. Modding a Code-Block: Can Mod the Code-Block Right After A Bright-Green Comment-Block
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-07-46-EasyToCode-FastToDrive-ModGroupChannelNum-02.png?raw=true)
  
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_01-12-22-EasyToCode-FastToDrive-ModServoMotorPower.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_02-18-12-EasyToCode-FastToDrive-ModServoMotorPower-02.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
 
-# * Quick-Start to Flash/Download Code to 'micro:bit' USB-Cable-Connected w/ Computer
-# ** One-Time Setup: Chrome Browser
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-08_12-24-16.png?raw=true)
+# C. Flash/Download This Same Code to 'micro:bits' of Both 1) Bot and 2) Controller_Joystick via USB Cable-Connection to Computer
 
-# ** 
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-06_04-00-43.png?raw=true)
+# * Flash/Download this Same Code to Both 'micro:bits'
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_06-53-15-FlashDownloadSameCodeToBothMicrobits.png?raw=true)
 
-# ** 
+# *
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-33-36-StartFlashDownloadWithSaveButton.png?raw=true)
+
+# *
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_06-13-17.png?raw=true)
 
-# ** 
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-08_12-26-45.png?raw=true)
+# *
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-26-45-FlashDownladToMicrobitAsUsbDrive-02.png?raw=true)
 
-# ** 
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_03-48-31.png?raw=true)
-
-# ** How to Read the Group-Channel-# (Bot_Id) on your LED-Screen for both Both and Controller_Joystick
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_06-19-21.png?raw=true)
+# * Flash/Download this Same Code to Both 'micro:bits'
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_06-53-15-FlashDownloadSameCodeToBothMicrobits.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
 
-# [* Staff Reference Prezi-Map: RQ100 ~ R&D-Tutorial_07: Lesson_01A: EasyToCode, SlowToDrive (WebLink)](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+# D. Network-Pair from Controller_Joystick to Bot
+
+# *
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-03-02_03-48-31-NetworkPair_PressAorB_OnControllerJoystick-02.png?raw=true)
+
+# * How to Read the Group-Channel-# (Bot_Id) 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-05-19-DriverDiagnosticDashboard-GroupChannelNumber.png?raw=true)
+
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+
 
 # THE END
-# 
-# 
+# .
+# .
+# .
+# FOR STAFF USE:
+
+# * One-Time Setup: Chrome Browser
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
+# .
+# [* Educator Resource Guide (ERG):RQ100 ~ R&D-Tutorial_07: Lesson_01: EasyToCode, FastToDrive (WebLink)](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+# .
+# .
+# .
 # EXTRAS
 
 # Open Below: [R100: Lesson 2D: JoyRide: Download/Flash Code (Ver2.1+) & Quick-Start / Troubleshoot Guide](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
