@@ -342,9 +342,6 @@ radio.onReceivedString(function (receivedString) {
                     )
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
                 }
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                )
             } else if (receivedString == "left") {
                 quest_Note_2.quest_Show_String_For_Note_Big_Func(
                 "Following Block_Code Moddable"
