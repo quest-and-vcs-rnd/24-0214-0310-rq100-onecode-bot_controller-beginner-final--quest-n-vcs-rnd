@@ -65,7 +65,7 @@
 # * One-Time Setup: Chrome Browser
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
 # .
-# [* Educator Resource Guide (ERG):RQ100 ~ R&D-Tutorial_07: Lesson_01: EasyToCode, FastToDrive (WebLink)](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+# [* Right Side-Panel Mini-Tutorial Separate-Web-Page](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
 # .
 # .
 # .
