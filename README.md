@@ -7,15 +7,14 @@
 
 --- 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-09_19-53-03B-CloseRightSidePanel.png?raw=true)
-
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
 
 # * A. Modding Basic Code: Bright_Green Comment Blocks Mark the Following Block_Code as Moddable
-![24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-42-RnDTutorial_08-Level_01A-EasyToCode-HardToDrive-Stack_A-02.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-07-46-EasyToCode-FastToDrive-ModGroupChannelNum-02.png?raw=true)
  
-![AltTag_24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0107-53-RnDTutorial_08-Level_01A-EasyToCode-SlowToDrive-Stack_B-02.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_01-12-22-EasyToCode-FastToDrive-ModServoMotorPower.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
