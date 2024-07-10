@@ -22,22 +22,22 @@
 
 ---
 
-# C. Flash/Download This Same Code to 'micro:bits' of Both 1) Bot and 2) Controller_Joystick via USB Cable-Connection to Computer
+# C. Flash/Download This Same Code to Both 'micro:bits'
 
-# * Flash/Download this Same Code to Both 'micro:bits'
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_06-53-15-FlashDownloadSameCodeToBothMicrobits.png?raw=true)
+# * C1
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-28-01-FlashDownloadToController_Joystick.png?raw=true)
 
-# *
+# * C2
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-33-36-StartFlashDownloadWithSaveButton.png?raw=true)
 
-# *
+# * C3
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-03-02_06-13-17.png?raw=true)
 
-# *
+# * C4
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-26-45-FlashDownladToMicrobitAsUsbDrive-02.png?raw=true)
 
-# * Flash/Download this Same Code to Both 'micro:bits'
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_06-53-15-FlashDownloadSameCodeToBothMicrobits.png?raw=true)
+# * C5
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-34-56-FlashDownloadToBot.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
