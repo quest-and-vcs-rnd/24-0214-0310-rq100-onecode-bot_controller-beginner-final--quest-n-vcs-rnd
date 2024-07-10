@@ -2,8 +2,11 @@
 <!--- add suffix '?raw=true' --->
 
 # Side_Panel Guide: 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-09_19-45-36-CloseLeftSidePanel.png?raw=true)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
-![AltTag_24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0429-0550-43-ClickGrayTabToCloseThisRightSidePanel-03.png?raw=true)
+--- 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-07-09_19-53-03B-CloseRightSidePanel.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
