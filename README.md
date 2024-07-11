@@ -37,6 +37,11 @@
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-26-45-FlashDownladToMicrobitAsUsbDrive-02.png?raw=true)
 
 # * C5
+<!-- Settle for lower resolution than this for more time-duration potential: ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/24-0711-1500-B100-BotCode-Flash_Download-Img_090323-0326-1310-FlashingOnly-ForGifUnder25Mb-720p-2pt5sec.gif?raw=true)
+-->
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/24-0711-1500-B100-BotCode-Flash_Download-Img_090323-0326-1310-FlashingOnly-ForGifUnder25Mb-5sec-640x360.gif?raw=true)
+
+# * C6
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-34-56-FlashDownloadToBot.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
@@ -54,7 +59,6 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-
 
 # THE END
 # .
