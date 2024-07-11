@@ -800,6 +800,23 @@ basic.forever(function () {
     ////jwc for Controller:     basic.showString("ton")
     ////jwc for Controller: }
 
+    ////jwc y if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
+    ////jwc y     basic.showString("C")
+    ////jwc y }
+    ////jwc y if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
+    ////jwc y     basic.showString("h")
+    ////jwc y }
+    ////jwc y if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
+    ////jwc y     basic.showString(":")
+    ////jwc y }
+
+    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
+        basic.showString(convertToText(network_GroupChannel_MyBotAndController_Base0_Int))
+    }
+    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
+        basic.showString("~")
+    }
+
     if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
         basic.showString("A")
     }
@@ -847,22 +864,6 @@ basic.forever(function () {
     }
     if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
         basic.showString("r")
-    }
-    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
-        basic.showString("~")
-    }
-    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
-        basic.showString("C")
-    }
-    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
-        basic.showString("h")
-    }
-    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
-        basic.showString(":")
-    }
-
-    if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {
-        basic.showString(convertToText(network_GroupChannel_MyBotAndController_Base0_Int))
     }
     
     if (startup_ScrollingText_ShowOrNotShow_ReturnBool_Func()) {

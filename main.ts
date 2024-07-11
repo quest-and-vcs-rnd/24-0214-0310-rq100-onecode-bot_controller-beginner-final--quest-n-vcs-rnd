@@ -743,7 +743,7 @@ if (true) {
     )
     if (true) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Set GroupChannel_# for Both Bot & Controller_Joystick: Default = 1"
+        "Set GroupChannel_# (Bot_Id): Range [21 to 255], Default = 1"
         )
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Following Block_Code Moddable"
