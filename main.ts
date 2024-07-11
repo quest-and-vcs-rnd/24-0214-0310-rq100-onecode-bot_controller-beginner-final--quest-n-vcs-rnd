@@ -406,10 +406,19 @@ radio.onReceivedString(function (receivedString) {
                 0,
                 0
                 )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                )
-                if (true) {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . # . .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else {
+                    screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                     )
