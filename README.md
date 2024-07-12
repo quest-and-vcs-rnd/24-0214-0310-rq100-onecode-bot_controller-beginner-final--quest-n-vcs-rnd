@@ -13,10 +13,14 @@
 
 --- 
 
-# B. Modding a Code-Block: Can Mod the Code-Block Right After A Bright-Green Comment-Block
+# B. Can Mod the Code-Block Right After A Bright-Green Comment-Block
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-52-01.png-LookForBrightGreenComment_Block.png?raw=true)
+# B1. ___Beginner___ Modding/Coding
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-07-46-EasyToCode-FastToDrive-ModGroupChannelNum-02.png?raw=true)
- 
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_02-18-12-EasyToCode-FastToDrive-ModServoMotorPower-02.png?raw=true)
+# (If First-Time Modding/Coding, Then Skip To Section C.)
+# .
+# B2. ___Intermediate___ Modding/Coding
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
