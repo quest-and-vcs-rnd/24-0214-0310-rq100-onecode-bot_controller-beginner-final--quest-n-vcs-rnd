@@ -289,14 +289,6 @@ radio.onReceivedString(function (receivedString) {
         // //jwc o } else if (!(device_Type_Bot_Bool)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
             if (receivedString == "forward") {
-                quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                "Following Block_Code Moddable"
-                )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                15,
-                15
-                )
                 if (false) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following Block More as Visual Comment Since very Laggy"
@@ -309,6 +301,14 @@ radio.onReceivedString(function (receivedString) {
                         . . . . .
                         `)
                 } else {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    30,
+                    30
+                    )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
@@ -316,14 +316,6 @@ radio.onReceivedString(function (receivedString) {
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
                 }
             } else if (receivedString == "backward") {
-                quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                "Following Block_Code Moddable"
-                )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                -15,
-                -15
-                )
                 if (false) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following Block More as Visual Comment Since very Laggy"
@@ -336,6 +328,14 @@ radio.onReceivedString(function (receivedString) {
                         . . # . .
                         `)
                 } else {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    -30,
+                    -30
+                    )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
@@ -343,14 +343,6 @@ radio.onReceivedString(function (receivedString) {
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
                 }
             } else if (receivedString == "left") {
-                quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                "Following Block_Code Moddable"
-                )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                0,
-                15
-                )
                 if (false) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following Block More as Visual Comment Since very Laggy"
@@ -363,6 +355,14 @@ radio.onReceivedString(function (receivedString) {
                         . . . . .
                         `)
                 } else {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    0,
+                    30
+                    )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
@@ -370,14 +370,6 @@ radio.onReceivedString(function (receivedString) {
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
                 }
             } else if (receivedString == "right") {
-                quest_Note_2.quest_Show_String_For_Note_Big_Func(
-                "Following Block_Code Moddable"
-                )
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                15,
-                0
-                )
                 if (false) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following Block More as Visual Comment Since very Laggy"
@@ -390,22 +382,21 @@ radio.onReceivedString(function (receivedString) {
                         . . . . .
                         `)
                 } else {
+                    quest_Note_2.quest_Show_String_For_Note_Big_Func(
+                    "Following Block_Code Moddable"
+                    )
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    30,
+                    0
+                    )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                     )
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
                 }
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                )
             } else if (receivedString == "stop") {
-                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                0,
-                0
-                )
                 if (false) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following Block More as Visual Comment Since very Laggy"
@@ -418,11 +409,15 @@ radio.onReceivedString(function (receivedString) {
                         . . . . .
                         `)
                 } else {
-                    screen_Clear_Func()
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    0,
+                    0
                     )
-                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+                    )
                 }
             } else {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -810,7 +805,6 @@ basic.forever(function () {
                             quest_Note_1.quest_Show_String_For_Note_Big_Func(
                             "Controller_Joystick: North"
                             )
-                            radio.sendString("forward")
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Following Block More as Visual Comment Since very Laggy"
@@ -823,6 +817,7 @@ basic.forever(function () {
                                     . . . . .
                                     `)
                             } else {
+                                radio.sendString("forward")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
@@ -835,7 +830,6 @@ basic.forever(function () {
                             quest_Note_1.quest_Show_String_For_Note_Big_Func(
                             "Controller_Joystick: South"
                             )
-                            radio.sendString("backward")
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Following Block More as Visual Comment Since very Laggy"
@@ -848,6 +842,7 @@ basic.forever(function () {
                                     . . # . .
                                     `)
                             } else {
+                                radio.sendString("backward")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
@@ -860,7 +855,6 @@ basic.forever(function () {
                             quest_Note_1.quest_Show_String_For_Note_Big_Func(
                             "Controller_Joystick: West"
                             )
-                            radio.sendString("left")
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Following Block More as Visual Comment Since very Laggy"
@@ -873,6 +867,7 @@ basic.forever(function () {
                                     . . . . .
                                     `)
                             } else {
+                                radio.sendString("left")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
@@ -885,7 +880,6 @@ basic.forever(function () {
                             quest_Note_1.quest_Show_String_For_Note_Big_Func(
                             "Controller_Joystick: East"
                             )
-                            radio.sendString("right")
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "Following Block More as Visual Comment Since very Laggy"
@@ -898,6 +892,7 @@ basic.forever(function () {
                                     . . . . .
                                     `)
                             } else {
+                                radio.sendString("right")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
