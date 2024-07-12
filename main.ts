@@ -34,11 +34,11 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
             quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(0.2, quest_Time_Units_Enum.Seconds)
         }
         basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
+            # . # . #
+            . # # # .
+            # # . # #
+            . # # # .
+            # . # . #
             `)
         if (true) {
             quest_Note_3.quest_Show_String_For_Note_Small_Func(
