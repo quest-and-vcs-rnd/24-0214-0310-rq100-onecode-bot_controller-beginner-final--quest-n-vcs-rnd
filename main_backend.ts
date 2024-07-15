@@ -224,7 +224,7 @@ function network_GroupChannel_Show_Func(screenBrightness_int_in: number) {
     }
     for (let index3 = 0; index3 <= network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int - 1; index3++) {
         _codeComment_AsText = "Resides on Columns (Base0): 2"
-        led.plotBrightness(Math.idiv(index3, 5) + 3, index3 % 5, screenBrightness_int_in)
+        led.plotBrightness(Math.idiv(index3, 5) + 2, index3 % 5, screenBrightness_int_in)
     }
 }
 basic.forever(function () {
