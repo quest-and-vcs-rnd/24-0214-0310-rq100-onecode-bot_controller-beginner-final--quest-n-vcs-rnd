@@ -222,6 +222,10 @@ function network_GroupChannel_Show_Func(screenBrightness_int_in: number) {
         ////jwc o led.plot(Math.idiv(index2, 5) + 3, index2 % 5)
         led.plotBrightness(Math.idiv(index2, 5) + 3, index2 % 5, screenBrightness_int_in)
     }
+    for (let index3 = 0; index3 <= network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int - 1; index3++) {
+        _codeComment_AsText = "Resides on Columns (Base0): 2"
+        led.plotBrightness(Math.idiv(index3, 5) + 3, index3 % 5, screenBrightness_int_in)
+    }
 }
 basic.forever(function () {
     _codeComment_AsText = "DashboardDisplay_GroupChannel_Edit_Mode"
@@ -288,12 +292,19 @@ basic.forever(function () {
                 // //jwc n: seems timing issue, place earlier before state checking: quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(5, quest_Time_Units_Enum.Seconds)
                 _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
 
-                network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int, 10)
-                network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = network_GroupChannel_MyBotAndController_Base0_Int % 10
+                ////jwc y network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int, 10)
+                ////jwc y network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = network_GroupChannel_MyBotAndController_Base0_Int % 10
+
+                network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int, 100)
+                network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int - network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100, 10)
+                network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int - ((network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100) + (network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int * 10)), 1)
 
                 ////jwc y do at lower level: screen_Clear_Func()
                 ////jwc y network_GroupChannel_Show_Func(screenBrightness_MI_INT)
                 network_GroupChannel_Show_Func(screenBrightness_HI_DEFAULT_INT)
+                serial.writeLine("24-0714-2350> " + network_GroupChannel_MyBotAndController_Base0_Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int)
+
+                
 
             } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT) {
                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
