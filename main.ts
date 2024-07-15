@@ -247,6 +247,12 @@ input.onButtonPressed(Button.AB, function () {
             network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int, 100)
             network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int - network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100, 10)
             network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int - (network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100 + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int * 10), 1)
+            if (true) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Since not enough input buttons to allow manual override of hundreds_digit, will override hundreds_digit to always be 0, to stabilize at a known value"
+                )
+                network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
+            }
         } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
             quest_Note_2.quest_Show_String_For_Note_Small_Func(
             "Just exited the above_conditioned 'if then' state and will process accordingly as needed:"
@@ -266,6 +272,12 @@ input.onButtonPressed(Button.AB, function () {
             network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int, 100)
             network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int - network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100, 10)
             network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = Math.idiv(network_GroupChannel_MyBotAndController_Base0_Int - (network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100 + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int * 10), 1)
+            if (true) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Since not enough input buttons to allow manual override of hundreds_digit, will override hundreds_digit to always be 0, to stabilize at a known value"
+                )
+                network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
+            }
         } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
             quest_Note_2.quest_Show_String_For_Note_Small_Func(
             "Just entered the above_conditioned 'if then' state and will process accordingly as needed:"
