@@ -287,7 +287,9 @@ input.onButtonPressed(Button.AB, function () {
             radio.setGroup(network_GroupChannel_MyBotAndController_Base0_Int)
         }
     }
-    serial.writeLine("24-0714-2351> " + network_GroupChannel_MyBotAndController_Base0_Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int)
+    if (false) {
+        serial.writeLine("24-0714-2351> " + network_GroupChannel_MyBotAndController_Base0_Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int)
+    }
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "Level 2.1: Variables_n_Constants_Yes"
     )

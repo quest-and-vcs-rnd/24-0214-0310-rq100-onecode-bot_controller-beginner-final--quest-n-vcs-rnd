@@ -302,9 +302,7 @@ basic.forever(function () {
                 ////jwc y do at lower level: screen_Clear_Func()
                 ////jwc y network_GroupChannel_Show_Func(screenBrightness_MI_INT)
                 network_GroupChannel_Show_Func(screenBrightness_HI_DEFAULT_INT)
-                serial.writeLine("24-0714-2350> " + network_GroupChannel_MyBotAndController_Base0_Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int)
-
-                
+                ////jwc y for debug: serial.writeLine("24-0714-2350> " + network_GroupChannel_MyBotAndController_Base0_Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int + " " + network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int)
 
             } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT) {
                 quest_Note_2.quest_Show_String_For_Note_Small_Func(
