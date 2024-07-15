@@ -768,7 +768,7 @@ if (true) {
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Following Block_Code Moddable"
         )
-        network_GroupChannel_MyBotAndController_Base0_Int = 123
+        network_GroupChannel_MyBotAndController_Base0_Int = 1
     }
     if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
