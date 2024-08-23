@@ -15,18 +15,18 @@
 
 # B. Can Mod the Code-Block Right After A Bright-Green Comment-Block
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-52-01.png-LookForBrightGreenComment_Block.png?raw=true)
-# B1. ___Basic Required___ Modding/Coding
+# B1. ___Basic Required:___ Modding/Coding ~ Lesson 02: Joy Ride & Lesson 05: Sumo
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-07-46-EasyToCode-FastToDrive-ModGroupChannelNum-02.png?raw=true)
 # (If First-Time Modding/Coding, Then can Skip Section B2 To Do Section C.)
 # .
-# B2. ___Bonus Optional___ Modding/Coding
+# B2. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Only Lesson 05: Sumo
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
 
-# C. Flash/Download This Same Code to Both 'micro:bits'
+# C. ___Basic Required:___ Flash/Download This Same Code to Both 'micro:bits' ~ Any Lesson
 
 # * C1
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-28-01-FlashDownloadToController_Joystick-02.png?raw=true)
@@ -52,7 +52,7 @@
 
 ---
 
-# D. Quick-Start for Network_Pairing
+# D. ___Basic Required:___ Quick-Start for Network_Pairing ~ Any Lesson
 
 # * D1: Part 1 ~ Scrolling Instructions
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/24-0719-0630-Rq100-NetworkPairing-StartupScrollingText-Gif-480x240-ClipSpeed_1pt5-03.gif?raw=true)
@@ -74,9 +74,9 @@
 # * E2. Staff: Chrome (Web) Browser ~ One-Time Setup 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
 
-# [* E3. Staff: General-Setup WebLink](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
+# [* E3. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
 
-# [* E4. Staff: Educator Resource Guide ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
+# [* E4. Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
 
 # THE END (For Staff)
