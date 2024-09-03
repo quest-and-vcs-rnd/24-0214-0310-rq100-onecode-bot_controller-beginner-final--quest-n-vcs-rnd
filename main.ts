@@ -323,8 +323,8 @@ radio.onReceivedString(function (receivedString) {
                     )
                     quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
                     quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    30,
-                    30
+                    50,
+                    50
                     )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -350,8 +350,8 @@ radio.onReceivedString(function (receivedString) {
                     )
                     quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
                     quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    -30,
-                    -30
+                    -50,
+                    -50
                     )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -378,7 +378,7 @@ radio.onReceivedString(function (receivedString) {
                     quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
                     quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
                     0,
-                    30
+                    50
                     )
                     screen_Clear_Func()
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -404,7 +404,7 @@ radio.onReceivedString(function (receivedString) {
                     )
                     quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
                     quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    30,
+                    50,
                     0
                     )
                     screen_Clear_Func()
