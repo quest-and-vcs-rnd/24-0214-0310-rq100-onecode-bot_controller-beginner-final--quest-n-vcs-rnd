@@ -15,18 +15,18 @@
 
 # B. Can Mod the Code-Block Right After A Bright-Green Comment-Block
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-52-01.png-LookForBrightGreenComment_Block.png?raw=true)
-# B1. ___Basic Required:___ Modding/Coding ~ Lesson 02: Joy Ride & Lesson 05: Sumo
+# B1. ___Basic Required:___ Modding/Coding ~ 'Lesson 02: Joy Ride' & 'Lesson 05: Sumo'
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-07-46-EasyToCode-FastToDrive-ModGroupChannelNum-02.png?raw=true)
-# (If First-Time Modding/Coding, Then can Skip Section B2 To Do Section C.)
+# (If on 'Lesson 02: Joy Ride' (First-Time Modding/Coding), Then can Skip (Next) Section B2 To Do Section C.)
 # .
-# B2. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Only Lesson 05: Sumo
+# B2. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Only for: 'Lesson 05: Sumo'
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
 
-# C. ___Basic Required:___ Flash/Download This Same Code to Both 'micro:bits' ~ Any Lesson
+# C. ___Basic Required:___ Flash/Download This Same Code to Both 'micro:bits' ~ For 'Any Lesson'
 
 # * C1
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-28-01-FlashDownloadToController_Joystick-02.png?raw=true)
@@ -46,6 +46,9 @@
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/24-0711-1500A-B100-BotCode-Flash_Download-Img_090323-0326-1310-FlashingOnly-ForGifUnder25Mb-5sec-640x360.gif?raw=true)
 
 # * C6
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-09-11_14-38-57-FlashSadFaceError.png?raw=true)
+
+# * C7
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-34-56-FlashDownloadToBot-02.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
