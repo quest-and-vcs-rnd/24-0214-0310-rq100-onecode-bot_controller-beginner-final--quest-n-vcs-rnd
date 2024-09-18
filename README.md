@@ -70,16 +70,28 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-# E. FOR STAFF USE:
 
-# [* E1. Staff: Teacher-Guide ~ Right-Side-Panel Mini-Tutorial Separate-Web-Page ](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+# E. ___Troubleshooting:___ Network-Pairing ~ Any Lesson
 
-# * E2. Staff: Chrome (Web) Browser ~ One-Time Setup 
+# * E1: Check Bot's Battery is 3 out of 4 bars
+
+# * E2: Check-Joystick's Power Light is On
+
+# * E3: If Network-Pairing still not working, Turn Both Devices Off: Controller-Joystick and Bot
+# * E3a: Turn Both Devices On: Controller-Joystick & Bot (in any Device Order)
+# * E3b: Press 'A' or 'B' Buttonon ONLY Controller-Joystick (as in Step D2) To Start Network-Pairing with Bot
+
+---
+# F. FOR STAFF USE:
+
+# [* F1. Staff: Teacher-Guide ~ Right-Side-Panel Mini-Tutorial Separate-Web-Page ](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+
+# * F2. Staff: Chrome (Web) Browser ~ One-Time Setup 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
 
-# [* E3. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
+# [* F3. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
 
-# [* E4. Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
+# [* F4. Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
 
 # THE END (For Staff)
