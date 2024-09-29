@@ -1,6 +1,6 @@
 {
     "name": "24-0214-0310-rq100-onecode-bot_controller-beginner-final--24-0903-0020--https://makecode.microbit.org/S85195-89753-66510-61916",
-    "version": "0.9.0",
+    "version": "0.10.0",
     "description": "",
     "dependencies": {
         "core": "*",
