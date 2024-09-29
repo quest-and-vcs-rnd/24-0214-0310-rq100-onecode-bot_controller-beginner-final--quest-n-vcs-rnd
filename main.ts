@@ -49,6 +49,129 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
         control.reset()
     }
 })
+function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
+	
+}
+function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "turbo_fo") {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block More as Visual Comment Since very Laggy"
+            )
+            basic.showLeds(`
+                . . . . .
+                . . # . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+        } else {
+            motor_Power_Full_Current_Pos = 100
+            // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+            motor_Power_Full_Current_Pos,
+            motor_Power_Full_Current_Pos
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Turbo_Fo" + "Mtr_Full" + motor_Power_Full_Current_Pos,
+            0,
+            2
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+            )
+        }
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "turbo_ba") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block More as Visual Comment Since very Laggy"
+            )
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . # . . .
+                . . . . .
+                . . . . .
+                `)
+        } else {
+            motor_Power_Full_Current_Pos = 100
+            // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+            -1 * motor_Power_Full_Current_Pos,
+            1 * motor_Power_Full_Current_Pos
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Turbo_Ba" + "Mtr_Full" + motor_Power_Full_Current_Pos,
+            0,
+            2
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+            )
+        }
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "serv_up") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block More as Visual Comment Since very Laggy"
+            )
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . # .
+                . . . . .
+                . . . . .
+                `)
+        } else {
+            servoArm_UP_DEGREES_INT = 45
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+            )
+            wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_UP_DEGREES_INT)
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Servo-Arm:" + "serv_up:" + servoArm_UP_DEGREES_INT,
+            0,
+            2
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+            )
+        }
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "serv_dwn") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block More as Visual Comment Since very Laggy"
+            )
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . # . .
+                . . . . .
+                `)
+        } else {
+            servoArm_DOWN_DEGREES_INT = 20
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+            )
+            wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Servo-Arm:" + "serv_dn:" + servoArm_DOWN_DEGREES_INT,
+            0,
+            2
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+            )
+        }
+    } else {
+    	
+    }
+}
+function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
+	
+}
 input.onButtonPressed(Button.A, function () {
     if (true) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -306,6 +429,9 @@ radio.onReceivedString(function (receivedString) {
         // //jwc o if (device_Type_Bot_Bool && _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT) {
         // //jwc o } else if (!(device_Type_Bot_Bool)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            bot_Servo_Motors_Basic_Fn(receivedString)
+            bot_Servo_Motors_Turbo_Fn(receivedString)
+            bot_Servo_Arms_Fn(receivedString)
             if (receivedString == "forward") {
                 if (false) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -437,135 +563,16 @@ radio.onReceivedString(function (receivedString) {
                     "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
                     )
                 }
-            } else if (receivedString == "turbo_fo") {
-                if (false) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following Block More as Visual Comment Since very Laggy"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . # . .
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        `)
-                } else {
-                    motor_Power_Full_Current_Pos = 100
-                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    motor_Power_Full_Current_Pos,
-                    motor_Power_Full_Current_Pos
-                    )
-                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                    "Turbo_Fo" + "Mtr_Full" + motor_Power_Full_Current_Pos,
-                    0,
-                    2
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
-                    )
-                }
-            } else if (receivedString == "turbo_ba") {
-                if (false) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following Block More as Visual Comment Since very Laggy"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . # . . .
-                        . . . . .
-                        . . . . .
-                        `)
-                } else {
-                    motor_Power_Full_Current_Pos = 100
-                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                    -1 * motor_Power_Full_Current_Pos,
-                    1 * motor_Power_Full_Current_Pos
-                    )
-                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                    "Turbo_Ba" + "Mtr_Full" + motor_Power_Full_Current_Pos,
-                    0,
-                    2
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
-                    )
-                }
-            } else if (receivedString == "serv_up") {
-                if (false) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following Block More as Visual Comment Since very Laggy"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . . . # .
-                        . . . . .
-                        . . . . .
-                        `)
-                } else {
-                    servoArm_UP_DEGREES_INT = 45
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
-                    )
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_UP_DEGREES_INT)
-                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                    "Servo-Arm:" + "serv_up:" + servoArm_UP_DEGREES_INT,
-                    0,
-                    2
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
-                    )
-                }
-            } else if (receivedString == "serv_dwn") {
-                if (false) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following Block More as Visual Comment Since very Laggy"
-                    )
-                    basic.showLeds(`
-                        . . . . .
-                        . . . . .
-                        . . . . .
-                        . . # . .
-                        . . . . .
-                        `)
-                } else {
-                    servoArm_DOWN_DEGREES_INT = 20
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
-                    )
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
-                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                    "Servo-Arm:" + "serv_dn:" + servoArm_DOWN_DEGREES_INT,
-                    0,
-                    2
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
-                    )
-                }
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
+            } else if (false) {
+            	
             } else {
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Error: Unknown Msg"
-                )
-                // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                0,
-                0
-                )
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "For now, all 4 corners = Error: Unknown Msg"
-                    )
-                    error_Message_Func("2024-0213-1700", receivedString)
-screen_IconMessage_Func("error")
-                }
+            	
             }
             network__CpuCycle_Post__Management_Func()
         } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
@@ -646,30 +653,30 @@ let servoArm_Right_Up_Bool = false
 let servoArm_Left_Up_Bool = false
 let servoArm_Right_UP_DEGREES_INT = 0
 let servoArm_Left_UP_DEGREES_INT = 0
-let servoArm_UP_DEGREES_INT = 0
-let servoArm_DOWN_DEGREES_INT = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
 let motor_Power_ZERO_INT = 0
 let motor_Power_Half_Current = 0
 let motor_Power_Full_Current_Neg = 0
-let motor_Power_Full_Current_Pos = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
-let _system_Hw_DeviceType__Bot__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
-let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
+let servoArm_DOWN_DEGREES_INT = 0
+let servoArm_UP_DEGREES_INT = 0
+let motor_Power_Full_Current_Pos = 0
+let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
+let _system_Hw_DeviceType__Bot__ID_INT = 0
+let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
@@ -925,6 +932,9 @@ basic.forever(function () {
         "Network Message Max_Character_Length: 19"
         )
     }
+})
+basic.forever(function () {
+	
 })
 loops.everyInterval(3600000, function () {
     quest_Note_5.quest_Show_String_For_Note_Small_Func(
