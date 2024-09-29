@@ -191,61 +191,59 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
     }
 }
 function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_up") {
-            if (false) {
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following Block More as Visual Comment Since very Laggy"
-                )
-                basic.showLeds(`
-                    # # . . .
-                    . # # # .
-                    . . . # #
-                    . . . . .
-                    . . . . .
-                    `)
-            } else {
-                servoArm_UP_DEGREES_INT = 45
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
-                )
-                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_UP_DEGREES_INT)
-                quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                "Servo-Arm:" + "serv_up:" + servoArm_UP_DEGREES_INT,
-                0,
-                2
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
-                )
-            }
-        } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
-            if (false) {
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following Block More as Visual Comment Since very Laggy"
-                )
-                basic.showLeds(`
-                    . . . . .
-                    . . . . .
-                    . . . # #
-                    . # # . .
-                    # # . . .
-                    `)
-            } else {
-                servoArm_DOWN_DEGREES_INT = 20
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
-                )
-                wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
-                quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-                "Servo-Arm:" + "serv_dn:" + servoArm_DOWN_DEGREES_INT,
-                0,
-                2
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
-                )
-            }
+    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_up") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block More as Visual Comment Since very Laggy"
+            )
+            basic.showLeds(`
+                # # . . .
+                . # # # .
+                . . . # #
+                . . . . .
+                . . . . .
+                `)
+        } else {
+            servoArm_UP_DEGREES_INT = 45
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+            )
+            wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_UP_DEGREES_INT)
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Servo-Arm:" + "serv_up:" + servoArm_UP_DEGREES_INT,
+            0,
+            2
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+            )
+        }
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block More as Visual Comment Since very Laggy"
+            )
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . # #
+                . # # . .
+                # # . . .
+                `)
+        } else {
+            servoArm_DOWN_DEGREES_INT = 20
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+            )
+            wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Servo-Arm:" + "serv_dn:" + servoArm_DOWN_DEGREES_INT,
+            0,
+            2
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+            )
         }
     }
 }
@@ -257,8 +255,8 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType
     }
 })
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "fwd_max") {
+    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "fwd_max") {
+        if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Following Block More as Visual Comment Since very Laggy"
             )
@@ -656,12 +654,12 @@ let controller__Polar_OriginAtCenter__MagnitudePixel__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
+let _system_Hw_DeviceType__Bot__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
 let motor_Power_Full_Current_Pos = 0
 let servoArm_DOWN_DEGREES_INT = 0
 let servoArm_UP_DEGREES_INT = 0
-let _system_Hw_DeviceType__Bot__ID_INT = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
