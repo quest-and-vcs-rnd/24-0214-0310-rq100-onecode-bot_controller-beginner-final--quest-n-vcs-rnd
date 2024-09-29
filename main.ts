@@ -193,7 +193,8 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                     )
                 }
                 if (true) {
-                    servoArm_DOWN_DEGREES_INT = 0
+                    servoArm_DOWN_DEGREES_INT = 20
+                    servoArm_UP_DEGREES_INT = 45
                     servoArm_Left_UP_DEGREES_INT = 20
                     servoArm_Right_UP_DEGREES_INT = 45
                     wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
@@ -220,7 +221,7 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.up, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("serv_rgt")
+        radio.sendString("serv_up")
         screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
     }
 })
@@ -298,9 +299,6 @@ input.onButtonPressed(Button.AB, function () {
     )
 })
 radio.onReceivedString(function (receivedString) {
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    "24-0609-0640 jwc obsolete: replaced with new stack with servo_lft & servo_rht."
-    )
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Network_Message Received' Dual Usage:: Usage #1: Operate Bot from Controller_Joystick"
@@ -439,6 +437,118 @@ radio.onReceivedString(function (receivedString) {
                     "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
                     )
                 }
+            } else if (receivedString == "turbo_fo") {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . # . .
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else {
+                    motor_Power_Full_Current_Pos = 100
+                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    motor_Power_Full_Current_Pos,
+                    motor_Power_Full_Current_Pos
+                    )
+                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+                    "Turbo_Fo" + "Mtr_Full" + motor_Power_Full_Current_Pos,
+                    0,
+                    2
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+                    )
+                }
+            } else if (receivedString == "turbo_ba") {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . # . . .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else {
+                    motor_Power_Full_Current_Pos = 100
+                    // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+                    quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+                    quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                    -1 * motor_Power_Full_Current_Pos,
+                    1 * motor_Power_Full_Current_Pos
+                    )
+                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+                    "Turbo_Ba" + "Mtr_Full" + motor_Power_Full_Current_Pos,
+                    0,
+                    2
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+                    )
+                }
+            } else if (receivedString == "serv_up") {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . . # .
+                        . . . . .
+                        . . . . .
+                        `)
+                } else {
+                    servoArm_UP_DEGREES_INT = 45
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+                    )
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_UP_DEGREES_INT)
+                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+                    "Servo-Arm:" + "serv_up:" + servoArm_UP_DEGREES_INT,
+                    0,
+                    2
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+                    )
+                }
+            } else if (receivedString == "serv_dwn") {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block More as Visual Comment Since very Laggy"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . . . . .
+                        . . . . .
+                        . . # . .
+                        . . . . .
+                        `)
+                } else {
+                    servoArm_DOWN_DEGREES_INT = 20
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+                    )
+                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
+                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+                    "Servo-Arm:" + "serv_dn:" + servoArm_DOWN_DEGREES_INT,
+                    0,
+                    2
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
+                    )
+                }
             } else {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Error: Unknown Msg"
@@ -520,7 +630,7 @@ input.onButtonPressed(Button.B, function () {
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.up, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("serv_lft")
+        radio.sendString("serv_dwn")
         screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
     }
 })
@@ -536,6 +646,7 @@ let servoArm_Right_Up_Bool = false
 let servoArm_Left_Up_Bool = false
 let servoArm_Right_UP_DEGREES_INT = 0
 let servoArm_Left_UP_DEGREES_INT = 0
+let servoArm_UP_DEGREES_INT = 0
 let servoArm_DOWN_DEGREES_INT = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
@@ -615,22 +726,22 @@ basic.forever(function () {
         )
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
                 quest_Note_1.quest_Show_String_For_Note_Big_Func(
                 "Controller_Joystick: gear_lo"
                 )
                 motor_Power_Gear_Number_Int = 1
-                radio.sendString("gear_lo")
+                radio.sendString("turbo_fo")
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                 )
                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
                 quest_Note_1.quest_Show_String_For_Note_Big_Func(
                 "Controller_Joystick: gear_hi"
                 )
                 motor_Power_Gear_Number_Int = 2
-                radio.sendString("gear_hi")
+                radio.sendString("turbo_ba")
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                 )
