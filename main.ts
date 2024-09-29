@@ -1,7 +1,7 @@
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.up, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("serv_dwn")
+        radio.sendString("arm_down")
         screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
     }
 })
@@ -192,15 +192,15 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
 }
 function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "serv_up") {
+        if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_up") {
             if (false) {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Following Block More as Visual Comment Since very Laggy"
                 )
                 basic.showLeds(`
-                    . . . . .
-                    . . . . .
-                    . . . # .
+                    # # . . .
+                    . # # # .
+                    . . . # #
                     . . . . .
                     . . . . .
                     `)
@@ -219,7 +219,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
                 "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
                 )
             }
-        } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "serv_dwn") {
+        } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
             if (false) {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Following Block More as Visual Comment Since very Laggy"
@@ -227,9 +227,9 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
                 basic.showLeds(`
                     . . . . .
                     . . . . .
-                    . . . . .
-                    . . # . .
-                    . . . . .
+                    . . . # #
+                    . # # . .
+                    # # . . .
                     `)
             } else {
                 servoArm_DOWN_DEGREES_INT = 20
@@ -252,7 +252,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.up, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("serv_up")
+        radio.sendString("arm_up")
         screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
     }
 })
@@ -263,11 +263,11 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             "Following Block More as Visual Comment Since very Laggy"
             )
             basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . # .
-                . . . . .
-                . . . . .
+                . . # . .
+                . # # # .
+                # . # . #
+                . . # . .
+                . . # . .
                 `)
         } else {
             motor_Power_Full_Current_Pos = 100
@@ -292,19 +292,19 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             "Following Block More as Visual Comment Since very Laggy"
             )
             basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
                 . . # . .
-                . . . . .
+                . . . # .
+                # # # # #
+                . . . # .
+                . . # . .
                 `)
         } else {
             motor_Power_Full_Current_Pos = 100
             // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
             quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-            -1 * motor_Power_Full_Current_Pos,
-            1 * motor_Power_Full_Current_Pos
+            1 * motor_Power_Full_Current_Pos,
+            -1 * motor_Power_Full_Current_Pos
             )
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
             "Turbo_Ba" + "Mtr_Full" + motor_Power_Full_Current_Pos,
