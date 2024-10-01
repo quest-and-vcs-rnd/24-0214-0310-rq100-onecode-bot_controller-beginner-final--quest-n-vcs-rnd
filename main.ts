@@ -202,7 +202,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             )
             servoArm_Now_Degrees_Int = servoArm_UP_DEGREES_INT
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+            "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
             )
             wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
@@ -238,7 +238,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             )
             servoArm_Now_Degrees_Int = servoArm_DOWN_DEGREES_INT
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
+            "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
             )
             wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
