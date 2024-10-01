@@ -3,6 +3,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         radio.sendString("arm_down")
         screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
+        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
     }
 })
 function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: number, screen_y_new_num: number) {
@@ -197,26 +198,33 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             "Following Block More as Visual Comment Since very Laggy"
             )
             basic.showLeds(`
-                # # . . .
-                . # # # .
                 . . . # #
+                . # # # .
+                # # . . .
                 . . . . .
                 . . . . .
                 `)
         } else {
-            servoArm_UP_DEGREES_INT = 45
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "360 can be jittery, try 330"
+            )
+            servoArm_Degrees_Int = 330
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
             )
-            wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_UP_DEGREES_INT)
+            wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Degrees_Int)
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Servo-Arm:" + "serv_up:" + servoArm_UP_DEGREES_INT,
+            "Servo_Arm:" + "arm_up:" + servoArm_Degrees_Int,
             0,
             2
             )
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
             )
+            if (false) {
+                servoArm_UP_DEGREES_INT = 45
+                servoArm_Degrees_Int = 45
+            }
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         if (false) {
@@ -226,24 +234,31 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             basic.showLeds(`
                 . . . . .
                 . . . . .
-                . . . # #
-                . # # . .
                 # # . . .
+                . # # # .
+                . . . # #
                 `)
         } else {
-            servoArm_DOWN_DEGREES_INT = 20
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "00 can be jittery, try 30"
+            )
+            servoArm_Degrees_Int = 30
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
             )
-            wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_DOWN_DEGREES_INT)
+            wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Degrees_Int)
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Servo-Arm:" + "serv_dn:" + servoArm_DOWN_DEGREES_INT,
+            "Servo_Arm:" + "arm_down:" + servoArm_Degrees_Int,
             0,
             2
             )
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
             )
+            if (false) {
+                servoArm_DOWN_DEGREES_INT = 20
+                servoArm_Degrees_Int = 20
+            }
         }
     }
 }
@@ -252,6 +267,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         radio.sendString("arm_up")
         screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
+        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
     }
 })
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
@@ -459,14 +475,26 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                     )
                 }
                 if (true) {
-                    servoArm_DOWN_DEGREES_INT = 20
-                    servoArm_UP_DEGREES_INT = 45
-                    servoArm_Left_UP_DEGREES_INT = 20
-                    servoArm_Right_UP_DEGREES_INT = 45
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, servoArm_Left_UP_DEGREES_INT)
-                    wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S6, servoArm_Right_UP_DEGREES_INT)
-                    servoArm_Left_Up_Bool = true
-                    servoArm_Right_Up_Bool = true
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "GeekServo: For servo_360: start at 180"
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Start w/ Label 'GeekServo' facing out for Servo_Arm_Left, for 180-degrees to face forward for optimum range"
+                    )
+                    servoArm_Degrees_Int = 180
+                    wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Degrees_Int)
+                    wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, servoArm_Degrees_Int)
+                    if (false) {
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Obsolete?"
+                        )
+                        servoArm_DOWN_DEGREES_INT = 0
+                        servoArm_UP_DEGREES_INT = 90
+                        servoArm_Left_UP_DEGREES_INT = 20
+                        servoArm_Right_UP_DEGREES_INT = 45
+                        servoArm_Left_Up_Bool = true
+                        servoArm_Right_Up_Bool = true
+                    }
                 }
                 if (true) {
                     quest_Dashboard.quest_Show_Oled_Cleared_Func(
@@ -660,6 +688,7 @@ let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
 let motor_Power_Full_Current_Pos = 0
 let servoArm_DOWN_DEGREES_INT = 0
 let servoArm_UP_DEGREES_INT = 0
+let servoArm_Degrees_Int = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
