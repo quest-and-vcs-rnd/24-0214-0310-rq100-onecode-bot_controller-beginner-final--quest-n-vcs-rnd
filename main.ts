@@ -64,7 +64,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
                 `)
         } else {
             quest_Note_2.quest_Show_String_For_Note_Big_Func(
-            "Following Block_Code Moddable"
+            "B-2: Next Block_Code Moddable"
             )
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
             quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
@@ -91,7 +91,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
                 `)
         } else {
             quest_Note_2.quest_Show_String_For_Note_Big_Func(
-            "Following Block_Code Moddable"
+            "B-2: Next Block_Code Moddable"
             )
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
             quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
@@ -118,7 +118,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
                 `)
         } else {
             quest_Note_2.quest_Show_String_For_Note_Big_Func(
-            "Following Block_Code Moddable"
+            "B-2: Next Block_Code Moddable"
             )
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
             quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
@@ -145,7 +145,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
                 `)
         } else {
             quest_Note_2.quest_Show_String_For_Note_Big_Func(
-            "Following Block_Code Moddable"
+            "B-2: Next Block_Code Moddable"
             )
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
             quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
@@ -198,7 +198,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
                 `)
         } else {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "360 can be jittery, try 330"
+            "If [0|360] is jittery, insure battery at 75% power min."
             )
             servoArm_Now_Degrees_Int = servoArm_UP_DEGREES_INT
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -219,10 +219,6 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
             )
-            if (false) {
-                servoArm_UP_DEGREES_INT = 45
-                servoArm_Now_Degrees_Int = 45
-            }
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         if (false) {
@@ -238,7 +234,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
                 `)
         } else {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "00 can be jittery, try 30"
+            "If [0|360] is jittery, insure battery at 75% power min."
             )
             servoArm_Now_Degrees_Int = servoArm_DOWN_DEGREES_INT
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -259,10 +255,6 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
             )
-            if (false) {
-                servoArm_DOWN_DEGREES_INT = 20
-                servoArm_Now_Degrees_Int = 20
-            }
         }
     }
 }
@@ -280,6 +272,9 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
                 . . # . .
                 `)
         } else {
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Next Block_Code Moddable: Forward-Max: Button-F"
+            )
             motor_Power_Full_Current_Pos = 100
             // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
@@ -314,6 +309,9 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
                 . . # . .
                 `)
         } else {
+            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            "Next Block_Code Moddable: Turn-Max: Button-E"
+            )
             motor_Power_Full_Current_Pos = 100
             // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
             quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
@@ -380,10 +378,10 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
         "THIS STACK NOT CUSTOMIZABLE"
         )
         if (true) {
-            quest_Note_5.quest_Show_String_For_Note_Small_Func(
+            quest_Note_6.quest_Show_String_For_Note_Small_Func(
             "Mannual Overrides to fix compiler bug"
             )
-            quest_Note_5.quest_Show_String_For_Note_Small_Func(
+            quest_Note_6.quest_Show_String_For_Note_Small_Func(
             "Following assignments prevent variables from being 'grayed' out"
             )
             if (true) {
@@ -537,7 +535,7 @@ input.onButtonPressed(Button.AB, function () {
         // //jwc o }
         // //jwc o network_GroupChannel_Show_Func()
         if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT) {
-            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Just entered the above_conditioned 'if then' state and will process accordingly as needed:"
             )
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT
@@ -551,8 +549,8 @@ input.onButtonPressed(Button.AB, function () {
                 network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
             }
         } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
-            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-            "Just exited the above_conditioned 'if then' state and will process accordingly as needed:"
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Just entered the above_conditioned 'if then' state and will process accordingly as needed:"
             )
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
             network_GroupChannel_MyBotAndController_Base0_Int = network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int * 100 + (network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int * 10 + network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int * 1)
@@ -562,7 +560,7 @@ input.onButtonPressed(Button.AB, function () {
         // //jwc debug: serial.writeLine("HW_Null: SW_Null >> SW_Edit")
         // //jwc debug: serial.writeLine("HW_Null: SW_Edit >> SW_Null")
         if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Null__ID_INT) {
-            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Just entered the above_conditioned 'if then' state and will process accordingly as needed:"
             )
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT
@@ -576,7 +574,7 @@ input.onButtonPressed(Button.AB, function () {
                 network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
             }
         } else if (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT) {
-            quest_Note_2.quest_Show_String_For_Note_Small_Func(
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Just entered the above_conditioned 'if then' state and will process accordingly as needed:"
             )
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Null__ID_INT
@@ -622,10 +620,10 @@ radio.onReceivedString(function (receivedString) {
             quest_Note_6.quest_Show_String_For_Note_Big_Func(
             "Level 1.0: Variables_n_Constants_Not (Hardcode) ~ Yes: 1-Sec Lag 'show leds'"
             )
-            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            quest_Note_6.quest_Show_String_For_Note_Small_Func(
             "For exclusive activation, place this 'on radio received' stack higher than other 'on radio received' stacks"
             )
-            quest_Note_5.quest_Show_String_For_Note_Small_Func(
+            quest_Note_6.quest_Show_String_For_Note_Small_Func(
             "Bot Stack: Main 1of1 ~ 'on radio received(receivedString)'"
             )
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -689,6 +687,9 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "24-0916-0620 Deactivate Servo_Motor[_Left|_Right] Diagnostic Test, Since Complicates UI"
     )
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    "24-0916-0620 Deactivate Servo_Motor[_Left|_Right] Diagnostic Test, Since Complicates UI"
+    )
 })
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
@@ -728,7 +729,7 @@ let screen_X_Old_Num = 0
 let servoArm_Now_Degrees_Int = 0
 let servoArm_DOWN_DEGREES_INT = 0
 let servoArm_UP_DEGREES_INT = 0
-let servoArm_STARTUP_DEGREES_INT = 0
+let servoArm_DEFAULT_DEGREES_INT = 0
 let network_GroupChannel_MyBotAndController_Base0_Int = 0
 if (true) {
     quest_Note_1.quest_Show_String_For_Note_Big_Func(
@@ -742,7 +743,7 @@ if (true) {
         "Set GroupChannel_# (Bot_Id): Range [21 to 255], Default = 1"
         )
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Following Block_Code Moddable"
+        "B-1: Next Block_Code Moddable: Group-Channel-#"
         )
         network_GroupChannel_MyBotAndController_Base0_Int = 1
     }
@@ -752,38 +753,53 @@ if (true) {
 setup_BotAndController_Func()
     }
     if (true) {
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "AAA-1: Next Block_Code Moddable..."
+        )
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "...Data-Dashboard: Row-1: Title"
+        )
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-        "Data Dashboard :)",
+        "Data-Dashboard :)",
         0,
         0
         )
     }
     if (true) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "GeekServo: For servo_360: start at 180"
+        "GeekServo-360-Degrees-2kg: start at 180"
         )
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "Start w/ Label 'GeekServo' facing out for Servo_Arm_Left, for 180-degrees to face forward for optimum range"
         )
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "Servo-Arm: GeekServo_360_Degrees: 1-of-3"
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "BBB-1: Next Block_Code Moddable..."
         )
-        servoArm_STARTUP_DEGREES_INT = 180
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "Servo-Arm: GeekServo_360_Degrees: 2-of-3"
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "...Servo-Arm: 1-of-3: Default (degrees)"
+        )
+        servoArm_DEFAULT_DEGREES_INT = 180
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "BBB-2: Next Block_Code Moddable..."
+        )
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "...Servo-Arm: 2-of-3: Up-Max (degrees)"
         )
         servoArm_UP_DEGREES_INT = 360
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "Servo-Arm: GeekServo_360_Degrees: 3-of-3"
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "BBB-3: Next Block_Code Moddable..."
+        )
+        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "...Servo-Arm: 3-of-3: Down-Max (degrees)"
         )
         servoArm_DOWN_DEGREES_INT = 0
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Servo-Arm: GeekServo_360_Degrees: StartUp"
+        "Servo-Arm: GeekServo_360_Degrees: Default"
         )
-        servoArm_Now_Degrees_Int = servoArm_STARTUP_DEGREES_INT
+        servoArm_Now_Degrees_Int = servoArm_DEFAULT_DEGREES_INT
         wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-        "Arm-L:" + "Start= " + servoArm_Now_Degrees_Int,
+        "Arm-L:" + "Default= " + servoArm_Now_Degrees_Int,
         0,
         3
         )
@@ -797,13 +813,13 @@ setup_BotAndController_Func()
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 1: Variables_n_Constants_Not (Hardcode)"
         )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
         "For exclusive activation, place this 'on start' stack higher than other 'on start' stacks"
         )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
         "Bot & Controller_Joystick Stack: 'on start'"
         )
-        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
         "setup_VariablesAndConstants_UserCustomizable: Yes"
         )
     }
@@ -813,7 +829,7 @@ basic.forever(function () {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
         )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
         "Controller_Joystick Stack: Main 2of2"
         )
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -1010,10 +1026,10 @@ basic.forever(function () {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
         )
-        quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
         "Activate Stack via 'Forever' Stack_Header"
         )
-        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
         "Controller_Joystick Stack: Main 1of2"
         )
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -1022,5 +1038,196 @@ basic.forever(function () {
     }
 })
 loops.everyInterval(3600000, function () {
-	
+    quest_Note_6.quest_Show_String_For_Note_Small_Func(
+    "Above stack is practically a 'non-executing' stack that does not tie up cpu_resources with its 1 hour (3600,000)"
+    )
+    quest_Note_6.quest_Show_String_For_Note_Small_Func(
+    "Also the 'if(false)' mini-stacks will be skipped by cpu, for further non-resource burdening"
+    )
+    if (false) {
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Staff: Very Important Notes"
+        )
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Levels 1, 2, 2.1"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "* Level 1: Hardcoded Static via Actual_Numbers for MotorPower%"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "* Level 2: Softcoded Dynamic via Variables/Constants for MotorPower% "
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "* Level 2.1 Add Controller_Joystick * Level 2.2 Add Gear 3 (90%?)"
+            )
+        }
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Basic Comment_Colors Usage:: Black: Very Big Picture, Blue: Big Picture, Green: Following Block_Code Moddable, Orange: Question/TODO, Magenta: Special Multi-Purpose "
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "micro:bit Ver2 Warning during Download is Ignorable Yet Courteously Helpful"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "'if_then' mini-stacks useful for modular 3-D code select/duplicate/move/delete"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Light_Gray Functions non-editable (backend staff-use code only)"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "For Group_CHannel_# (Bot_Id): Propose: 1-10 Staff Use, 11-99 Student Use"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "SW Reset: Long_Press Logo for 3 sec min"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Built-in Diagnostic Test: Short_Press Logo for 1 sec max"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "'Blocks' Window homes 'on start'_stack as top_left corner of editor_screen, until 'on start' is moved below, then next stack to right presides"
+        )
+        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        "All These Levels are Intermediate Level Coding due to Networking Pairing Involved.  Basic Diagnostic Servo_Motors (Autonomoous) is Beginner Level."
+        )
+        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        "This Intermediate Level Network_Pairing has 1sec_Lag Response Time; The Other Advanced Level Network_Pairing has Real_Time Response Time."
+        )
+        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        "For Level 1, can keep 'Forward: set manual_servo_motors' Block functional, yet reset to 0 all other 'set manual_servo_motors' Blocks for Discovery Learning"
+        )
+        quest_Note_3.quest_Show_String_For_Note_Small_Func(
+        "If duplicate stacks exist, then the highest stack is active and others are non_active"
+        )
+    }
+    if (false) {
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Staff: Important Notes"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Upon open file, Editor zooms in on closest stack to right of original_origin from project_creation"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Semantic Naming prefers '_' vs. '-' since latter can be conufused with minus_sign"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "'every 360000 ms' (1 hour) Stacks can be ignored, esp w/ 'if false' embedded"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Avoid using 'show leds' Block since will cause lag & degrade real-time response"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Seems like 'signficant' changes to JavaScript can activate 'format code', rearrange stacks to original position"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Important 'system' variables are 1) _system_Hw_DeviceType__* (Hw=Hardware) and 2) _system_Sw_ModeState__* (Sw=Software)"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "If Buttons C-F for Gears/Misc, Maybe 'Logo Up/Down' for 'Servo_Arm Up/Down'"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "'Rotatedisplay' could be used on Bot's Led_Screen, but causes light flickering on bottom row, so maybe avoid"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
+        )
+        if (false) {
+            quest_Note_3.quest_Show_String_For_Note_Small_Func(
+            "Main upgrade from Lv1 to Lv2 is replacing cpu_laggy 'show leds' block with cpu_fast 'plox x _ y _' block, such as below: "
+            )
+            if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "West"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                led.plot(4, 2)
+            } else if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "North"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                led.plot(2, 0)
+            } else if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "East"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                led.plot(2, 4)
+            } else if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "South"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                led.plot(0, 2)
+            } else if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Idle: Neutral"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                led.plot(2, 2)
+            } else {
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Gear: Lo"
+                    )
+                    led.plot(2, 3)
+                } else {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Gear: Hi"
+                    )
+                    led.plot(2, 1)
+                }
+            }
+        }
+    }
+    if (false) {
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Staff: Notes"
+        )
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Bug Resolved: TYJ"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "////jwc n may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at Blocks: on start stack: root level: error_Message_Func(\"2024-0212-1730\", convertToText(controller__Polar_OriginAtCenter__AngleDegree__Int))"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Fix: 'error_Message_Func(\"2024-0212-1730\", \"Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'\")'"
+            )
+            if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "KINDLY IGNORE:: COMPILER ISSUE: NEED FOLLOING UNUSUAL VARIABLE DECLARATION BY COMPILER"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following Always First Line of This 'on start' Stack by Compiler."
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Can Move Anywhere on Same Stack, But Needs to Stay Root Level (Main_Stack), e.g. Not Nested in Sub/Mini_Stack"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "* Current variable below is: 'controller__Polar_OriginAtCenter__AngleDegree__Int'"
+                )
+            }
+        }
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "jwc ? may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at inactive free space"
+            )
+        }
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "When activating a 'on Radio Received' stack, replace 'receivedString_TO_BE_REPLACED_BY_ONrADIOrECEIVED_STACK' with 'receivedString'"
+        )
+    }
 })
