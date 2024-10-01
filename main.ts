@@ -207,9 +207,14 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Servo_Arm:" + "arm_up:" + servoArm_Now_Degrees_Int,
+            "Arm-L:" + "Up= " + servoArm_Now_Degrees_Int,
             0,
-            2
+            3
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Arm-R:" + "" + "",
+            0,
+            4
             )
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
@@ -242,9 +247,14 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Servo_Arm:" + "arm_down:" + servoArm_Now_Degrees_Int,
+            "Arm-L:" + "Down= " + servoArm_Now_Degrees_Int,
             0,
-            2
+            3
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Arm-R:" + "" + "",
+            0,
+            4
             )
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
@@ -278,7 +288,12 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             motor_Power_Full_Current_Pos
             )
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Fwd_Max: " + "Mtr_Full: " + motor_Power_Full_Current_Pos,
+            "Motor-L:" + "Forward-Max= " + motor_Power_Full_Current_Pos,
+            0,
+            1
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Motor-R:" + "Forward-Max= " + motor_Power_Full_Current_Pos,
             0,
             2
             )
@@ -307,7 +322,12 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             -1 * motor_Power_Full_Current_Pos
             )
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Turn_Max: " + "Mtr_Full: " + motor_Power_Full_Current_Pos,
+            "Motor-L:" + "Turn-Max= " + 1 * motor_Power_Full_Current_Pos,
+            0,
+            1
+            )
+            quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+            "Motor-R:" + "Turn-Max= " + -1 * motor_Power_Full_Current_Pos,
             0,
             2
             )
@@ -732,6 +752,13 @@ if (true) {
 setup_BotAndController_Func()
     }
     if (true) {
+        quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+        "Data Dashboard :)",
+        0,
+        0
+        )
+    }
+    if (true) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo: For servo_360: start at 180"
         )
@@ -756,9 +783,14 @@ setup_BotAndController_Func()
         servoArm_Now_Degrees_Int = servoArm_STARTUP_DEGREES_INT
         wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-        "Servo_Arm:" + "arm_start:" + servoArm_Now_Degrees_Int,
+        "Arm-L:" + "Start= " + servoArm_Now_Degrees_Int,
         0,
-        2
+        3
+        )
+        quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
+        "Arm-R:",
+        0,
+        4
         )
     }
     if (true) {
