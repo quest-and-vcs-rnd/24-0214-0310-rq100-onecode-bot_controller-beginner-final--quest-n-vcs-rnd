@@ -1,11 +1,3 @@
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.up, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("arm_down")
-        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
-    }
-})
 function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: number, screen_y_new_num: number) {
     led.plotBrightness(screen_X_Old_Num, screen_Y_Old_Num, screen_XY_Brightness_Old_Num)
     screen_X_Old_Num = screen_x_new_num
@@ -213,6 +205,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
             )
             wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
+            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
             "Servo_Arm:" + "arm_up:" + servoArm_Now_Degrees_Int,
             0,
@@ -247,6 +240,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             "GeekServo: Treat as 180-Degree Servo for Simplicity (Though can be a 360-Degree Servo)"
             )
             wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
+            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
             "Servo_Arm:" + "arm_down:" + servoArm_Now_Degrees_Int,
             0,
@@ -262,14 +256,6 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         }
     }
 }
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.up, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("arm_up")
-        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
-    }
-})
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "fwd_max") {
         if (false) {
@@ -292,7 +278,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             motor_Power_Full_Current_Pos
             )
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Turbo_Fo" + "Mtr_Full" + motor_Power_Full_Current_Pos,
+            "Fwd_Max: " + "Mtr_Full: " + motor_Power_Full_Current_Pos,
             0,
             2
             )
@@ -321,7 +307,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             -1 * motor_Power_Full_Current_Pos
             )
             quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-            "Turbo_Ba" + "Mtr_Full" + motor_Power_Full_Current_Pos,
+            "Turn_Max: " + "Mtr_Full: " + motor_Power_Full_Current_Pos,
             0,
             2
             )
@@ -626,6 +612,9 @@ radio.onReceivedString(function (receivedString) {
             "Network Message Max_Character_Length: 19"
             )
         }
+        if (true) {
+            serial.writeLine("* " + receivedString)
+        }
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -656,6 +645,26 @@ input.onButtonPressed(Button.B, function () {
         )
     }
 })
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        radio.sendString("arm_up")
+        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
+        )
+    }
+})
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        radio.sendString("arm_down")
+        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
+        )
+    }
+})
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "24-0916-0620 Deactivate Servo_Motor[_Left|_Right] Diagnostic Test, Since Complicates UI"
@@ -672,6 +681,7 @@ let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
@@ -683,19 +693,18 @@ let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
+let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
+let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
 let motor_Power_Full_Current_Pos = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
+let _system_Sw_ModeState__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
 let screen_X_Old_Num = 0
-let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
-let _system_Sw_ModeState__Now__Id_Int = 0
-let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
-let _system_Hw_DeviceType__Now__Id_Int = 0
 let servoArm_Now_Degrees_Int = 0
 let servoArm_DOWN_DEGREES_INT = 0
 let servoArm_UP_DEGREES_INT = 0
@@ -789,7 +798,7 @@ basic.forever(function () {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                 )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
                 quest_Note_1.quest_Show_String_For_Note_Big_Func(
                 "Controller_Joystick: gear_hi"
@@ -799,7 +808,7 @@ basic.forever(function () {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
                 )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
             }
             network__CpuCycle_Post__Management_Func()
         }
