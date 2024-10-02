@@ -4,7 +4,7 @@
 # **** ** Side-Panel Guide ** 
 
 # A. Coding-Editor Setup
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_16-23-54-Close-LeftSidePanel.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_16-23-54-Close-LeftSidePanel-03.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
@@ -80,7 +80,7 @@
 # * AA-2: If Network-Pairing still failing, Then...
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_14-50-24-TurnBothOff_3Sec-ThenBothOn.png?raw=true)
 
-# * AA-3: Press Button 'A' or 'B' on ONLY Controller-Joystick (as in Step D-2) To Start Network-Pairing with Bot
+# * AA-3: & Then...
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-15_07-17-04-NetworkPair-Startup_Poster-325x500.png?raw=true)
 
 # THE END (For Students)
