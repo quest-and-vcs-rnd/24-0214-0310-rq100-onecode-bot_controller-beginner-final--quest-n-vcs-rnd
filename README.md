@@ -63,23 +63,34 @@
 # * D-3: Part 3: How to Read the Group-Channel-# (Bot-Id) 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-05-19-DriverDiagnosticDashboard-GroupChannelNumber.png?raw=true)
 
+# * D-4: Part 4: How to Confirm AI-Code Identified Proper Device 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-05-55-ConfirmAiCodeIdentified_B_and_C_Devices.png?raw=true)
+
+
 # THE END (For Students)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
 
-# E. ___Troubleshooting:___ Network-Pairing ~ Any Lesson
+# AA. ___Troubleshooting:___ Network-Pairing ~ Any Lesson
 
-# * E-1: Check Bot's Battery is 3 out of 4 bars
+# * AA-1: Check Bot's Battery is 3-of-4 bars & Controller-Joystick's Power Light (Next to Power Switch) is On
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-40-19-IoExpansionBoard_Wukong-Power_Minimum-3-out-of-4.png?raw=true)
 
-# * E-2: Check-Joystick's Power Light is On
+# * AA-2: If Network-Pairing still failing, Then...
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_14-50-24-TurnBothOff_3Sec-ThenBothOn.png?raw=true)
 
-# * E-3: If Network-Pairing still not working, Turn Both Devices Off: Controller-Joystick and Bot
-# * E-3a: Turn Both Devices On: Controller-Joystick & Bot (in any Device Order)
-# * E-3b: Press 'A' or 'B' Buttonon ONLY Controller-Joystick (as in Step D2) To Start Network-Pairing with Bot
+# * AA-3: Press Button 'A' or 'B' on ONLY Controller-Joystick (as in Step D-2) To Start Network-Pairing with Bot
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-15_07-17-04-NetworkPair-Startup_Poster-325x500.png?raw=true)
+
+# THE END (For Students)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-# F. FOR STAFF USE:
+# AAA. Bonus Components:
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
 
 # [* F-1. Staff: Teacher-Guide ~ Right-Side-Panel Mini-Tutorial Separate-Web-Page ](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
 
