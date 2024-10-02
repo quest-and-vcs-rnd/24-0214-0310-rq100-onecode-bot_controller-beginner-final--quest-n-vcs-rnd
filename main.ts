@@ -817,6 +817,219 @@ setup_BotAndController_Func()
     }
 }
 basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
+        )
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (true) {
+                controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
+                quest_Controller_Joystick_Directional_AngelDegree_Increment_Enum.degree_90
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_MagnitudePixel_AsIntOut_Func(
+                )
+                if (false) {
+                    controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOfDegree90_AsIntOut_Func(
+                    )
+                }
+            }
+            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+            "Convert Network Message to Operate 'B'ot: "
+            )
+            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int >= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                    "Motion: Yes"
+                    )
+                    if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
+                        if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                            "Controller_Joystick: North"
+                            )
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . # . .
+                                    . # # # .
+                                    . . # . .
+                                    . . # . .
+                                    . . . . .
+                                    `)
+                            } else {
+                                radio.sendString("forward")
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
+                            }
+                        }
+                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
+                        if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                            "Controller_Joystick: South"
+                            )
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . . . .
+                                    . . # . .
+                                    . . # . .
+                                    . # # # .
+                                    . . # . .
+                                    `)
+                            } else {
+                                radio.sendString("backward")
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
+                            }
+                        }
+                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
+                        if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                            "Controller_Joystick: West"
+                            )
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . . . .
+                                    . # . . .
+                                    # # # # .
+                                    . # . . .
+                                    . . . . .
+                                    `)
+                            } else {
+                                radio.sendString("left")
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
+                            }
+                        }
+                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
+                        if (true) {
+                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                            "Controller_Joystick: East"
+                            )
+                            if (false) {
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "Following Block More as Visual Comment Since very Laggy"
+                                )
+                                basic.showLeds(`
+                                    . . . . .
+                                    . . . # .
+                                    . # # # #
+                                    . . . # .
+                                    . . . . .
+                                    `)
+                            } else {
+                                radio.sendString("right")
+                                screen_Clear_Func()
+                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                )
+                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
+                            }
+                        }
+                    } else {
+                        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+                        "Invalid 'controller_Joystick_Angle_Degrees_AsIncremented_Int'"
+                        )
+                        error_Message_Func("2024-0212-1731", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
+                    }
+                    if (false) {
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
+                        )
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "jwc ? may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at inactive free space"
+                        )
+                    }
+                }
+            } else if (controller__Polar_OriginAtCenter__MagnitudePixel__Int < controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Motion: Not"
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Zero values if not exceed 'Deadzone_AsIdle'"
+                )
+                radio.sendString("stop")
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
+                }
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Activate Stack via 'Forever' Stack_Header"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 1of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+    }
+})
+basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 2of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Controller_Joystick: gear_lo"
+                )
+                motor_Power_Gear_Number_Int = 1
+                radio.sendString("fwd_max")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Controller_Joystick: gear_hi"
+                )
+                motor_Power_Gear_Number_Int = 2
+                radio.sendString("turn_max")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
+        )
+    }
+})
+basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "'On Logo Pressed'"
     )
@@ -1024,219 +1237,6 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 2of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_lo"
-                )
-                motor_Power_Gear_Number_Int = 1
-                radio.sendString("fwd_max")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_hi"
-                )
-                motor_Power_Gear_Number_Int = 2
-                radio.sendString("turn_max")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
-            }
-            network__CpuCycle_Post__Management_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
-    }
-})
-basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
-        )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (true) {
-                controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
-                quest_Controller_Joystick_Directional_AngelDegree_Increment_Enum.degree_90
-                )
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_MagnitudePixel_AsIntOut_Func(
-                )
-                if (false) {
-                    controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOfDegree90_AsIntOut_Func(
-                    )
-                }
-            }
-            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-            "Convert Network Message to Operate 'B'ot: "
-            )
-            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int >= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                    "Motion: Yes"
-                    )
-                    if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: North"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . # . .
-                                    . # # # .
-                                    . . # . .
-                                    . . # . .
-                                    . . . . .
-                                    `)
-                            } else {
-                                radio.sendString("forward")
-                                screen_Clear_Func()
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
-                            }
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: South"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . . . .
-                                    . . # . .
-                                    . . # . .
-                                    . # # # .
-                                    . . # . .
-                                    `)
-                            } else {
-                                radio.sendString("backward")
-                                screen_Clear_Func()
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
-                            }
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: West"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . . . .
-                                    . # . . .
-                                    # # # # .
-                                    . # . . .
-                                    . . . . .
-                                    `)
-                            } else {
-                                radio.sendString("left")
-                                screen_Clear_Func()
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
-                            }
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
-                        if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: East"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . . . .
-                                    . . . # .
-                                    . # # # #
-                                    . . . # .
-                                    . . . . .
-                                    `)
-                            } else {
-                                radio.sendString("right")
-                                screen_Clear_Func()
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
-                            }
-                        }
-                    } else {
-                        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-                        "Invalid 'controller_Joystick_Angle_Degrees_AsIncremented_Int'"
-                        )
-                        error_Message_Func("2024-0212-1731", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
-                    }
-                    if (false) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
-                        )
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "jwc ? may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at inactive free space"
-                        )
-                    }
-                }
-            } else if (controller__Polar_OriginAtCenter__MagnitudePixel__Int < controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Motion: Not"
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Zero values if not exceed 'Deadzone_AsIdle'"
-                )
-                radio.sendString("stop")
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                    )
-                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
-                }
-            }
-            network__CpuCycle_Post__Management_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Activate Stack via 'Forever' Stack_Header"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 1of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-    }
-})
-basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     ""
     )
@@ -1254,8 +1254,7 @@ basic.forever(function () {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "For now, all 4 corners = Error: Unknown Msg"
             )
-            error_Message_Func("2024-0213-1700", receivedString)
-screen_IconMessage_Func("error")
+            screen_IconMessage_Func("error")
         }
     }
 })
@@ -1282,7 +1281,8 @@ basic.forever(function () {
                 // //jwc o } else if (!(device_Type_Bot_Bool)) {
                 if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
                     if (true) {
-                        if (receivedString == "forward") {
+                        let _system_ReceivedString_Temp_Placeholder = ""
+                        if (_system_ReceivedString_Temp_Placeholder == "forward") {
                             quest_Note_2.quest_Show_String_For_Note_Small_Func(
                             "Following Block_Code Moddable"
                             )
@@ -1311,7 +1311,7 @@ basic.forever(function () {
                                 . . . . .
                                 . . . . .
                                 `)
-                        } else if (receivedString == "backward") {
+                        } else if (_system_ReceivedString_Temp_Placeholder == "backward") {
                             quest_Note_2.quest_Show_String_For_Note_Small_Func(
                             "Following Block_Code Moddable"
                             )
@@ -1340,7 +1340,7 @@ basic.forever(function () {
                                 . . . . .
                                 . . . . .
                                 `)
-                        } else if (receivedString == "left") {
+                        } else if (_system_ReceivedString_Temp_Placeholder == "left") {
                             quest_Note_2.quest_Show_String_For_Note_Small_Func(
                             "Following Block_Code Moddable"
                             )
@@ -1369,7 +1369,7 @@ basic.forever(function () {
                                 . . . . .
                                 . . . . .
                                 `)
-                        } else if (receivedString == "right") {
+                        } else if (_system_ReceivedString_Temp_Placeholder == "right") {
                             quest_Note_2.quest_Show_String_For_Note_Small_Func(
                             "Following Block_Code Moddable"
                             )
@@ -1398,7 +1398,7 @@ basic.forever(function () {
                                 . . . . .
                                 . . . . .
                                 `)
-                        } else if (receivedString == "stop") {
+                        } else if (_system_ReceivedString_Temp_Placeholder == "stop") {
                             quest_Note_2.quest_Show_String_For_Note_Small_Func(
                             "Following Block_Code Moddable"
                             )
@@ -1414,7 +1414,7 @@ basic.forever(function () {
                                 )
                                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                             }
-                        } else if (receivedString == "gear_lo") {
+                        } else if (_system_ReceivedString_Temp_Placeholder == "gear_lo") {
                             if (true) {
                                 // //jwc o ? let motor_Power_Gear_01_MAX = 0
                                 motor_Power_Full_Current_Pos = motor_Power_Gear_01_MAX
@@ -1425,7 +1425,7 @@ basic.forever(function () {
                                 )
                                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
                             }
-                        } else if (receivedString == "gear_hi") {
+                        } else if (_system_ReceivedString_Temp_Placeholder == "gear_hi") {
                             if (true) {
                                 // /jwc o ? let motor_Power_Gear_02_MAX = 0
                                 motor_Power_Full_Current_Pos = motor_Power_Gear_02_MAX
