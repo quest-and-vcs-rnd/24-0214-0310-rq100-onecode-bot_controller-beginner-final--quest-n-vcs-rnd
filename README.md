@@ -84,19 +84,28 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-# AAA. Bonus Components:
+# AAA. ___Bonus Components:___ OLED Data-Dashboard
+
+# * AAA-1: Data-Dashbaord 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_20-09-20-OledDataDashboard-ConnectTo-MicrobitIoExpansionBoard.png?raw=true)
+
+# * BBB-1: ServoArm_Left: Default (degrees)
+# * BBB-2: ServoArm_Left: Up-Max (degrees)
+# * BBB-3: ServoArm_Left: Down-Max (degrees)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_19-14-54-ServoArm_Left-ConnectTo-MicrobitIoExpansionBoard.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
+# ZZZZ. FOR STAFF USE:
 
-# [* F-1. Staff: Teacher-Guide ~ Right-Side-Panel Mini-Tutorial Separate-Web-Page ](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+# [* ZZZZ-1. Staff: Teacher-Guide ~ Right-Side-Panel Mini-Tutorial Separate-Web-Page ](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
 
-# * F-2. Staff: Chrome (Web) Browser ~ One-Time Setup 
+# * ZZZZ-2. Staff: Chrome (Web) Browser ~ One-Time Setup 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
 
-# [* F-3. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
+# [* ZZZZ-3. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
 
-# [* F-4. Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
+# [* ZZZZ-4. Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
 ![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
 
 # THE END (For Staff)
