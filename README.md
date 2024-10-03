@@ -4,7 +4,7 @@
 # **** ** Side-Panel Guide ** 
 
 # A. Coding-Editor Setup
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_16-23-54-Close-LeftSidePanel-03.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_16-23-54-Close-LeftSidePanel-04.png?raw=true)
 
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
@@ -58,30 +58,27 @@
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/24-0719-0630-Rq100-NetworkPairing-StartupScrollingText-Gif-480x240-ClipSpeed_1pt5-03.gif?raw=true)
 
 # * D-2: Part 2 ~ Summary Poster
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-15_07-17-04-NetworkPair-Startup_Poster-325x500.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_17-12-59-NetworkPair-Startup_Poster-2840x2928.png?raw=true)
 
 # * D-3: Part 3: How to Read the Group-Channel-# (Bot-Id) 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-05-19-DriverDiagnosticDashboard-GroupChannelNumber.png?raw=true)
 
 # * D-4: Part 4: How to Confirm AI-Code Identified Proper Device 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-05-55-ConfirmAiCodeIdentified_B_and_C_Devices.png?raw=true)
-
-
-# THE END (For Students)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
 
 # AA. ___Troubleshooting:___ Network-Pairing ~ Any Lesson
 
-# * AA-1: Check Bot's Battery is 3-of-4 bars & Controller-Joystick's Power Light (Next to Power Switch) is On
+# * AA-1: Check Bot's Battery is 3-of-4 Bars & Controller-Joystick's Power Light (Next to Power Switch) is On
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-40-19-IoExpansionBoard_Wukong-Power_Minimum-3-out-of-4.png?raw=true)
 
-# * AA-2: If Network-Pairing still failing, Then...
+# * AA-2: If Network-Pairing still Failing, Then...
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_14-50-24-TurnBothOff_3Sec-ThenBothOn.png?raw=true)
 
-# * AA-3: & Then...
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-15_07-17-04-NetworkPair-Startup_Poster-325x500.png?raw=true)
+# * AA-3: And Then...
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_17-12-59-NetworkPair-Startup_Poster-2840x2928.png?raw=true)
 
 # THE END (For Students)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
