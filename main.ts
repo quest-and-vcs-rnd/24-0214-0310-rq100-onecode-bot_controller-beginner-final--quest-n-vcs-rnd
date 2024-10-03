@@ -989,6 +989,47 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 2of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Controller_Joystick: gear_lo"
+                )
+                motor_Power_Gear_Number_Int = 1
+                radio.sendString("fwd_max")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
+                quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                "Controller_Joystick: gear_hi"
+                )
+                motor_Power_Gear_Number_Int = 2
+                radio.sendString("turn_max")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                )
+                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
+        )
+    }
+})
+basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "'On Logo Pressed'"
     )
@@ -1192,28 +1233,6 @@ basic.forever(function () {
                 )
                 _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
             }
-        }
-    }
-})
-basic.forever(function () {
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    ""
-    )
-    if (false) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Error: Unknown Msg"
-        )
-        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        0,
-        0
-        )
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "For now, all 4 corners = Error: Unknown Msg"
-            )
-            screen_IconMessage_Func("error")
         }
     }
 })
@@ -1439,44 +1458,25 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 2of2"
-        )
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    ""
+    )
+    if (false) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
+        "Error: Unknown Msg"
         )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_lo"
-                )
-                motor_Power_Gear_Number_Int = 1
-                radio.sendString("fwd_max")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_hi"
-                )
-                motor_Power_Gear_Number_Int = 2
-                radio.sendString("turn_max")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
-            }
-            network__CpuCycle_Post__Management_Func()
+        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        0,
+        0
+        )
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "For now, all 4 corners = Error: Unknown Msg"
+            )
+            screen_IconMessage_Func("error")
         }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
     }
 })
 basic.forever(function () {
