@@ -200,7 +200,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "If [0|360] is jittery, insure battery at 75% power min."
             )
-            servoArm_Now_Degrees_Int = servoArm_UP_DEGREES_INT
+            servoArm_Now_Degrees_Int = servoArm_UP_MAX_DEGREES_INT
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
             )
@@ -236,7 +236,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "If [0|360] is jittery, insure battery at 75% power min."
             )
-            servoArm_Now_Degrees_Int = servoArm_DOWN_DEGREES_INT
+            servoArm_Now_Degrees_Int = servoArm_DOWN_MAX_DEGREES_INT
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
             )
@@ -492,8 +492,8 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                         quest_Note_1.quest_Show_String_For_Note_Small_Func(
                         "Obsolete?"
                         )
-                        servoArm_DOWN_DEGREES_INT = 0
-                        servoArm_UP_DEGREES_INT = 90
+                        servoArm_DOWN_MAX_DEGREES_INT = 0
+                        servoArm_UP_MAX_DEGREES_INT = 90
                         servoArm_Left_UP_DEGREES_INT = 20
                         servoArm_Right_UP_DEGREES_INT = 45
                         servoArm_Left_Up_Bool = true
@@ -719,8 +719,8 @@ let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
 let screen_X_Old_Num = 0
 let servoArm_Now_Degrees_Int = 0
-let servoArm_DOWN_DEGREES_INT = 0
-let servoArm_UP_DEGREES_INT = 0
+let servoArm_DOWN_MAX_DEGREES_INT = 0
+let servoArm_UP_MAX_DEGREES_INT = 0
 let servoArm_DEFAULT_DEGREES_INT = 0
 let network_GroupChannel_MyBotAndController_Base0_Int = 0
 if (true) {
@@ -777,14 +777,14 @@ setup_BotAndController_Func()
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "...Servo-Arm: 2-of-3: Up-Max (degrees)"
         )
-        servoArm_UP_DEGREES_INT = 360
+        servoArm_UP_MAX_DEGREES_INT = 360
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "BBB-3: Next Block_Code Moddable..."
         )
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "...Servo-Arm: 3-of-3: Down-Max (degrees)"
         )
-        servoArm_DOWN_DEGREES_INT = 0
+        servoArm_DOWN_MAX_DEGREES_INT = 0
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "Servo-Arm: GeekServo_360_Degrees: Default"
         )
@@ -1542,7 +1542,7 @@ basic.forever(function () {
                     quest_Note_2.quest_Show_String_For_Note_Small_Func(
                     "Following Block_Code Moddable"
                     )
-                    servoArm_DOWN_DEGREES_INT = 90
+                    servoArm_DOWN_MAX_DEGREES_INT = 90
                     quest_Note_2.quest_Show_String_For_Note_Small_Func(
                     "Following Block_Code Moddable"
                     )
