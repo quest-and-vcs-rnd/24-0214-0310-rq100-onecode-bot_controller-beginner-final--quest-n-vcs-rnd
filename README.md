@@ -107,7 +107,7 @@
 # ** Connect
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-01_19-14-54-ServoArm_Left-ConnectTo-MicrobitIoExpansionBoard.png?raw=true)
 # ** Code
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_05-40-51-ServoArm-Coding-02.png?raw=true)
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_10-11-44-ServoArm-Coding-02.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
