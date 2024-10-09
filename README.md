@@ -72,6 +72,9 @@
 
 # * D-4. Part 4: How to Confirm AI-Code Identified Proper Device 
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-05-55-ConfirmAiCodeIdentified_B_and_C_Devices.png?raw=true)
+
+# * D-5. Part 5: How to Drive & Operate (Quick-Start) 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-10-09_05-55-43-Controller_Joystick-TurboFwd_F-TurboTurn_E.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
