@@ -972,6 +972,17 @@ basic.forever(function () {
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                 }
             }
+            if (true) {
+                serial.writeLine("*** " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+                joystickbit.getRockerValue(joystickbit.rockerType.X),
+                8,
+                2
+                ) + " Joy_Y:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+                joystickbit.getRockerValue(joystickbit.rockerType.Y),
+                8,
+                2
+                ))
+            }
             network__CpuCycle_Post__Management_Func()
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
