@@ -808,7 +808,18 @@ let network_GroupChannel_MyBotAndController_Base0_Int = 0
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
 "©️ 2024 Quest Institute. All rights reserved."
 )
-if (true) {
+if (false) {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Following Block More as Visual Comment Since very Laggy"
+    )
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        . # . # .
+        # # # # #
+        . # . # .
+        `)
+} else {
     quest_Note_2.quest_Show_String_For_Note_Small_Func(
     "Set GroupChannel_# (Bot_Id): Range [21 to 255], Default = 1"
     )
