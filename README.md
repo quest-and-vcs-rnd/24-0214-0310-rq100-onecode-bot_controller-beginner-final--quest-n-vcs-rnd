@@ -1,35 +1,35 @@
 <!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 <!--- add suffix '?raw=true' --->
 
-# **** ** Right-Side Panel-Guide ** 
-### [( Right-Side Panel-Guide Separate Web-Page )](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+# **** ** Right-Side-Panel Educator Resource Guide ** 
+### [( Educator Resource Guide Separate Web-Page )](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
 
-# A. Coding-Editor Setup:
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_01-20-51-Close-LeftSidePanel-05-Blur20.png?raw=true)
-
+# Table of Contents
+### **Basic**: Lesson 2 ~ Joy Ride
+#### A. Coding-Editor Setup
+#### B. Mod: Bot-Id (Group-Channel-Num)
+#### C. Flash/Download Code to 'micro:bit'
+#### D. Quick-Start: Network-Pairing
+#### E. Troubleshooting: Network-Pairing
+### **Intermediate**: Lesson 5 ~ Sumo
+#### AA. Mod: Motor-Power-%
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
+# A. Coding-Editor Setup:
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_01-20-51-Close-LeftSidePanel-05-Blur20.png?raw=true)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
+--- 
 # B. Can Mod the Code-Block Right After A Bright-Green Comment-Block:
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-52-01.png-LookForBrightGreenComment_Block.png?raw=true)
 # B-1. ___Basic Required:___ Modding/Coding ~ 'Lesson 02: Joy Ride' & 'Lesson 05: Sumo':
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-09_19-07-46-EasyToCode-FastToDrive-ModGroupChannelNum-02.png?raw=true)
+![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/2024-12-06_15-01-20-GroupChannelNum_Mod.png?raw=true)
 # B-2.
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_09-12-45-Label_GroupChannel%23_Microbit_PermanentMarker-03.png?raw=true)
-# B-3. If on 'Lesson 02: Joy Ride' (First-Time Modding/Coding), Then can Skip (Next) Section B-4 To Do Section C:
-
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-
-# B-4. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Only for: 'Lesson 05: Sumo':
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true)
-
-<!--- Need following dummy blank line above for this upcoming divider_line to work --->
-
----
-
 # C. ___Basic Required:___ Flash/Download This Same Code to Both 'micro:bits' ~ For 'Any Lesson':
 
 # * C-1.
@@ -54,11 +54,9 @@
 
 # * C-7.
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-10_07-34-56-FlashDownloadToBot-02.png?raw=true)
-
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-
 # D. ___Basic Required:___ Quick-Start for Network_Pairing ~ Any Lesson:
 
 # * D-1. Part 1 ~ Scrolling Instructions
@@ -78,19 +76,32 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
+# E. ___Troubleshooting:___ Network-Pairing ~ Any Lesson:
 
-# AA. ___Troubleshooting:___ Network-Pairing ~ Any Lesson:
-
-# * AA-1. Check Bot's Battery is 3-of-4 Bars & Controller-Joystick's Power Light (Next to Power Switch) is On
+# * E-1. Check Bot's Battery is 3-of-4 Bars & Controller-Joystick's Power Light (Next to Power Switch) is On
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-40-19-IoExpansionBoard_Wukong-Power_Minimum-3-out-of-4.png?raw=true)
 
-# * AA-2. If Network-Pairing still Failing, Then...
+# * E-2. If Network-Pairing still Failing, Then...
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_14-50-24-TurnBothOff_3Sec-ThenBothOn.png?raw=true)
 
-# * AA-3. And Then...
+# * E-3. And Then...
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_17-12-59-NetworkPair-Startup_Poster-2840x2928.png?raw=true)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
+---
+# AA-1. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Only for: 'Lesson 05: Sumo':
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+# AA-2. Go Back for Steps C: Flash/Downlaod, D: Quick-Start -&- E: Troubleshooting
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
 # THE END (For Students)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
