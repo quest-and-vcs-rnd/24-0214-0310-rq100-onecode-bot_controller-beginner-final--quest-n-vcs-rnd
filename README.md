@@ -1,19 +1,21 @@
+<!-- NOTE: jwc 24-1209-1400 '##' not header effective -->
+
 <!---  ![AltTag](24-0325-2140-Makecode-ClickToCloseSidePanel-2024-03-25_21-40-43.png) --->
 <!--- add suffix '?raw=true' --->
 
-# **** ** Right-Side-Panel Educator Resource Guide ** 
+# ** Right-Side-Panel Ed Resource Guide ** 
 <!--- ### [( Educator Resource Guide Separate Web-Page )](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/) --->
 ### [( Educator Resource Guide Separate Web-Page )](https://quest-and-vcs-rnd.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/)
 
 # Table of Contents
 ### **Basic**: Lesson 2 ~ Joy Ride
-#### A. Coding-Editor Setup
-#### B. Mod: Bot-Id (Group-Channel-Num)
-#### C. Flash/Download Code to 'micro:bit'
-#### D. Quick-Start: Network-Pairing
-#### E. Troubleshooting: Network-Pairing
+#### * A. Coding-Editor Setup
+#### * B. Mod: Bot-Id (Group-Channel-Num)
+#### * C. Flash/Download Code to 'micro:bit'
+#### * D. Quick-Start: Network-Pairing
+#### * E. Troubleshooting: Network-Pairing
 ### **Intermediate**: Lesson 5 ~ Sumo
-#### AA. Mod: Motor-Power-%
+#### * AA. Mod: Motor-Power-%
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
