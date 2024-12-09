@@ -2,7 +2,8 @@
 <!--- add suffix '?raw=true' --->
 
 # **** ** Right-Side-Panel Educator Resource Guide ** 
-### [( Educator Resource Guide Separate Web-Page )](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/)
+<!--- ### [( Educator Resource Guide Separate Web-Page )](https://jasonc1025-333.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final/) --->
+### [( Educator Resource Guide Separate Web-Page )](https://quest-and-vcs-rnd.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/)
 
 # Table of Contents
 ### **Basic**: Lesson 2 ~ Joy Ride
