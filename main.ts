@@ -9,10 +9,12 @@ function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: num
     led.plotBrightness(screen_x_new_num, screen_y_new_num, screenBrightness_Heartbeat_Count_Int)
 }
 function setup_System_AnyLessonAlways_Func () {
-    setup_VariablesAndConstants_UserCustomizableNot_Func()
-    setup_Network_Func()
+    if (true) {
+        setup_VariablesAndConstants_UserCustomizableNot_Func()
+        setup_Network_Func()
 setup_BotAndController_Func()
 setup_Device_ArmServo_Left_Func()
+    }
 }
 function screen_Clear_Func () {
     for (let index_X = 0; index_X <= 4; index_X++) {
@@ -550,6 +552,25 @@ radio.onReceivedString(function (receivedString) {
             )
             _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
             setup_BotOnly_Func()
+if (true) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following Syncs LED-Code w/'Upside-Down' micro:bit"
+                )
+                display.rotateTo(display.Direction.UpsideDown)
+            }
+            if (true) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Insure Following Variable's Value Stabilized.."
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "'network_GroupChannel_MyBotAndController_Base0_Int'"
+                )
+                quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
+                network_GroupChannel_MyBotAndController_Base0_Int,
+                quest_Toggle_OnOff_Enum.On,
+                quest_Debug_Show_Enum.Dashboard_OLED
+                )
+            }
         }
         if (true) {
             quest_Note_6.quest_Show_String_For_Note_Big_Func(
@@ -721,10 +742,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
     }
 })
 function pre_setup_System_AnyLessonAlways_Func () {
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Following Syncs LED-Code w/'Upside-Down' micro:bit"
-    )
-    display.rotateTo(display.Direction.UpsideDown)
+	
 }
 function setup_Device_ArmServo_Left_Func () {
     if (false) {
