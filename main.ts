@@ -64,7 +64,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "forward") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . # . .
@@ -84,14 +84,14 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
             )
             screen_Clear_Func()
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
             )
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "backward") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . . . .
@@ -111,14 +111,14 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
             )
             screen_Clear_Func()
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
             )
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "left") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . . . .
@@ -138,14 +138,14 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
             )
             screen_Clear_Func()
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
             )
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "right") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . . . .
@@ -165,14 +165,14 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
             )
             screen_Clear_Func()
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
             )
             screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "stop") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . . . .
@@ -198,7 +198,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_up") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . . # #
@@ -234,7 +234,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . . . .
@@ -623,7 +623,7 @@ function bot_Servo_Motors_Turbo_Func (network_ReceivedString_FromControllerJoyst
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "fwd_max") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . # . .
@@ -656,11 +656,15 @@ function bot_Servo_Motors_Turbo_Func (network_ReceivedString_FromControllerJoyst
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
             )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+            )
+            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
         }
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "turn_max") {
         if (false) {
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Following Block More as Visual Comment Since very Laggy"
+            "Following Block as a Visual-Comment to Avoid Lag"
             )
             basic.showLeds(`
                 . . # . .
@@ -693,13 +697,60 @@ function bot_Servo_Motors_Turbo_Func (network_ReceivedString_FromControllerJoyst
             quest_Note_1.quest_Show_String_For_Note_Small_Func(
             "Avoid 'screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2,2)' since Screen Conflicts"
             )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+            )
+            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+        }
+    }
+    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "button_d") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block as a Visual-Comment to Avoid Lag"
+            )
+            basic.showLeds(`
+                . . . # .
+                . # # # .
+                . # . # .
+                . # # # .
+                . . . . .
+                `)
+        } else {
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Next Block_Code Moddable: Button-D"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+            )
+            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
+        }
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "button_c") {
+        if (false) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "Following Block as a Visual-Comment to Avoid Lag"
+            )
+            basic.showLeds(`
+                . . . . .
+                . # # # .
+                . # . . .
+                . # # # .
+                . . . . .
+                `)
+        } else {
+            quest_Note_2.quest_Show_String_For_Note_Big_Func(
+            "Next Block_Code Moddable: Turn-Max: Button-C"
+            )
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+            )
+            screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
         }
     }
 }
 function setup_Device_DataDisplay_Func () {
     if (false) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following Block More as Visual Comment Since very Laggy"
+        "Following Block as a Visual-Comment to Avoid Lag"
         )
         basic.showLeds(`
             # # # # #
@@ -722,23 +773,21 @@ function setup_Device_DataDisplay_Func () {
     )
 }
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "'on button __ is pressed' has auto-debounce"
+    )
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("arm_up")
-        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
-        )
+    	
     }
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "'on button __ is pressed' has auto-debounce"
+    )
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        radio.sendString("arm_down")
-        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
-        )
+    	
     }
 })
 function pre_setup_System_AnyLessonAlways_Func () {
@@ -747,7 +796,7 @@ function pre_setup_System_AnyLessonAlways_Func () {
 function setup_Device_ArmServo_Left_Func () {
     if (false) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following Block More as Visual Comment Since very Laggy"
+        "Following Block as a Visual-Comment to Avoid Lag"
         )
         basic.showLeds(`
             . . . # #
@@ -844,7 +893,7 @@ let network_GroupChannel_MyBotAndController_Base0_Int = 0
 pre_setup_System_AnyLessonAlways_Func()
 if (false) {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Following Block More as Visual Comment Since very Laggy"
+    "Following Block as a Visual-Comment to Avoid Lag"
     )
     basic.showLeds(`
         . # . # .
@@ -1391,7 +1440,7 @@ basic.forever(function () {
                             )
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
+                                "Following Block as a Visual-Comment to Avoid Lag"
                                 )
                                 basic.showLeds(`
                                     . . # . .
@@ -1404,7 +1453,7 @@ basic.forever(function () {
                                 radio.sendString("forward")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
                                 )
                                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 0)
                             }
@@ -1416,7 +1465,7 @@ basic.forever(function () {
                             )
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
+                                "Following Block as a Visual-Comment to Avoid Lag"
                                 )
                                 basic.showLeds(`
                                     . . . . .
@@ -1429,7 +1478,7 @@ basic.forever(function () {
                                 radio.sendString("backward")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
                                 )
                                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 4)
                             }
@@ -1441,7 +1490,7 @@ basic.forever(function () {
                             )
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
+                                "Following Block as a Visual-Comment to Avoid Lag"
                                 )
                                 basic.showLeds(`
                                     . . . . .
@@ -1454,7 +1503,7 @@ basic.forever(function () {
                                 radio.sendString("left")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
                                 )
                                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(0, 2)
                             }
@@ -1466,7 +1515,7 @@ basic.forever(function () {
                             )
                             if (false) {
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
+                                "Following Block as a Visual-Comment to Avoid Lag"
                                 )
                                 basic.showLeds(`
                                     . . . . .
@@ -1479,7 +1528,7 @@ basic.forever(function () {
                                 radio.sendString("right")
                                 screen_Clear_Func()
                                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                                "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
                                 )
                                 screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(4, 2)
                             }
@@ -1509,7 +1558,7 @@ basic.forever(function () {
                 radio.sendString("stop")
                 if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
+                    "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
                     )
                     screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
                 }
@@ -1555,25 +1604,95 @@ basic.forever(function () {
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
             if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_lo"
-                )
-                motor_Power_Gear_Number_Int = 1
-                radio.sendString("fwd_max")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block as a Visual-Comment to Avoid Lag"
+                    )
+                    basic.showLeds(`
+                        . . # . .
+                        . # # # .
+                        # . # . #
+                        . . # . .
+                        . . # . .
+                        `)
+                } else if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                    "Controller_Joystick: gear_lo"
+                    )
+                    motor_Power_Gear_Number_Int = 1
+                    radio.sendString("fwd_max")
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
+                }
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_hi"
-                )
-                motor_Power_Gear_Number_Int = 2
-                radio.sendString("turn_max")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                )
-                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block as a Visual-Comment to Avoid Lag"
+                    )
+                    basic.showLeds(`
+                        . . # . .
+                        . . . # .
+                        # # # # #
+                        . . . # .
+                        . . # . .
+                        `)
+                } else if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                    "Controller_Joystick: gear_hi"
+                    )
+                    motor_Power_Gear_Number_Int = 2
+                    radio.sendString("turn_max")
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
+                }
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block as a Visual-Comment to Avoid Lag"
+                    )
+                    basic.showLeds(`
+                        . . . # .
+                        . # # # .
+                        . # . # .
+                        . # # # .
+                        . . . . .
+                        `)
+                } else if (true) {
+                    radio.sendString("button_d")
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
+                    )
+                }
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
+                if (false) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following Block as a Visual-Comment to Avoid Lag"
+                    )
+                    basic.showLeds(`
+                        . . . . .
+                        . # # # .
+                        . # . . .
+                        . # # # .
+                        . . . . .
+                        `)
+                } else if (true) {
+                    radio.sendString("button_c")
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "LED 5x5: (0,0):Upper_Left, (4,4):Bottom_Right"
+                    )
+                    screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
+                    )
+                }
             }
             network__CpuCycle_Post__Management_Func()
         }
