@@ -19,7 +19,9 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
-# A. Coding-Editor Setup:
+# A-1. Chrome-Browser Setup (One-Time):
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/RQ100-CodeEditor-Setup-FlashDownload_ManualOverride-25-0214-1430-ACA_a-TYJ-1280x720-30sec-30fps-1pt3Mb.gif?raw=true)
+# A-2. Coding-Editor Setup (As Needed):
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_01-20-51-Close-LeftSidePanel-05-Blur20.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
