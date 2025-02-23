@@ -25,41 +25,6 @@ function screen_Clear_Func () {
         }
     }
 }
-input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Software Reset"
-        )
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Give time for other stacks to complete under different concurrent 'SW_ModeState' ..."
-            )
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "... to not conflict with following LED Display"
-            )
-            _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Reset__ID_INT
-            quest_Note_3.quest_Show_String_For_Note_Small_Func(
-            "Continue Current State for Time Below"
-            )
-            // 1.0 too slow, 0.5 not bad, try 0.20
-            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(0.2, quest_Time_Units_Enum.Seconds)
-        }
-        basic.showLeds(`
-            # . # . #
-            . # # # .
-            # # . # #
-            . # # # .
-            # . # . #
-            `)
-        if (true) {
-            quest_Note_3.quest_Show_String_For_Note_Small_Func(
-            "Continue Current State for Time Below"
-            )
-            quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(3, quest_Time_Units_Enum.Seconds)
-        }
-        control.reset()
-    }
-})
 function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "forward") {
         if (false) {
@@ -872,6 +837,7 @@ let servoArm_Right_UP_DEGREES_INT = 0
 let servoArm_Left_UP_DEGREES_INT = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
+let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
@@ -892,11 +858,10 @@ let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
 let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
+let _system_Sw_ModeState__Now__Id_Int = 0
 let servoArm_DOWN_MAX_DEGREES_INT = 0
 let servoArm_UP_MAX_DEGREES_INT = 0
 let servoArm_Now_Degrees_Int = 0
-let _system_Sw_ModeState__Reset__ID_INT = 0
-let _system_Sw_ModeState__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
 let screen_XY_Brightness_Old_Num = 0
 let screen_Y_Old_Num = 0
@@ -922,6 +887,11 @@ if (false) {
     "B-1: Next Block_Code Moddable: Group-Channel-#"
     )
     network_GroupChannel_MyBotAndController_Base0_Int = 1
+    quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
+    network_GroupChannel_MyBotAndController_Base0_Int,
+    quest_Toggle_OnOff_Enum.On,
+    quest_Debug_Show_Enum.Dashboard_OLED
+    )
 }
 setup_System_AnyLessonAlways_Func()
 setup_Staff_ThisLessonOnly_Func()

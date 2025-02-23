@@ -6,7 +6,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.14.3",
+        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.19.1",
         "joystickbit": "github:tinkertanker/pxt-joystickbit#v1.0.2",
         "microbit-pxt-rotate": "github:bsiever/microbit-pxt-rotate#v0.1.6"
     },
