@@ -1,6 +1,4 @@
-/**
- * // jwc 24-0214-0310-rq100-onecode-bot_controller-beginner-final.ts
- */
+// // jwc 24-0214-0310-rq100-onecode-bot_controller-beginner-final.ts
 function screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func (screen_x_new_num: number, screen_y_new_num: number) {
     led.plotBrightness(screen_X_Old_Num, screen_Y_Old_Num, screen_XY_Brightness_Old_Num)
     screen_X_Old_Num = screen_x_new_num
@@ -164,10 +162,6 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_DOWN_MAX_DEGREES_INT)
-    } else if (false) {
-    	
-    } else if (false) {
-    	
     }
 }
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
@@ -748,72 +742,189 @@ quest_Note_1.quest_Show_String_For_Note_Big_Func(
 setup_For_Student_Func()
 basic.forever(function () {
     if (false) {
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "GroupChannel=0to3"
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
         )
-        quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
-        network_GroupChannel_MyBotAndController_Base0_Int,
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Dashboard_OLED
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
         )
-        quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
-        randint(0, 3),
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Dashboard_OLED
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
         )
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "<-- Bot Code (Web-Server)  |"
+        )
     }
+})
+basic.forever(function () {
     if (false) {
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "Aa-HUJ: GroupChannel=1 (default)"
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
-        1,
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Dashboard_OLED
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(1, quest_Time_Units_Enum.Seconds)
-    }
-    if (false) {
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "AAa-HUJ: GroupChannel=1 (default)"
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
-        1,
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Dashboard_OLED
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(5, quest_Time_Units_Enum.Seconds)
-    }
-    if (false) {
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "a HUJ GroupChannel=1 (default)"
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Dashboard.quest_Send_DataOfBot_ToXrayDashboardOfMb_Func(
-        "HiJesus",
-        quest_Debug_Show_Enum.Off
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(5, quest_Time_Units_Enum.Seconds)
-    }
-    if (false) {
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "AAA_a TYJ: GroupChannel=1 (default)"
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
-        1,
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Dashboard_OLED
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
-    }
-    if (false) {
-        quest_Note_2.quest_Show_String_For_Note_Small_Func(
-        "AAA_a TYJ: GroupChannel=1 (default)"
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
-        quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
-        1,
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Off
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "|  Controller-Joystick (Web-Client) -->"
         )
     }
 })
@@ -845,111 +956,47 @@ basic.forever(function () {
                     )
                     if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
                         if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: North"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . # . .
-                                    . # # # .
-                                    . . # . .
-                                    . . # . .
-                                    . . . . .
-                                    `)
-                            } else {
-                                images.createImage(`
-                                    . . # . .
-                                    . # # # .
-                                    . . # . .
-                                    . . # . .
-                                    . . . . .
-                                    `).showImage(0, 0)
-                                radio.sendString("forward")
-                            }
+                            images.createImage(`
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                . . # . .
+                                . . . . .
+                                `).showImage(0, 0)
+                            radio.sendString("forward")
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
                         if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: South"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . . . .
-                                    . . # . .
-                                    . . # . .
-                                    . # # # .
-                                    . . # . .
-                                    `)
-                            } else {
-                                images.createImage(`
-                                    . . . . .
-                                    . . # . .
-                                    . . # . .
-                                    . # # # .
-                                    . . # . .
-                                    `).showImage(0, 0)
-                                radio.sendString("backward")
-                            }
+                            images.createImage(`
+                                . . . . .
+                                . . # . .
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                `).showImage(0, 0)
+                            radio.sendString("backward")
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
                         if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: West"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . . . .
-                                    . # . . .
-                                    # # # # .
-                                    . # . . .
-                                    . . . . .
-                                    `)
-                            } else {
-                                images.createImage(`
-                                    . . . . .
-                                    . # . . .
-                                    # # # # .
-                                    . # . . .
-                                    . . . . .
-                                    `).showImage(0, 0)
-                                radio.sendString("left")
-                            }
+                            images.createImage(`
+                                . . . . .
+                                . # . . .
+                                # # # # .
+                                . # . . .
+                                . . . . .
+                                `).showImage(0, 0)
+                            radio.sendString("left")
                         }
                     } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
                         if (true) {
-                            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                            "Controller_Joystick: East"
-                            )
-                            if (false) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "Following Block More as Visual Comment Since very Laggy"
-                                )
-                                basic.showLeds(`
-                                    . . . . .
-                                    . . . # .
-                                    . # # # #
-                                    . . . # .
-                                    . . . . .
-                                    `)
-                            } else {
-                                images.createImage(`
-                                    . . . . .
-                                    . . . # .
-                                    . # # # #
-                                    . . . # .
-                                    . . . . .
-                                    `).showImage(0, 0)
-                                radio.sendString("right")
-                            }
+                            images.createImage(`
+                                . . . . .
+                                . . . # .
+                                . # # # #
+                                . . . # .
+                                . . . . .
+                                `).showImage(0, 0)
+                            radio.sendString("right")
                         }
                     } else {
                         quest_Note_5.quest_Show_String_For_Note_Small_Func(
@@ -980,9 +1027,6 @@ basic.forever(function () {
                     . . . . .
                     . . . . .
                     `).showImage(0, 0)
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Motion: Not"
-                )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Zero values if not exceed 'Deadzone_AsIdle'"
                 )
@@ -1036,9 +1080,6 @@ basic.forever(function () {
                     . . # . .
                     . . # . .
                     `).showImage(0, 0)
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_lo"
-                )
                 radio.sendString("fwd_max")
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
                 images.createImage(`
@@ -1048,10 +1089,25 @@ basic.forever(function () {
                     . . . # .
                     . . # . .
                     `).showImage(0, 0)
-                quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                "Controller_Joystick: gear_hi"
-                )
                 radio.sendString("turn_max")
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+                images.createImage(`
+                    . . . # .
+                    . . . # .
+                    . # # # .
+                    . # . # .
+                    . # # # .
+                    `).showImage(0, 0)
+                radio.sendString("button_d")
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
+                images.createImage(`
+                    . . . . .
+                    . # # # .
+                    . # . . .
+                    . # # # .
+                    . . . . .
+                    `).showImage(0, 0)
+                radio.sendString("button_c")
             }
             network__CpuCycle_Post__Management_Func()
         }
@@ -1286,308 +1342,6 @@ basic.forever(function () {
             "For now, all 4 corners = Error: Unknown Msg"
             )
             screen_IconMessage_Func("error")
-        }
-    }
-})
-basic.forever(function () {
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    "'on start'"
-    )
-    if (false) {
-        if (true) {
-            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-            "For exclusive activation, place this 'on start' stack higher than other 'on start' stacks"
-            )
-            quest_Note_3.quest_Show_String_For_Note_Big_Func(
-            "Bot & Controller_Joystick: All_in_One Code"
-            )
-            quest_Note_6.quest_Show_String_For_Note_Small_Func(
-            "Bot & Controller_Joystick Stack: 'on start'"
-            )
-            if (true) {
-                quest_Note_6.quest_Show_String_For_Note_Small_Func(
-                "setup_VariablesAndConstants_UserCustomizable: Yes"
-                )
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Set GroupChannel_# for Both Bot & Controller_Joystick: Default = 1"
-                    )
-                    quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    network_GroupChannel_MyBotAndController_Base0_Int = 1
-                }
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following Pixels_Max: Horizontal/Vertical: 512 -&- Diagonal: 887 [= sqrt(512^2 + 512^2)]"
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Was 15, try 30 to accomodate off_calibrated controllers"
-                    )
-                    quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 30
-                }
-                // //jwc debug:  serial.writeLine("*** 24-0323-1921: " + convertToText(motor_Power_Gear_01_MAX) + " " + convertToText(motor_Power_Full_Current_Pos))
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Perhaps too fast: 30 & 60 for Gears 1 & 2, Respectively"
-                    )
-                    quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    // Was 30
-                    motor_Power_Gear_01_MAX = 15
-                    quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    // Was 60
-                    motor_Power_Gear_02_MAX = 30
-                }
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Values Vary for Each Bot"
-                    )
-                    quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    servoArm_DOWN_MAX_DEGREES_INT = 90
-                    quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                    "Following Block_Code Moddable"
-                    )
-                    servoArm_Left_UP_DEGREES_INT = 0
-                }
-            }
-            if (true) {
-                setup_VariablesAndConstants_UserCustomizableNot_Func()
-                setup_Network_Func()
-setup_BotAndController_Func()
-            }
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2: Variables_n_Constants_Yes"
-        )
-    }
-})
-basic.forever(function () {
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    "'on radio received 'receivedString''"
-    )
-    if (false) {
-        if (true) {
-            quest_Note_6.quest_Show_String_For_Note_Small_Func(
-            "For exclusive activation, place this 'on radio received' stack higher than other 'on radio received' stacks"
-            )
-            quest_Note_3.quest_Show_String_For_Note_Big_Func(
-            "Network_Message Received' Dual Usage:: Usage #1: Operate Bot from Controller_Joystick"
-            )
-            quest_Note_6.quest_Show_String_For_Note_Small_Func(
-            "Bot Stack: Main 1of1 ~ 'on radio received(receivedString)'"
-            )
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "Network Message Max_Character_Length: 19"
-            )
-            if (true) {
-                // //jwc o if (device_Type_Bot_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-                // //jwc o } else if (!(device_Type_Bot_Bool)) {
-                if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-                    if (true) {
-                        let _system_ReceivedString_Temp_Placeholder = ""
-                        if (_system_ReceivedString_Temp_Placeholder == "forward") {
-                            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                            "Following Block_Code Moddable"
-                            )
-                            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                            motor_Power_Full_Current_Pos,
-                            motor_Power_Full_Current_Pos
-                            )
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                . . # . .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        } else if (_system_ReceivedString_Temp_Placeholder == "backward") {
-                            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                            "Following Block_Code Moddable"
-                            )
-                            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                            motor_Power_Full_Current_Neg,
-                            motor_Power_Full_Current_Neg
-                            )
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . # . .
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        } else if (_system_ReceivedString_Temp_Placeholder == "left") {
-                            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                            "Following Block_Code Moddable"
-                            )
-                            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                            motor_Power_ZERO_INT,
-                            motor_Power_Full_Current_Pos
-                            )
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . # . . .
-                                # # # # .
-                                . # . . .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        } else if (_system_ReceivedString_Temp_Placeholder == "right") {
-                            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                            "Following Block_Code Moddable"
-                            )
-                            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                            motor_Power_Full_Current_Pos,
-                            motor_Power_ZERO_INT
-                            )
-                            quest_Note_4.quest_Show_String_For_Note_Small_Func(
-                            "Reliable/Faster Response If Screen_Led_Graphics After Important Action Blocks Above"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . # .
-                                . # # # #
-                                . . . # .
-                                . . . . .
-                                `)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Clear Screen Right After"
-                            )
-                            basic.showLeds(`
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                . . . . .
-                                `)
-                        } else if (_system_ReceivedString_Temp_Placeholder == "stop") {
-                            quest_Note_2.quest_Show_String_For_Note_Small_Func(
-                            "Following Block_Code Moddable"
-                            )
-                            // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                            motor_Power_ZERO_INT,
-                            motor_Power_ZERO_INT
-                            )
-                            if (true) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 2)
-                            }
-                        } else if (_system_ReceivedString_Temp_Placeholder == "gear_lo") {
-                            if (true) {
-                                // //jwc o ? let motor_Power_Gear_01_MAX = 0
-                                motor_Power_Full_Current_Pos = motor_Power_Gear_01_MAX
-                                motor_Power_Full_Current_Neg = -1 * motor_Power_Full_Current_Pos
-                                motor_Power_Half_Current = Math.round(0.5 * motor_Power_Full_Current_Pos)
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 3)
-                            }
-                        } else if (_system_ReceivedString_Temp_Placeholder == "gear_hi") {
-                            if (true) {
-                                // /jwc o ? let motor_Power_Gear_02_MAX = 0
-                                motor_Power_Full_Current_Pos = motor_Power_Gear_02_MAX
-                                motor_Power_Full_Current_Neg = -1 * motor_Power_Full_Current_Pos
-                                motor_Power_Half_Current = Math.round(0.5 * motor_Power_Full_Current_Pos)
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "LED 5x5 Screen: (0,0) @ Upper_Left -&- (4,4) @ Bottom_Right"
-                                )
-                                screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(2, 1)
-                            }
-                        } else {
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Error: Unknown Msg"
-                            )
-                            // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-                            quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                            quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-                            motor_Power_ZERO_INT,
-                            motor_Power_ZERO_INT
-                            )
-                            if (true) {
-                                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                                "For now, all 4 corners = Error: Unknown Msg"
-                                )
-                                quest_Note_6.quest_Show_String_For_Note_Small_Func(
-                                "ERROR_MESSAGE_TOBE_REPLACED"
-                                )
-                                screen_IconMessage_Func("error")
-                            }
-                        }
-                        network__CpuCycle_Post__Management_Func()
-                    }
-                } else if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Null__ID_INT) {
-                    quest_Note_3.quest_Show_String_For_Note_Big_Func(
-                    "Network_Message Received' Dual Usage:: Usage #2: Designate this micro:bit as Bot to *Finish* Network_Pairing w/ Controller_Joystick"
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                    "Code Activation of Bot:: 1of1 : 1st micro:bit Having Received a Network_Message is Designated as Device:Bot"
-                    )
-                    _system_Hw_DeviceType__Now__Id_Int = _system_Hw_DeviceType__Bot__ID_INT
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Start with 'DeviceType' Status to allow screen to stabilize & not clobber a LED for 'GroupChannelNum' Status"
-                    )
-                    _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT
-                    setup_BotOnly_Func()
-                }
-            }
-            quest_Note_6.quest_Show_String_For_Note_Big_Func(
-            "Level 2: Variables_n_Constants_Yes"
-            )
         }
     }
 })

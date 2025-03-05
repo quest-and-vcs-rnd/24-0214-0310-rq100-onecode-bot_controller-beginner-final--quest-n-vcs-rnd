@@ -171,6 +171,8 @@ function setup_BotOnly_Func() {
         motor_Power_Full_Current_Neg = -1 * motor_Power_Full_Current_Pos
         motor_Power_Half_Current = Math.round(0.5 * motor_Power_Full_Current_Pos)
         ////jwc debug: serial.writeLine("*** 24-0323-1920: " + convertToText(motor_Power_Gear_01_MAX) + " " + convertToText(motor_Power_Full_Current_Pos))
+        // Mb only upside-down for Bot (and not for Controller-Joystick)
+        display.rotateTo(display.Direction.UpsideDown)
     }
 }
 function setup_ControllerOnly_Func() {
