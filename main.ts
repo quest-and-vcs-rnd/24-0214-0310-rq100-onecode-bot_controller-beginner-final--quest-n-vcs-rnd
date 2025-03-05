@@ -566,6 +566,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
         )
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
     }
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
@@ -583,6 +584,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
         )
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
     }
 })
 function setup_For_Teacher_Func () {
@@ -661,6 +663,16 @@ setup_BotAndController_Func()
         )
     }
     if (true) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following limits repeating 'idle/stop' to .."
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        ".. not flood Led-5x5 and Network"
+        )
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+    }
+    if (true) {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 1: Variables_n_Constants_Not (Hardcode)"
         )
@@ -680,7 +692,9 @@ function setup_For_Student_Func () {
     "Below: Student can Add Code for Setup"
     )
 }
+let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
 let servoArm_DEFAULT_DEGREES_INT = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
@@ -936,9 +950,17 @@ basic.forever(function () {
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
             if (true) {
+                serial.writeNumbers([
+                controller__Polar_OriginAtCenter__MagnitudePixel__Int,
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int,
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int
+                ])
+            }
+            if (true) {
                 controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
                 quest_Controller_Joystick_Directional_AngelDegree_Increment_Enum.degree_90
                 )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = controller__Polar_OriginAtCenter__MagnitudePixel__Int
                 controller__Polar_OriginAtCenter__MagnitudePixel__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_MagnitudePixel_AsIntOut_Func(
                 )
                 if (false) {
@@ -949,7 +971,7 @@ basic.forever(function () {
             quest_Note_1.quest_Show_String_For_Note_Big_Func(
             "Convert Network Message to Operate 'B'ot: "
             )
-            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int >= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
+            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int > controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
                 if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Big_Func(
                     "Motion: Yes"
@@ -1013,24 +1035,55 @@ basic.forever(function () {
                         )
                     }
                 }
-            } else if (controller__Polar_OriginAtCenter__MagnitudePixel__Int < controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT && (!(joystickbit.getButton(joystickbit.JoystickBitPin.P12)) && (!(joystickbit.getButton(joystickbit.JoystickBitPin.P13)) && (!(joystickbit.getButton(joystickbit.JoystickBitPin.P14)) && !(joystickbit.getButton(joystickbit.JoystickBitPin.P15)))))) {
+            } else if (controller__Polar_OriginAtCenter__MagnitudePixel__Int <= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT && (!(joystickbit.getButton(joystickbit.JoystickBitPin.P12)) && (!(joystickbit.getButton(joystickbit.JoystickBitPin.P13)) && (!(joystickbit.getButton(joystickbit.JoystickBitPin.P14)) && !(joystickbit.getButton(joystickbit.JoystickBitPin.P15)))))) {
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "Avoid sending 'stop' to not interfere.. "
                 )
                 quest_Note_1.quest_Show_String_For_Note_Small_Func(
                 "..turbo-max-motion buttons pressed"
                 )
-                images.createImage(`
-                    . . . . .
-                    . . . . .
-                    . . # . .
-                    . . . . .
-                    . . . . .
-                    `).showImage(0, 0)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Zero values if not exceed 'Deadzone_AsIdle'"
-                )
-                radio.sendString("stop")
+                if (controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int <= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
+                    controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int += 1
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid sending 'stop' after above threshold-max,.."
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "..to not flood Led-5x5 and Network"
+                    )
+                    if (controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int < 5) {
+                        if (true) {
+                            images.createImage(`
+                                . . . . .
+                                . . . . .
+                                . . # . .
+                                . . . . .
+                                . . . . .
+                                `).showImage(0, 0)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Zero values if not exceed 'Deadzone_AsIdle'"
+                            )
+                            radio.sendString("stop")
+                        }
+                    }
+                } else {
+                    controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+                }
+                if (false) {
+                    images.createImage(`
+                        . . . . .
+                        . . . . .
+                        . . # . .
+                        . . . . .
+                        . . . . .
+                        `).showImage(0, 0)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Zero values if not exceed 'Deadzone_AsIdle'"
+                    )
+                    radio.sendString("stop")
+                }
+            }
+            if (true) {
+            	
             }
             if (true) {
                 serial.writeLine("*** " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
@@ -1081,6 +1134,10 @@ basic.forever(function () {
                     . . # . .
                     `).showImage(0, 0)
                 radio.sendString("fwd_max")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
                 images.createImage(`
                     . . # . .
@@ -1090,6 +1147,10 @@ basic.forever(function () {
                     . . # . .
                     `).showImage(0, 0)
                 radio.sendString("turn_max")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
                 images.createImage(`
                     . . . # .
@@ -1099,6 +1160,10 @@ basic.forever(function () {
                     . # # # .
                     `).showImage(0, 0)
                 radio.sendString("button_d")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
                 images.createImage(`
                     . . . . .
@@ -1108,6 +1173,10 @@ basic.forever(function () {
                     . . . . .
                     `).showImage(0, 0)
                 radio.sendString("button_c")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             }
             network__CpuCycle_Post__Management_Func()
         }
