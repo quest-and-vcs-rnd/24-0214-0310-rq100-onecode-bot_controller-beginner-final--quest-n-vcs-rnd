@@ -146,7 +146,10 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_UP_MAX_DEGREES_INT)
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "ServoArm_Left: Up=90 deg | Down=0 deg"
+        )
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 90)
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         images.createImage(`
             . . . . .
@@ -161,7 +164,10 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_DOWN_MAX_DEGREES_INT)
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "ServoArm_Left: Up=90 deg | Down=0 deg"
+        )
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 0)
     }
 }
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
@@ -248,6 +254,23 @@ input.onButtonPressed(Button.A, function () {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes"
         )
+    }
+})
+input.onGesture(Gesture.LogoUp, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        images.createImage(`
+            . . . # #
+            . . # . .
+            # # . . .
+            . . . . .
+            . . . . .
+            `).showImage(0, 0)
+        radio.sendString("arm_up")
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following 0-Reset to Allow Idle/Stop Afterwards"
+        )
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
     }
 })
 // BUG FIX: Switch from BlockCode vs TextCode
@@ -551,25 +574,7 @@ input.onButtonPressed(Button.B, function () {
         )
     }
 })
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        images.createImage(`
-            . . . # #
-            . . # . .
-            # # . . .
-            . . . . .
-            . . . . .
-            `).showImage(0, 0)
-        radio.sendString("arm_up")
-        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(3, 2)
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
-        )
-        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-    }
-})
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
+input.onGesture(Gesture.LogoDown, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         images.createImage(`
@@ -580,9 +585,8 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
             . . . # #
             `).showImage(0, 0)
         radio.sendString("arm_down")
-        screen_PlotNewDot_ClearOldDot_WithHeartbeat_Func(1, 2)
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "20ms(not good), 100ms(worst): Debounce Delay not seem to work"
+        "Following 0-Reset to Allow Idle/Stop Afterwards"
         )
         controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
     }
@@ -694,7 +698,6 @@ function setup_For_Student_Func () {
 }
 let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
 let servoArm_DEFAULT_DEGREES_INT = 0
-let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
@@ -702,12 +705,13 @@ let servoArm_Right_Up_Bool = false
 let servoArm_Left_Up_Bool = false
 let servoArm_Right_UP_DEGREES_INT = 0
 let servoArm_Left_UP_DEGREES_INT = 0
+let servoArm_UP_MAX_DEGREES_INT = 0
+let servoArm_DOWN_MAX_DEGREES_INT = 0
 let servoArm_Now_Degrees_Int = 0
 let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
-let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
@@ -720,13 +724,13 @@ let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
 let _system_Hw_DeviceType__Now__Id_Int = 0
 let _system_Sw_ModeState__Edit_GroupChannelNum__ID_INT = 0
-let servoArm_DOWN_MAX_DEGREES_INT = 0
-let servoArm_UP_MAX_DEGREES_INT = 0
 let _system_Sw_ModeState__Reset__ID_INT = 0
 let _system_Sw_ModeState__Now__Id_Int = 0
 let screenBrightness_Heartbeat_Count_Int = 0
