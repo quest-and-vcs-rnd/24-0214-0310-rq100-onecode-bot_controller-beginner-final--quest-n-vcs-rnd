@@ -593,7 +593,10 @@ input.onGesture(Gesture.LogoDown, function () {
 })
 function setup_For_Teacher_Func () {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Below: Staff can Add Code for Setup"
+    "Below: Teacher can Add Code for Setup.."
+    )
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    ".. e.g. 'calibrate compass'"
     )
 }
 function setup_For_System_Func () {
@@ -691,11 +694,6 @@ setup_BotAndController_Func()
         )
     }
 }
-function setup_For_Student_Func () {
-    quest_Note_2.quest_Show_String_For_Note_Big_Func(
-    "Below: Student can Add Code for Setup"
-    )
-}
 let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
 let servoArm_DEFAULT_DEGREES_INT = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
@@ -757,7 +755,9 @@ setup_For_Teacher_Func()
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
 "©️ 2025 Quest Institute. All rights reserved."
 )
-setup_For_Student_Func()
+quest_Note_2.quest_Show_String_For_Note_Big_Func(
+"Below: Student can Add Code for Setup"
+)
 basic.forever(function () {
     if (false) {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
