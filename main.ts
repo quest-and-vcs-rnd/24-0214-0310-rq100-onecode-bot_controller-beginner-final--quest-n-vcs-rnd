@@ -150,6 +150,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "ServoArm_Left: Up=90 deg | Down=0 deg"
         )
         wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 90)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 90)
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         images.createImage(`
             . . . . .
@@ -167,7 +168,8 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "ServoArm_Left: Up=90 deg | Down=0 deg"
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 180)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 0)
     }
 }
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
@@ -216,6 +218,8 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below: Student can Add Code for this Action-Event"
         )
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 360)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 360)
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "button_c") {
         images.createImage(`
             . . . . .
@@ -227,6 +231,8 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below: Student can Add Code for this Action-Event"
         )
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 270)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 270)
     }
 }
 input.onButtonPressed(Button.A, function () {
@@ -638,7 +644,7 @@ setup_BotAndController_Func()
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "...Servo-Arm: 1-of-3: Default (degrees)"
         )
-        servoArm_DEFAULT_DEGREES_INT = 180
+        servoArm_DEFAULT_DEGREES_INT = 90
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "BBB-2: Next Block_Code Moddable..."
         )
@@ -658,13 +664,14 @@ setup_BotAndController_Func()
         )
         servoArm_Now_Degrees_Int = servoArm_DEFAULT_DEGREES_INT
         wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, servoArm_Now_Degrees_Int)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, servoArm_Now_Degrees_Int)
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
         "Arm-L:" + "Default= " + servoArm_Now_Degrees_Int,
         0,
         3
         )
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-        "Arm-R:",
+        "Arm-R:" + "Default= " + servoArm_Now_Degrees_Int,
         0,
         4
         )
