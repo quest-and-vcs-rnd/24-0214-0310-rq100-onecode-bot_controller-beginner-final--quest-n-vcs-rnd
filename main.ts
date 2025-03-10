@@ -134,11 +134,11 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
 function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_up") {
         images.createImage(`
-            . . . # #
-            . . # . .
-            # # . . .
             . . . . .
             . . . . .
+            . . . . .
+            . . . . .
+            # # # # #
             `).showImage(0, 0)
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "If [0|360] is jittery, insure battery at 75% power min."
@@ -146,18 +146,23 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "ServoArm_Left: Up=90 deg | Down=0 deg"
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Up,
+        quest_Debug_Show_Enum.Dashboard_OLED
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 90)
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 90)
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Up,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         images.createImage(`
-            . . . . .
-            . . . . .
-            # # . . .
+            . . . . #
+            . . . # .
             . . # . .
-            . . . # #
+            . # . . .
+            # . . . .
             `).showImage(0, 0)
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "If [0|360] is jittery, insure battery at 75% power min."
@@ -165,11 +170,34 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "ServoArm_Left: Up=90 deg | Down=0 deg"
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Down,
+        quest_Debug_Show_Enum.Dashboard_OLED
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 180)
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 0)
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Down,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_back") {
+        images.createImage(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `).showImage(0, 0)
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Back,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Back,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
     }
 }
 function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
@@ -218,8 +246,6 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below: Student can Add Code for this Action-Event"
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 360)
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 360)
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "button_c") {
         images.createImage(`
             . . . . .
@@ -231,8 +257,6 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below: Student can Add Code for this Action-Event"
         )
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S7, 270)
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S6, 270)
     }
 }
 input.onButtonPressed(Button.A, function () {
@@ -266,11 +290,11 @@ input.onGesture(Gesture.LogoUp, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         images.createImage(`
-            . . . # #
-            . . # . .
-            # # . . .
             . . . . .
             . . . . .
+            . . . . .
+            . . . . .
+            # # # # #
             `).showImage(0, 0)
         radio.sendString("arm_up")
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -433,6 +457,23 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
         )
     }
 }
+input.onGesture(Gesture.ScreenDown, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        images.createImage(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `).showImage(0, 0)
+        radio.sendString("arm_back")
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following 0-Reset to Allow Idle/Stop Afterwards"
+        )
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+    }
+})
 input.onButtonPressed(Button.AB, function () {
     // //jwc o if (device_Type_Controller_Bool || device_Type_Bot_Bool) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Bot__ID_INT || _system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT) {
@@ -584,11 +625,11 @@ input.onGesture(Gesture.LogoDown, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         images.createImage(`
-            . . . . .
-            . . . . .
-            # # . . .
+            . . . . #
+            . . . # .
             . . # . .
-            . . . # #
+            . # . . .
+            # . . . .
             `).showImage(0, 0)
         radio.sendString("arm_down")
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -631,7 +672,10 @@ setup_BotAndController_Func()
         0
         )
     }
-    if (true) {
+    if (false) {
+        quest_Note_1.quest_Show_String_For_Note_Big_Func(
+        "25-0309-2040 This Section Obsolete, Replaced Below"
+        )
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg: start at 180"
         )
@@ -674,6 +718,18 @@ setup_BotAndController_Func()
         "Arm-R:" + "Default= " + servoArm_Now_Degrees_Int,
         0,
         4
+        )
+    }
+    if (true) {
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Up,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Up,
+        quest_Debug_Show_Enum.Dashboard_OLED
         )
     }
     if (true) {
@@ -1427,7 +1483,7 @@ basic.forever(function () {
 })
 loops.everyInterval(3600000, function () {
     quest_Note_6.quest_Show_String_For_Note_Small_Func(
-    "Above stack is practically a 'non-executing' stack that does not tie up cpu_resources with its 1 hour (3600,000)"
+    "This stack is practically a 'non-executing' stack that does not tie up cpu_resources with its 1 hour (3600,000)"
     )
     quest_Note_6.quest_Show_String_For_Note_Small_Func(
     "Also the 'if(false)' mini-stacks will be skipped by cpu, for further non-resource burdening"
