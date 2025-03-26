@@ -8,7 +8,7 @@
         "microphone": "*",
         "joystickbit": "github:tinkertanker/pxt-joystickbit#v1.0.2",
         "microbit-pxt-rotate": "github:bsiever/microbit-pxt-rotate#v0.1.6",
-        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (24-0310-0410, v0.21.2)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.21.2"
+        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (24-0326-1000, v0.22.0)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.22.0"
     },
     "files": [
         "main.blocks",

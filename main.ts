@@ -1017,11 +1017,7 @@ basic.forever(function () {
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
             if (true) {
-                serial.writeNumbers([
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int,
-                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int,
-                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int
-                ])
+                serial.writeNumbers([controller__Polar_OriginAtCenter__MagnitudePixel__Int, controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int, controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int])
             }
             if (true) {
                 controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
@@ -1254,6 +1250,28 @@ basic.forever(function () {
 })
 basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    ""
+    )
+    if (false) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Error: Unknown Msg"
+        )
+        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        0,
+        0
+        )
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "For now, all 4 corners = Error: Unknown Msg"
+            )
+            screen_IconMessage_Func("error")
+        }
+    }
+})
+basic.forever(function () {
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "'On Logo Pressed'"
     )
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
@@ -1456,28 +1474,6 @@ basic.forever(function () {
                 )
                 _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
             }
-        }
-    }
-})
-basic.forever(function () {
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    ""
-    )
-    if (false) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Error: Unknown Msg"
-        )
-        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        0,
-        0
-        )
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "For now, all 4 corners = Error: Unknown Msg"
-            )
-            screen_IconMessage_Func("error")
         }
     }
 })
