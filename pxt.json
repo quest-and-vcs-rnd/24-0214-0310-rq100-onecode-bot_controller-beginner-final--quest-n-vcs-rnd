@@ -1,6 +1,6 @@
 {
     "name": "Robot100-RemoteControl-Beginner (25-0326-1030, v2.6.0)",
-    "version": "2.5.0",
+    "version": "2.6.0",
     "description": "",
     "dependencies": {
         "core": "*",
