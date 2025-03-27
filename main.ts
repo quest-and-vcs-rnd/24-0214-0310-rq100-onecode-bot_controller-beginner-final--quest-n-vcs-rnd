@@ -816,9 +816,6 @@ network_GroupChannel_MyBotAndController_Base0_Int = 1
 setup_For_System_Func()
 setup_For_Teacher_Func()
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
-"©️ 2025 Quest Institute. All rights reserved."
-)
-quest_Note_2.quest_Show_String_For_Note_Big_Func(
 "Below: Student can Add Code for Setup"
 )
 basic.forever(function () {
@@ -1247,6 +1244,14 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes"
         )
     }
+})
+basic.forever(function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Ver 2.7.0: 25-0326-2130"
+    )
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "©️ 2025 Quest Institute. All rights reserved."
+    )
 })
 basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
