@@ -210,13 +210,13 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             . . # . .
             `).showImage(0, 0)
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: Forward-Max: Button-F"
+        "Below Moddable: Forward-Turbo"
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        70,
-        70
+        80,
+        80
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "backward_turbo") {
         images.createImage(`
@@ -227,13 +227,13 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             . . # . .
             `).showImage(0, 0)
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below Moddable: Turn-Max: Button-E"
+        "Below Moddable: Backward-Turbo"
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        -70,
-        -70
+        -80,
+        -80
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "left_turbo") {
         images.createImage(`
@@ -244,13 +244,13 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             . . # . .
             `).showImage(0, 0)
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below: Student can Add Code for this Action-Event"
+        "Below Moddable: Left-Turbo"
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
         0,
-        70
+        80
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "right_turbo") {
         images.createImage(`
@@ -261,12 +261,12 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
             . . # . .
             `).showImage(0, 0)
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
-        "Below: Student can Add Code for this Action-Event"
+        "Below Moddable: Right-Turbo"
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        70,
+        80,
         0
         )
     }
@@ -819,10 +819,10 @@ quest_Note_2.quest_Show_String_For_Note_Small_Func(
 network_GroupChannel_MyBotAndController_Base0_Int = 1
 setup_Code_For_System_Func()
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
-"Setup Code for Staff:"
+"Below, Setup Code for Staff:"
 )
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
-"Setup Code for Student:"
+"Below, Setup Code for Student:"
 )
 basic.forever(function () {
     if (false) {
