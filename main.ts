@@ -1253,7 +1253,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Ver 2.7.0: 25-0326-2130"
+    "Ver 2.8.0: 25-0401-1100"
     )
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
     "©️ 2025 Quest Institute. All rights reserved."
