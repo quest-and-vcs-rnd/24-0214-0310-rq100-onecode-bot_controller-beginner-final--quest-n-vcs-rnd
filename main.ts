@@ -819,7 +819,7 @@ quest_Note_2.quest_Show_String_For_Note_Small_Func(
 network_GroupChannel_MyBotAndController_Base0_Int = 1
 setup_Code_For_System_Func()
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
-"Below, Setup Code for Staff:"
+"Below, Setup Code for Teacher:"
 )
 quest_Note_1.quest_Show_String_For_Note_Big_Func(
 "Below, Setup Code for Student:"
@@ -1253,7 +1253,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Ver 2.8.1: 25-0401-1920"
+    "Ver 2.8.2: 25-0401-1930"
     )
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
     "©️ 2025 Quest Institute. All rights reserved."
