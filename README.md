@@ -16,6 +16,8 @@
 #### * E. Troubleshooting: Network-Pairing
 ### **Intermediate**: Lesson 5 ~ Sumo
 #### * AA. Mod: Motor-Power-%
+### **Bonus**: 4-Wheel Drive 'Combo-Bot'!
+#### * BB.  Transform 2-Bots into a 4-Wheel-Drive 'Combo-Bot'!
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 --- 
@@ -100,6 +102,15 @@
 
 ---
 # AA-2. Go Back for Steps C: Flash/Downlaod, D: Quick-Start -&- E: Troubleshooting
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+# BB. ___Bonus: Combo-Bot: Transform 2-Bots into a 4-Wheel-Drive 'Combo-Bot'!:___
+
+# * BB-1. Combine 2 Bots (a 'Front-Bot' and a 'Rear-Bot') using Your LEGO (R) Parts
+# * BB-2. No Coding and No Wiring Changes Needed :)
+# * BB-3. One Student Drives the Front-Bot (Front 2 Servo-Motor-Wheels) while Other Student Drives the Rear-Bot (Rear 2 Servo-Motor-Wheels) for a 4-Wheel-Drive Combo-Bot! :)
+
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
