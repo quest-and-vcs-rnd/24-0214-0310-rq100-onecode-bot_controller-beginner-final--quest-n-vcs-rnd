@@ -298,22 +298,19 @@ input.onButtonPressed(Button.A, function () {
         )
     }
 })
-input.onGesture(Gesture.LogoUp, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        images.createImage(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            # # # # #
-            `).showImage(0, 0)
-        radio.sendString("arm_up")
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following 0-Reset to Allow Idle/Stop Afterwards"
-        )
-        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-    }
+input.onGesture(Gesture.TiltLeft, function () {
+    images.createImage(`
+        . . # . .
+        . # . . .
+        # # # # #
+        . # . . .
+        . . # . .
+        `).showImage(0, 0)
+    radio.sendString("left_turbo")
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Following 0-Reset to Allow Idle/Stop Afterwards"
+    )
+    controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
 })
 // BUG FIX: Switch from BlockCode vs TextCode
 // let device_Type_Controller_Bool = 0
@@ -473,11 +470,11 @@ input.onGesture(Gesture.ScreenDown, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         images.createImage(`
-            # . . . .
-            # . . . .
-            # . . . .
-            # . . . .
-            # . . . .
+            . . . . #
+            . . . # .
+            . . # . .
+            . . . . .
+            . . . . .
             `).showImage(0, 0)
         radio.sendString("arm_back")
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
@@ -633,12 +630,43 @@ input.onButtonPressed(Button.B, function () {
         )
     }
 })
-input.onGesture(Gesture.LogoDown, function () {
+input.onGesture(Gesture.TiltRight, function () {
+    images.createImage(`
+        . . # . .
+        . . . # .
+        # # # # #
+        . . . # .
+        . . # . .
+        `).showImage(0, 0)
+    radio.sendString("right_turbo")
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Following 0-Reset to Allow Idle/Stop Afterwards"
+    )
+    controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+})
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         images.createImage(`
-            . . . . #
-            . . . # .
+            # . . . .
+            . # . . .
+            . . # . .
+            . . . . .
+            . . . . .
+            `).showImage(0, 0)
+        radio.sendString("arm_up")
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Following 0-Reset to Allow Idle/Stop Afterwards"
+        )
+        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+    }
+})
+joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
+    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        images.createImage(`
+            . . . . .
+            . . . . .
             . . # . .
             . # . . .
             # . . . .
@@ -777,6 +805,7 @@ let motor_Power_Gear_02_MAX = 0
 let motor_Power_Gear_01_MAX = 0
 let _system_Sw_ModeState__Test__ID_INT = 0
 let _system_Sw_ModeState__Autonomous__ID_INT = 0
+let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Null__ID_INT = 0
 let screen_Delay_MSEC_INT = 0
 let motor_Power_Gear_Number_Int = 0
@@ -790,7 +819,6 @@ let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
@@ -1221,7 +1249,7 @@ basic.forever(function () {
         )
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
                 images.createImage(`
                     . . # . .
                     . # # # .
@@ -1248,31 +1276,9 @@ basic.forever(function () {
                 )
                 controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
-                images.createImage(`
-                    . . # . .
-                    . # . . .
-                    # # # # #
-                    . # . . .
-                    . . # . .
-                    `).showImage(0, 0)
-                radio.sendString("left_turbo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+            	
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-                images.createImage(`
-                    . . # . .
-                    . . . # .
-                    # # # # #
-                    . . . # .
-                    . . # . .
-                    `).showImage(0, 0)
-                radio.sendString("right_turbo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+            	
             }
             network__CpuCycle_Post__Management_Func()
         }
