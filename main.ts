@@ -64,8 +64,8 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        50,
-        50
+        60,
+        60
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "backward") {
         images.createImage(`
@@ -80,8 +80,8 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        -50,
-        -50
+        -60,
+        -60
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "left") {
         images.createImage(`
@@ -97,7 +97,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
         0,
-        50
+        60
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "right") {
         images.createImage(`
@@ -112,7 +112,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        50,
+        60,
         0
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "stop") {
@@ -134,11 +134,11 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
 function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
     if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_up") {
         images.createImage(`
+            # . . . .
+            . # . . .
+            . . # . .
             . . . . .
             . . . . .
-            . . . . .
-            . . . . .
-            # # # # #
             `).showImage(0, 0)
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "If [0|360] is jittery, insure battery at 75% power min."
@@ -158,8 +158,8 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_down") {
         images.createImage(`
-            . . . . #
-            . . . # .
+            . . . . .
+            . . . . .
             . . # . .
             . # . . .
             # . . . .
@@ -182,11 +182,11 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_back") {
         images.createImage(`
-            # . . . .
-            # . . . .
-            # . . . .
-            # . . . .
-            # . . . .
+            . . . . #
+            . . . # .
+            . . # . .
+            . . . . .
+            . . . . .
             `).showImage(0, 0)
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
         quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
@@ -215,8 +215,8 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        80,
-        80
+        90,
+        90
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "backward_turbo") {
         images.createImage(`
@@ -232,8 +232,8 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        -80,
-        -80
+        -90,
+        -90
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "left_turbo") {
         images.createImage(`
@@ -250,7 +250,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
         0,
-        80
+        90
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "right_turbo") {
         images.createImage(`
@@ -266,7 +266,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
-        80,
+        90,
         0
         )
     }
@@ -297,20 +297,6 @@ input.onButtonPressed(Button.A, function () {
         "Level 2.1: Variables_n_Constants_Yes"
         )
     }
-})
-input.onGesture(Gesture.TiltLeft, function () {
-    images.createImage(`
-        . . # . .
-        . # . . .
-        # # # # #
-        . # . . .
-        . . # . .
-        `).showImage(0, 0)
-    radio.sendString("left_turbo")
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Following 0-Reset to Allow Idle/Stop Afterwards"
-    )
-    controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
 })
 // BUG FIX: Switch from BlockCode vs TextCode
 // let device_Type_Controller_Bool = 0
@@ -630,54 +616,6 @@ input.onButtonPressed(Button.B, function () {
         )
     }
 })
-input.onGesture(Gesture.TiltRight, function () {
-    images.createImage(`
-        . . # . .
-        . . . # .
-        # # # # #
-        . . . # .
-        . . # . .
-        `).showImage(0, 0)
-    radio.sendString("right_turbo")
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Following 0-Reset to Allow Idle/Stop Afterwards"
-    )
-    controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-})
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        images.createImage(`
-            # . . . .
-            . # . . .
-            . . # . .
-            . . . . .
-            . . . . .
-            `).showImage(0, 0)
-        radio.sendString("arm_up")
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following 0-Reset to Allow Idle/Stop Afterwards"
-        )
-        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-    }
-})
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
-    // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-    if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        images.createImage(`
-            . . . . .
-            . . . . .
-            . . # . .
-            . # . . .
-            # . . . .
-            `).showImage(0, 0)
-        radio.sendString("arm_down")
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Following 0-Reset to Allow Idle/Stop Afterwards"
-        )
-        controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-    }
-})
 function setup_Code_For_System_Func () {
     if (true) {
         setup_VariablesAndConstants_UserCustomizableNot_Func()
@@ -794,6 +732,7 @@ let servoArm_DEFAULT_DEGREES_INT = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Tens__Int = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Hundreds__Int = 0
+let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
 let servoArm_Right_Up_Bool = false
 let servoArm_Left_Up_Bool = false
 let servoArm_Right_UP_DEGREES_INT = 0
@@ -818,7 +757,6 @@ let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
-let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
 let _system_Hw_DeviceType__Controller_Joystick__ID_INT = 0
 let _system_Hw_DeviceType__Null__ID_INT = 0
@@ -1275,10 +1213,78 @@ basic.forever(function () {
                 "Following 0-Reset to Allow Idle/Stop Afterwards"
                 )
                 controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+            } else if (true) {
+                images.createImage(`
+                    . . # . .
+                    . # . . .
+                    # # # # #
+                    . # . . .
+                    . . # . .
+                    `).showImage(0, 0)
+                radio.sendString("left_turbo")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+            } else if (input.isGesture(Gesture.TiltRight)) {
+                images.createImage(`
+                    . . # . .
+                    . . . # .
+                    # # # # #
+                    . . . # .
+                    . . # . .
+                    `).showImage(0, 0)
+                radio.sendString("right_turbo")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
+        )
+    }
+})
+basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 2of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+                images.createImage(`
+                    # . . . .
+                    . # . . .
+                    . . # . .
+                    . . . . .
+                    . . . . .
+                    `).showImage(0, 0)
+                radio.sendString("arm_up")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
-            	
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-            	
+                images.createImage(`
+                    . . . . .
+                    . . . . .
+                    . . # . .
+                    . # . . .
+                    # . . . .
+                    `).showImage(0, 0)
+                radio.sendString("arm_down")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
             }
             network__CpuCycle_Post__Management_Func()
         }
