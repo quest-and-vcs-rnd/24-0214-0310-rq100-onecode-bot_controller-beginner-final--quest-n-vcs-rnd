@@ -188,6 +188,12 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
             . . . . .
             . . . . .
             `).showImage(0, 0)
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "If [0|360] is jittery, insure battery at 75% power min."
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
+        )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
         quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Back,
@@ -1008,7 +1014,19 @@ basic.forever(function () {
         // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
             if (true) {
-                serial.writeNumbers([controller__Polar_OriginAtCenter__MagnitudePixel__Int, controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int, controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int])
+                serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+                controller__Polar_OriginAtCenter__MagnitudePixel__Int,
+                8,
+                2
+                ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int,
+                8,
+                2
+                ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int,
+                8,
+                2
+                ))
             }
             if (true) {
                 controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
@@ -1117,30 +1135,18 @@ basic.forever(function () {
                             "Zero values if not exceed 'Deadzone_AsIdle'"
                             )
                             radio.sendString("stop")
+                            serial.writeString("*** B: STOP" + "")
                         }
                     }
                 } else {
                     controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-                }
-                if (false) {
-                    images.createImage(`
-                        . . . . .
-                        . . . . .
-                        . . # . .
-                        . . . . .
-                        . . . . .
-                        `).showImage(0, 0)
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Zero values if not exceed 'Deadzone_AsIdle'"
-                    )
-                    radio.sendString("stop")
                 }
             }
             if (true) {
             	
             }
             if (true) {
-                serial.writeLine("*** " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+                serial.writeLine("*** C: " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
                 joystickbit.getRockerValue(joystickbit.rockerType.X),
                 8,
                 2
@@ -1213,7 +1219,7 @@ basic.forever(function () {
                 "Following 0-Reset to Allow Idle/Stop Afterwards"
                 )
                 controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycles_IdleCount__Int = 0
-            } else if (true) {
+            } else if (input.isGesture(Gesture.TiltLeft)) {
                 images.createImage(`
                     . . # . .
                     . # . . .
