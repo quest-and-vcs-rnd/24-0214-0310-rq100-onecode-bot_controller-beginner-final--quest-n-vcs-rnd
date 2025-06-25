@@ -742,7 +742,12 @@ setup_BotAndController_Func()
         "Following for Network Throttling.."
         )
         controller__Polar_OriginAtCenter__IdleCount_Int = 0
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Int = 5
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 10
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+        if (false) {
+            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
+            controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 10
+        }
     }
     if (true) {
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
@@ -759,7 +764,8 @@ setup_BotAndController_Func()
         )
     }
 }
-let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Int = 0
+let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = 0
+let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
 let servoArm_DEFAULT_DEGREES_INT = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
@@ -1103,6 +1109,13 @@ basic.forever(function () {
                         )
                         error_Message_Func("2024-0212-1731", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
                     }
+                    if (true) {
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Following 0-Reset to Allow Idle/Stop Afterwards"
+                        )
+                        controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                    }
                     if (false) {
                         quest_Note_1.quest_Show_String_For_Note_Small_Func(
                         "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
@@ -1150,33 +1163,6 @@ basic.forever(function () {
             if (true) {
             	
             }
-            if (true) {
-                serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int,
-                8,
-                2
-                ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                controller__Polar_OriginAtCenter__IdleCount_Int,
-                8,
-                2
-                ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Int,
-                8,
-                2
-                ) + "|")
-            }
-            if (true) {
-                serial.writeLine("*** C: " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                joystickbit.getRockerValue(joystickbit.rockerType.X),
-                8,
-                2
-                ) + " Joy_Y:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                joystickbit.getRockerValue(joystickbit.rockerType.Y),
-                8,
-                2
-                ))
-            }
-            network__CpuCycle_Post__Management_Func()
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
         "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
@@ -1214,10 +1200,13 @@ basic.forever(function () {
                     . . # . .
                     `).showImage(0, 0)
                 radio.sendString("forward_turbo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
                 images.createImage(`
                     . . # . .
@@ -1227,10 +1216,13 @@ basic.forever(function () {
                     . . # . .
                     `).showImage(0, 0)
                 radio.sendString("backward_turbo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
             } else if (input.isGesture(Gesture.TiltLeft)) {
                 images.createImage(`
                     . . # . .
@@ -1294,10 +1286,13 @@ basic.forever(function () {
                     . . . . .
                     `).showImage(0, 0)
                 radio.sendString("arm_045_deg")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
                 images.createImage(`
                     . . . . .
@@ -1307,10 +1302,13 @@ basic.forever(function () {
                     . . . . .
                     `).showImage(0, 0)
                 radio.sendString("arm_000_deg")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
             }
             network__CpuCycle_Post__Management_Func()
         }
@@ -1320,6 +1318,43 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    if (true) {
+        serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__MagnitudePixel__Int,
+        8,
+        2
+        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__IdleCount_Int,
+        8,
+        2
+        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int,
+        8,
+        2
+        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT,
+        8,
+        2
+        ) + "|")
+    }
+    if (true) {
+        serial.writeLine("*** C: " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        joystickbit.getRockerValue(joystickbit.rockerType.X),
+        8,
+        2
+        ) + " Joy_Y:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        joystickbit.getRockerValue(joystickbit.rockerType.Y),
+        8,
+        2
+        ))
+    }
+    if (true) {
+        network__CpuCycle_Post__Management_Func()
+quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "See if this will slow down to column-align serial-prints"
+        )
+        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
+    }
     if (botModeInIdle_Fn()) {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "Avoid sending 'stop' to not interfere.. "
@@ -1333,7 +1368,7 @@ basic.forever(function () {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "..to not flood Led-5x5 and Network"
         )
-        if (controller__Polar_OriginAtCenter__IdleCount_Int % controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Int == 0) {
+        if (controller__Polar_OriginAtCenter__IdleCount_Int % controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int == 0) {
             if (true) {
                 images.createImage(`
                     . . . . .
@@ -1347,11 +1382,13 @@ basic.forever(function () {
                 )
                 radio.sendString("stop")
                 controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                serial.writeString("*** B: STOP" + "")
+                controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int += controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                serial.writeLine("*** B: STOP" + "")
             }
         }
         controller__Polar_OriginAtCenter__IdleCount_Int += 1
         if (false) {
+            controller__Polar_OriginAtCenter__IdleCount_Int = 0
             if (controller__Polar_OriginAtCenter__IdleCount_Int % 5 == 0) {
                 if (true) {
                     images.createImage(`
