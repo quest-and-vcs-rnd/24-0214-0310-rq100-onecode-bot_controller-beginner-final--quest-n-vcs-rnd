@@ -742,7 +742,13 @@ setup_BotAndController_Func()
         "Following for Network Throttling.."
         )
         controller__Polar_OriginAtCenter__IdleCount_Int = 0
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 10
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "controller..IdleCount_ModulusNetworkThrottle_ADD_INT"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "..: 10, 5"
+        )
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
         controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
         if (false) {
             controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
@@ -1353,6 +1359,12 @@ basic.forever(function () {
 quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "See if this will slow down to column-align serial-prints"
         )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "See if this will slow down to column-align serial-prints"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "20ms (min standard), 100ms, 10000ms (noticably slower, 1sec, but no help)"
+        )
         quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
     }
     if (botModeInIdle_Fn()) {
@@ -1830,5 +1842,18 @@ loops.everyInterval(3600000, function () {
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "When activating a 'on Radio Received' stack, replace 'receivedString_TO_BE_REPLACED_BY_ONrADIOrECEIVED_STACK' with 'receivedString'"
         )
+        if (false) {
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "Cpu-Cycle Delay: 20ms:: 115200-Y, 57600-Y, 38400-Y"
+            )
+            quest_Note_4.quest_Show_String_For_Note_Small_Func(
+            "Cpu-Cycle Delay: 20ms:: 14400-N, 28800-N, 31250-N "
+            )
+            serial.redirect(
+            SerialPin.USB_TX,
+            SerialPin.USB_RX,
+            BaudRate.BaudRate115200
+            )
+        }
     }
 })
