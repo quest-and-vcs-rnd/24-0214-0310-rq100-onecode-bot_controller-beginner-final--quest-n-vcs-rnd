@@ -63,7 +63,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         "Below Moddable: Motor Power_% [+/-100% max]"
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         60,
         60
         )
@@ -79,7 +79,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         "Below Moddable: Motor Power_% [+/-100% max]"
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         -60,
         -60
         )
@@ -95,7 +95,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         "Below Moddable: Motor Power_% [+/-100% max]"
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         0,
         40
         )
@@ -111,7 +111,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         "Below Moddable: Motor Power_% [+/-100% max]"
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         40,
         0
         )
@@ -125,7 +125,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
             `).showImage(0, 0)
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         0,
         0
         )
@@ -147,13 +147,13 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Up,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_045,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Up,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_045,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_000_deg") {
@@ -171,13 +171,13 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Down,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Down,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_090_deg") {
@@ -195,13 +195,13 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Back,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_090,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Back,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_090,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     }
@@ -220,7 +220,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         90,
         90
         )
@@ -237,7 +237,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         -90,
         -90
         )
@@ -254,7 +254,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         0,
         70
         )
@@ -271,7 +271,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         70,
         0
         )
@@ -462,7 +462,7 @@ function setup_VariablesAndConstants_UserCustomizableNot_Func () {
                 if (true) {
                     quest_Dashboard.quest_Show_Oled_Cleared_Func(
                     )
-                    quest_Dashboard.quest_Show_String_For_Oled_BigFont_Func(
+                    quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
                     "Hello  : )",
                     0,
                     0
@@ -652,8 +652,6 @@ setup_BotAndController_Func()
     if (true) {
         quest_Dashboard.quest_Send_LoginOfBot_ToXrayDashboardOfMb_Func(
         network_GroupChannel_MyBotAndController_Base0_Int,
-        quest_Toggle_OnOff_Enum.On,
-        quest_Debug_Show_Enum.Dashboard_OLED
         )
     }
     if (true) {
@@ -719,13 +717,13 @@ setup_BotAndController_Func()
     }
     if (true) {
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Down,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArm_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Down,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     }
@@ -1453,7 +1451,7 @@ basic.forever(function () {
                         "0% Power for Stop"
                         )
                         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
                         50,
                         0
                         )
@@ -1492,7 +1490,7 @@ basic.forever(function () {
                         "0% Power for Stop"
                         )
                         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
                         0,
                         50
                         )
@@ -1531,7 +1529,7 @@ basic.forever(function () {
                         "0% Power for Stop"
                         )
                         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
                         50,
                         50
                         )
@@ -1564,7 +1562,7 @@ basic.forever(function () {
                         "Servo_Motors: All Stop"
                         )
                         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
                         0,
                         0
                         )
@@ -1597,7 +1595,7 @@ basic.forever(function () {
                         "Servo_Motors: All Stop"
                         )
                         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
                         0,
                         0
                         )
@@ -1638,7 +1636,7 @@ basic.forever(function () {
         )
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         0,
         0
         )

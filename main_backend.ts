@@ -1192,7 +1192,7 @@ radio.onReceivedValue(function (name, value) {
                         }
                     }
                     quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorLeft__S0_MotorRight,
+                        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
                         motor_Power_L_Neg100toPos100_Int,
                         motor_Power_R_Neg100toPos100_Int
                     )
