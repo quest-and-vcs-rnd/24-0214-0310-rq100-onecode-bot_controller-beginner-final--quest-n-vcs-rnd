@@ -1022,14 +1022,6 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Ver 2.11.0: 25-0528-1900"
-    )
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "©️ 2025 Quest Institute. All rights reserved."
-    )
-})
-basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "'On Logo Pressed'"
     )
@@ -1497,6 +1489,14 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes"
         )
     }
+})
+basic.forever(function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Ver 2.12.0: 25-0627-0100"
+    )
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "©️ 2025 Quest Institute. All rights reserved."
+    )
 })
 basic.forever(function () {
     if (true) {
