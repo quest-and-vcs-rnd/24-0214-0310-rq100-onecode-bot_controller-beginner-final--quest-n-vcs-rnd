@@ -1,3 +1,5 @@
+// * jwc 25-0627-0400 Best to slow down joystick w/ 20ms-delay and turn-off all significant serial.prints
+
 /**
  * Variables moved from 'main.ts' to 'main_backend.ts'
  */

@@ -132,11 +132,35 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
     }
 }
 function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
-    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_045_deg") {
+    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_000_deg") {
+        images.createImage(`
+            . . . . .
+            . . . . .
+            # # . # #
+            . . . . .
+            . . . . .
+            `).showImage(0, 0)
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "If [0|360] is jittery, insure battery at 75% power min."
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
+        )
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
+        quest_Debug_Show_Enum.Dashboard_OLED
+        )
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_045_deg") {
         images.createImage(`
             # . . . #
             . # . # .
-            . . # . .
+            . . . . .
             . . . . .
             . . . . .
             `).showImage(0, 0)
@@ -154,37 +178,13 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_000_deg") {
-        images.createImage(`
-            . . . . .
-            . . . . .
-            # # # # #
-            . . . . .
-            . . . . .
-            `).showImage(0, 0)
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "If [0|360] is jittery, insure battery at 75% power min."
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
-        quest_Debug_Show_Enum.Dashboard_OLED
-        )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_090_deg") {
         images.createImage(`
-            . . # . .
-            . . # . .
-            . . # . .
+            . # . # .
+            . # . # .
+            . . . . .
             . . . . .
             . . . . .
             `).showImage(0, 0)
@@ -308,9 +308,9 @@ input.onGesture(Gesture.LogoUp, function () {
     // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
     if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
         images.createImage(`
-            . . # . .
-            . . # . .
-            . . # . .
+            . # . # .
+            . # . # .
+            . . . . .
             . . . . .
             . . . . .
             `).showImage(0, 0)
@@ -589,7 +589,7 @@ radio.onReceivedString(function (receivedString) {
             "Network Message Max_Character_Length: 19"
             )
         }
-        if (true) {
+        if (false) {
             serial.writeLine("* " + receivedString)
         }
     }
@@ -654,7 +654,7 @@ setup_BotAndController_Func()
         network_GroupChannel_MyBotAndController_Base0_Int
         )
     }
-    if (true) {
+    if (false) {
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "AAA-1: Next Block_Code Moddable..."
         )
@@ -662,7 +662,7 @@ setup_BotAndController_Func()
         "...Data-Dashboard: Row-1: Title"
         )
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-        "Data-Dashboard :)",
+        "Driver Dashboard :)",
         0,
         0
         )
@@ -744,7 +744,7 @@ setup_BotAndController_Func()
         "controller..IdleCount_ModulusNetworkThrottle_ADD_INT"
         )
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "..: 10, 5"
+        "..: 10, 5, 1 (for fastest response), 5"
         )
         controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
         controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
@@ -1022,6 +1022,411 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
+        )
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (true) {
+                controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
+                quest_Controller_Joystick_Directional_AngelDegree_Increment_Enum.degree_90
+                )
+                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = controller__Polar_OriginAtCenter__MagnitudePixel__Int
+                controller__Polar_OriginAtCenter__MagnitudePixel__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_MagnitudePixel_AsIntOut_Func(
+                )
+                if (false) {
+                    controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOfDegree90_AsIntOut_Func(
+                    )
+                }
+            }
+            quest_Note_1.quest_Show_String_For_Note_Big_Func(
+            "Convert Network Message to Operate 'B'ot: "
+            )
+            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int > controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
+                    "Motion: Yes"
+                    )
+                    if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
+                        if (true) {
+                            images.createImage(`
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                . . # . .
+                                . . . . .
+                                `).showImage(0, 0)
+                            radio.sendString("forward")
+                        }
+                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
+                        if (true) {
+                            images.createImage(`
+                                . . . . .
+                                . . # . .
+                                . . # . .
+                                . # # # .
+                                . . # . .
+                                `).showImage(0, 0)
+                            radio.sendString("backward")
+                        }
+                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
+                        if (true) {
+                            images.createImage(`
+                                . . . . .
+                                . # . . .
+                                # # # # .
+                                . # . . .
+                                . . . . .
+                                `).showImage(0, 0)
+                            radio.sendString("left")
+                        }
+                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
+                        if (true) {
+                            images.createImage(`
+                                . . . . .
+                                . . . # .
+                                . # # # #
+                                . . . # .
+                                . . . . .
+                                `).showImage(0, 0)
+                            radio.sendString("right")
+                        }
+                    } else {
+                        quest_Note_5.quest_Show_String_For_Note_Small_Func(
+                        "Invalid 'controller_Joystick_Angle_Degrees_AsIncremented_Int'"
+                        )
+                        error_Message_Func("2024-0212-1731", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
+                    }
+                    if (true) {
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "Following 0-Reset to Allow Idle/Stop Afterwards"
+                        )
+                        controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                    }
+                    if (false) {
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
+                        )
+                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                        "jwc ? may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at inactive free space"
+                        )
+                    }
+                }
+            } else if (false) {
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Avoid sending 'stop' to not interfere.. "
+                )
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "..turbo-max-motion buttons pressed"
+                )
+                if (controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int <= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
+                    controller__Polar_OriginAtCenter__IdleCount_Int += 1
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Avoid sending 'stop' after above threshold-max,.."
+                    )
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "..to not flood Led-5x5 and Network"
+                    )
+                    if (controller__Polar_OriginAtCenter__IdleCount_Int < 5) {
+                        if (true) {
+                            images.createImage(`
+                                . . . . .
+                                . . . . .
+                                . . # . .
+                                . . . . .
+                                . . . . .
+                                `).showImage(0, 0)
+                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                            "Zero values if not exceed 'Deadzone_AsIdle'"
+                            )
+                            radio.sendString("stop")
+                            serial.writeString("*** B: STOP" + "")
+                        }
+                    }
+                } else {
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                }
+            }
+            if (true) {
+                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
+            }
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Activate Stack via 'Forever' Stack_Header"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 1of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+    }
+})
+basic.forever(function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Ver 2.12.0: 25-0627-0100"
+    )
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "©️ 2025 Quest Institute. All rights reserved."
+    )
+})
+basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 2of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
+                images.createImage(`
+                    . . # . .
+                    . # # # .
+                    # . # . #
+                    . . # . .
+                    . . # . .
+                    `).showImage(0, 0)
+                radio.sendString("forward_turbo")
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
+                images.createImage(`
+                    . . # . .
+                    . . # . .
+                    # . # . #
+                    . # # # .
+                    . . # . .
+                    `).showImage(0, 0)
+                radio.sendString("backward_turbo")
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
+            } else if (input.isGesture(Gesture.TiltLeft)) {
+                images.createImage(`
+                    . . # . .
+                    . # . . .
+                    # # # # #
+                    . # . . .
+                    . . # . .
+                    `).showImage(0, 0)
+                radio.sendString("left_turbo")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+            } else if (input.isGesture(Gesture.TiltRight)) {
+                images.createImage(`
+                    . . # . .
+                    . . . # .
+                    # # # # #
+                    . . . # .
+                    . . # . .
+                    `).showImage(0, 0)
+                radio.sendString("right_turbo")
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Following 0-Reset to Allow Idle/Stop Afterwards"
+                )
+                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
+        )
+    }
+})
+basic.forever(function () {
+    if (true) {
+        quest_Note_3.quest_Show_String_For_Note_Big_Func(
+        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
+        )
+        quest_Note_6.quest_Show_String_For_Note_Small_Func(
+        "Controller_Joystick Stack: Main 2of2"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Network Message Max_Character_Length: 19"
+        )
+        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
+            if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
+                images.createImage(`
+                    . . . . .
+                    . . . . .
+                    # # . # #
+                    . . . . .
+                    . . . . .
+                    `).showImage(0, 0)
+                radio.sendString("arm_000_deg")
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
+            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+                images.createImage(`
+                    # . . . #
+                    . # . # .
+                    . . . . .
+                    . . . . .
+                    . . . . .
+                    `).showImage(0, 0)
+                radio.sendString("arm_045_deg")
+                if (true) {
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Following 0-Reset to Allow Idle/Stop Afterwards"
+                    )
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                }
+            }
+            network__CpuCycle_Post__Management_Func()
+        }
+        quest_Note_6.quest_Show_String_For_Note_Big_Func(
+        "Level 2.1: Variables_n_Constants_Yes"
+        )
+    }
+})
+basic.forever(function () {
+    if (false) {
+        serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__MagnitudePixel__Int,
+        8,
+        2
+        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__IdleCount_Int,
+        8,
+        2
+        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int,
+        8,
+        2
+        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT,
+        8,
+        2
+        ) + "|")
+    }
+    if (false) {
+        serial.writeLine("*** C: " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        joystickbit.getRockerValue(joystickbit.rockerType.X),
+        8,
+        2
+        ) + " Joy_Y:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
+        joystickbit.getRockerValue(joystickbit.rockerType.Y),
+        8,
+        2
+        ))
+    }
+    if (true) {
+        network__CpuCycle_Post__Management_Func()
+quest_Note_4.quest_Show_String_For_Note_Small_Func(
+        "See if this will slow down to column-align serial-prints"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "See if this will slow down to column-align serial-prints"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "20ms (min standard), 100ms, 10000ms (noticably slower, 1sec, but no help)"
+        )
+        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
+    }
+    if (botModeInIdle_Fn()) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Avoid sending 'stop' to not interfere.. "
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "..turbo-max-motion & other user-inputs pressed"
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Avoid sending 'stop' after above threshold-max,.."
+        )
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "..to not flood Led-5x5 and Network"
+        )
+        if (controller__Polar_OriginAtCenter__IdleCount_Int % controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int == 0) {
+            if (true) {
+                images.createImage(`
+                    . . . . .
+                    . . . . .
+                    . . # . .
+                    . . . . .
+                    . . . . .
+                    `).showImage(0, 0)
+                quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                "Zero values if not exceed 'Deadzone_AsIdle'"
+                )
+                radio.sendString("stop")
+                controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int += controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
+                serial.writeLine("*** B: STOP" + "")
+            }
+        }
+        controller__Polar_OriginAtCenter__IdleCount_Int += 1
+        if (false) {
+            controller__Polar_OriginAtCenter__IdleCount_Int = 0
+            if (controller__Polar_OriginAtCenter__IdleCount_Int % 5 == 0) {
+                if (true) {
+                    images.createImage(`
+                        . . . . .
+                        . . . . .
+                        . . # . .
+                        . . . . .
+                        . . . . .
+                        `).showImage(0, 0)
+                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+                    "Zero values if not exceed 'Deadzone_AsIdle'"
+                    )
+                    radio.sendString("stop")
+                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
+                    serial.writeString("*** B: STOP" + "")
+                }
+            }
+        }
+    }
+})
+basic.forever(function () {
+    quest_Note_6.quest_Show_String_For_Note_Big_Func(
+    ""
+    )
+    if (false) {
+        quest_Note_1.quest_Show_String_For_Note_Small_Func(
+        "Error: Unknown Msg"
+        )
+        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
+        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
+        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
+        0,
+        0
+        )
+        if (true) {
+            quest_Note_1.quest_Show_String_For_Note_Small_Func(
+            "For now, all 4 corners = Error: Unknown Msg"
+            )
+            screen_IconMessage_Func("error")
+        }
+    }
+})
+basic.forever(function () {
     quest_Note_6.quest_Show_String_For_Note_Big_Func(
     "'On Logo Pressed'"
     )
@@ -1224,426 +1629,6 @@ basic.forever(function () {
                 "Just exited the above_conditioned 'if then' state and will process accordingly as needed:"
                 )
                 _system_Sw_ModeState__Now__Id_Int = _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT
-            }
-        }
-    }
-})
-basic.forever(function () {
-    quest_Note_6.quest_Show_String_For_Note_Big_Func(
-    ""
-    )
-    if (false) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Error: Unknown Msg"
-        )
-        // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
-        quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
-        quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
-        0,
-        0
-        )
-        if (true) {
-            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-            "For now, all 4 corners = Error: Unknown Msg"
-            )
-            screen_IconMessage_Func("error")
-        }
-    }
-})
-basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Joystick"
-        )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (false) {
-                serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int,
-                8,
-                2
-                ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int,
-                8,
-                2
-                ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-                controller__Polar_OriginAtCenter__IdleCount_Int,
-                8,
-                2
-                ) + "|")
-            }
-            if (true) {
-                controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOf_AsIntOut_Func(
-                quest_Controller_Joystick_Directional_AngelDegree_Increment_Enum.degree_90
-                )
-                controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = controller__Polar_OriginAtCenter__MagnitudePixel__Int
-                controller__Polar_OriginAtCenter__MagnitudePixel__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_MagnitudePixel_AsIntOut_Func(
-                )
-                if (false) {
-                    controller__Polar_OriginAtCenter__AngleDegree__Int = quest_Sensors.quest_Get_Controller_Joystick_Directional_AngleDegree_IncrementOfDegree90_AsIntOut_Func(
-                    )
-                }
-            }
-            quest_Note_1.quest_Show_String_For_Note_Big_Func(
-            "Convert Network Message to Operate 'B'ot: "
-            )
-            if (controller__Polar_OriginAtCenter__MagnitudePixel__Int > controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Big_Func(
-                    "Motion: Yes"
-                    )
-                    if (controller__Polar_OriginAtCenter__AngleDegree__Int == 90) {
-                        if (true) {
-                            images.createImage(`
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                . . # . .
-                                . . . . .
-                                `).showImage(0, 0)
-                            radio.sendString("forward")
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 270) {
-                        if (true) {
-                            images.createImage(`
-                                . . . . .
-                                . . # . .
-                                . . # . .
-                                . # # # .
-                                . . # . .
-                                `).showImage(0, 0)
-                            radio.sendString("backward")
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 180) {
-                        if (true) {
-                            images.createImage(`
-                                . . . . .
-                                . # . . .
-                                # # # # .
-                                . # . . .
-                                . . . . .
-                                `).showImage(0, 0)
-                            radio.sendString("left")
-                        }
-                    } else if (controller__Polar_OriginAtCenter__AngleDegree__Int == 0 || controller__Polar_OriginAtCenter__AngleDegree__Int == 360) {
-                        if (true) {
-                            images.createImage(`
-                                . . . . .
-                                . . . # .
-                                . # # # #
-                                . . . # .
-                                . . . . .
-                                `).showImage(0, 0)
-                            radio.sendString("right")
-                        }
-                    } else {
-                        quest_Note_5.quest_Show_String_For_Note_Small_Func(
-                        "Invalid 'controller_Joystick_Angle_Degrees_AsIncremented_Int'"
-                        )
-                        error_Message_Func("2024-0212-1731", "Invalid 'controller__Polar_OriginAtCenter__AngleDegree__Int'")
-                    }
-                    if (true) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "Following 0-Reset to Allow Idle/Stop Afterwards"
-                        )
-                        controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                    }
-                    if (false) {
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "jwc ? cause compiler to auto-create weird code below from 'convert_Controller_Joystick_Directional_AngleDegrees__To__Microbit5x5Screen_Func(controller__Polar_OriginAtCenter__AngleDegree__Int)'"
-                        )
-                        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                        "jwc ? may cause compiler bug, auto_creates 'let controller__Polar_OriginAtCenter__AngleDegree__Int = 0' at inactive free space"
-                        )
-                    }
-                }
-            } else if (false) {
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Avoid sending 'stop' to not interfere.. "
-                )
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "..turbo-max-motion buttons pressed"
-                )
-                if (controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int <= controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT) {
-                    controller__Polar_OriginAtCenter__IdleCount_Int += 1
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Avoid sending 'stop' after above threshold-max,.."
-                    )
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "..to not flood Led-5x5 and Network"
-                    )
-                    if (controller__Polar_OriginAtCenter__IdleCount_Int < 5) {
-                        if (true) {
-                            images.createImage(`
-                                . . . . .
-                                . . . . .
-                                . . # . .
-                                . . . . .
-                                . . . . .
-                                `).showImage(0, 0)
-                            quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                            "Zero values if not exceed 'Deadzone_AsIdle'"
-                            )
-                            radio.sendString("stop")
-                            serial.writeString("*** B: STOP" + "")
-                        }
-                    }
-                } else {
-                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                }
-            }
-            if (true) {
-            	
-            }
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes ~ Yes: 1-Sec Lag 'show leds'"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Activate Stack via 'Forever' Stack_Header"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 1of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-    }
-})
-basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 2of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-        // //jwc o if (device_Type_Controller_Bool && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-                images.createImage(`
-                    . . # . .
-                    . # # # .
-                    # . # . #
-                    . . # . .
-                    . . # . .
-                    `).showImage(0, 0)
-                radio.sendString("forward_turbo")
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following 0-Reset to Allow Idle/Stop Afterwards"
-                    )
-                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                }
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
-                images.createImage(`
-                    . . # . .
-                    . . # . .
-                    # . # . #
-                    . # # # .
-                    . . # . .
-                    `).showImage(0, 0)
-                radio.sendString("backward_turbo")
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following 0-Reset to Allow Idle/Stop Afterwards"
-                    )
-                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                }
-            } else if (input.isGesture(Gesture.TiltLeft)) {
-                images.createImage(`
-                    . . # . .
-                    . # . . .
-                    # # # # #
-                    . # . . .
-                    . . # . .
-                    `).showImage(0, 0)
-                radio.sendString("left_turbo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
-            } else if (input.isGesture(Gesture.TiltRight)) {
-                images.createImage(`
-                    . . # . .
-                    . . . # .
-                    # # # # #
-                    . . . # .
-                    . . # . .
-                    `).showImage(0, 0)
-                radio.sendString("right_turbo")
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Following 0-Reset to Allow Idle/Stop Afterwards"
-                )
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
-            }
-            network__CpuCycle_Post__Management_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
-    }
-})
-basic.forever(function () {
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Ver 2.12.0: 25-0627-0100"
-    )
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "©️ 2025 Quest Institute. All rights reserved."
-    )
-})
-basic.forever(function () {
-    if (true) {
-        quest_Note_3.quest_Show_String_For_Note_Big_Func(
-        "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
-        )
-        quest_Note_6.quest_Show_String_For_Note_Small_Func(
-        "Controller_Joystick Stack: Main 2of2"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Network Message Max_Character_Length: 19"
-        )
-        if (_system_Hw_DeviceType__Now__Id_Int == _system_Hw_DeviceType__Controller_Joystick__ID_INT && (_system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT || _system_Sw_ModeState__Now__Id_Int == _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT)) {
-            if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
-                images.createImage(`
-                    # . . . #
-                    . # . # .
-                    . . # . .
-                    . . . . .
-                    . . . . .
-                    `).showImage(0, 0)
-                radio.sendString("arm_045_deg")
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following 0-Reset to Allow Idle/Stop Afterwards"
-                    )
-                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                }
-            } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
-                images.createImage(`
-                    . . . . .
-                    . . . . .
-                    # # # # #
-                    . . . . .
-                    . . . . .
-                    `).showImage(0, 0)
-                radio.sendString("arm_000_deg")
-                if (true) {
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Following 0-Reset to Allow Idle/Stop Afterwards"
-                    )
-                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                    controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                }
-            }
-            network__CpuCycle_Post__Management_Func()
-        }
-        quest_Note_6.quest_Show_String_For_Note_Big_Func(
-        "Level 2.1: Variables_n_Constants_Yes"
-        )
-    }
-})
-basic.forever(function () {
-    if (true) {
-        serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-        controller__Polar_OriginAtCenter__MagnitudePixel__Int,
-        8,
-        2
-        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-        controller__Polar_OriginAtCenter__IdleCount_Int,
-        8,
-        2
-        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int,
-        8,
-        2
-        ) + "|" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT,
-        8,
-        2
-        ) + "|")
-    }
-    if (true) {
-        serial.writeLine("*** C: " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-        joystickbit.getRockerValue(joystickbit.rockerType.X),
-        8,
-        2
-        ) + " Joy_Y:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
-        joystickbit.getRockerValue(joystickbit.rockerType.Y),
-        8,
-        2
-        ))
-    }
-    if (true) {
-        network__CpuCycle_Post__Management_Func()
-quest_Note_4.quest_Show_String_For_Note_Small_Func(
-        "See if this will slow down to column-align serial-prints"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "See if this will slow down to column-align serial-prints"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "20ms (min standard), 100ms, 10000ms (noticably slower, 1sec, but no help)"
-        )
-        quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
-    }
-    if (botModeInIdle_Fn()) {
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Avoid sending 'stop' to not interfere.. "
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "..turbo-max-motion & other user-inputs pressed"
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "Avoid sending 'stop' after above threshold-max,.."
-        )
-        quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "..to not flood Led-5x5 and Network"
-        )
-        if (controller__Polar_OriginAtCenter__IdleCount_Int % controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int == 0) {
-            if (true) {
-                images.createImage(`
-                    . . . . .
-                    . . . . .
-                    . . # . .
-                    . . . . .
-                    . . . . .
-                    `).showImage(0, 0)
-                quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                "Zero values if not exceed 'Deadzone_AsIdle'"
-                )
-                radio.sendString("stop")
-                controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int += controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
-                serial.writeLine("*** B: STOP" + "")
-            }
-        }
-        controller__Polar_OriginAtCenter__IdleCount_Int += 1
-        if (false) {
-            controller__Polar_OriginAtCenter__IdleCount_Int = 0
-            if (controller__Polar_OriginAtCenter__IdleCount_Int % 5 == 0) {
-                if (true) {
-                    images.createImage(`
-                        . . . . .
-                        . . . . .
-                        . . # . .
-                        . . . . .
-                        . . . . .
-                        `).showImage(0, 0)
-                    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-                    "Zero values if not exceed 'Deadzone_AsIdle'"
-                    )
-                    radio.sendString("stop")
-                    controller__Polar_OriginAtCenter__IdleCount_Int = 0
-                    serial.writeString("*** B: STOP" + "")
-                }
             }
         }
     }
