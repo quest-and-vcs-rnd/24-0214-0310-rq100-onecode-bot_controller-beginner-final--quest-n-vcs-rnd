@@ -1,5 +1,5 @@
 {
-    "name": "robot100_200-RemoteControl-Beginner",
+    "name": "robot100_200-RemoteControl-Beginner (v2.13.1, 25-0628-1620)",
     "version": "2.13.0",
     "description": "",
     "dependencies": {
@@ -30,5 +30,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
