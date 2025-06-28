@@ -589,7 +589,7 @@ radio.onReceivedString(function (receivedString) {
             "Network Message Max_Character_Length: 19"
             )
         }
-        if (false) {
+        if (true) {
             serial.writeLine("* " + receivedString)
         }
     }
@@ -654,7 +654,7 @@ setup_BotAndController_Func()
         network_GroupChannel_MyBotAndController_Base0_Int
         )
     }
-    if (false) {
+    if (true) {
         quest_Note_4.quest_Show_String_For_Note_Small_Func(
         "AAA-1: Next Block_Code Moddable..."
         )
@@ -662,7 +662,7 @@ setup_BotAndController_Func()
         "...Data-Dashboard: Row-1: Title"
         )
         quest_Dashboard.quest_Show_String_For_Oled_SmallFont_Func(
-        "Driver Dashboard :)",
+        "Data-Dashboard :)",
         0,
         0
         )
@@ -744,7 +744,7 @@ setup_BotAndController_Func()
         "controller..IdleCount_ModulusNetworkThrottle_ADD_INT"
         )
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
-        "..: 10, 5, 1 (for fastest response), 5"
+        "..: 10, 5"
         )
         controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 5
         controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
@@ -1150,7 +1150,7 @@ basic.forever(function () {
                 }
             }
             if (true) {
-                quest_Timer.quest_Set_ContinueCurrentState_CountdownTimer_Func(20, quest_Time_Units_Enum.Milliseconds)
+            	
             }
         }
         quest_Note_6.quest_Show_String_For_Note_Big_Func(
@@ -1166,14 +1166,6 @@ basic.forever(function () {
         "Network Message Max_Character_Length: 19"
         )
     }
-})
-basic.forever(function () {
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "Ver 2.12.0: 25-0627-0100"
-    )
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "©️ 2025 Quest Institute. All rights reserved."
-    )
 })
 basic.forever(function () {
     if (true) {
@@ -1255,6 +1247,14 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "Ver 2.12.0: 25-0627-0100"
+    )
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "©️ 2025 Quest Institute. All rights reserved."
+    )
+})
+basic.forever(function () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
@@ -1307,7 +1307,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (false) {
+    if (true) {
         serial.writeString("*** A:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
         controller__Polar_OriginAtCenter__MagnitudePixel__Int,
         8,
@@ -1326,7 +1326,7 @@ basic.forever(function () {
         2
         ) + "|")
     }
-    if (false) {
+    if (true) {
         serial.writeLine("*** C: " + "Joy_X:" + quest_General.quest_Get_Number_WithColumnPadding_AsStringOut_Func(
         joystickbit.getRockerValue(joystickbit.rockerType.X),
         8,
