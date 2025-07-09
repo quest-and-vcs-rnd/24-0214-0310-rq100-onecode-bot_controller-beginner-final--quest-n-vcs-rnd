@@ -1212,7 +1212,10 @@ basic.forever(function () {
                     controller__Polar_OriginAtCenter__IdleCount_Int = 0
                     controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
                 }
-            } else if (input.isGesture(Gesture.TiltLeft)) {
+            } else if (false) {
+                quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                "Deactivate for now"
+                )
                 images.createImage(`
                     . . # . .
                     . # . . .
@@ -1225,7 +1228,10 @@ basic.forever(function () {
                 "Following 0-Reset to Allow Idle/Stop Afterwards"
                 )
                 controller__Polar_OriginAtCenter__IdleCount_Int = 0
-            } else if (input.isGesture(Gesture.TiltRight)) {
+            } else if (false) {
+                quest_Note_4.quest_Show_String_For_Note_Small_Func(
+                "Deactivate for now"
+                )
                 images.createImage(`
                     . . # . .
                     . . . # .
@@ -1248,7 +1254,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "(v2.14.1: 25-0708-2020)"
+    " (v2.14.2: 25-0709-1000)"
     )
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
     "©️ 2025 Quest Institute. All rights reserved."
