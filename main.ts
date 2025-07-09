@@ -97,7 +97,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         0,
-        40
+        50
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "right") {
         images.createImage(`
@@ -112,7 +112,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
         )
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
-        40,
+        50,
         0
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "stop") {
@@ -256,7 +256,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
         0,
-        70
+        80
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "right_turbo") {
         images.createImage(`
@@ -272,7 +272,7 @@ function bot_Servo_Motors_Turbo_Fn (network_ReceivedString_FromControllerJoystic
         // //jwc o roboQuest.powerMotorsViaBlueRedBlackPins(PortGroup_BlueRedBlack__PortIds__Enum.S1_MotorLeft__S0_MotorRight, motor_Power_ZERO_INT, motor_Power_ZERO_INT)
         quest_Motors.quest_Set_PowerMotorsViaBlueRedBlackPins_Func(
         quest_PortGroup_BlueRedBlack_PortIds_Enum.S1_MotorWheel_Left__S0_MotorWheel_Right,
-        70,
+        80,
         0
         )
     }
@@ -1248,7 +1248,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "v2.13.2: 25-0708-2000"
+    "(v2.14.1: 25-0708-2020)"
     )
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
     "©️ 2025 Quest Institute. All rights reserved."
