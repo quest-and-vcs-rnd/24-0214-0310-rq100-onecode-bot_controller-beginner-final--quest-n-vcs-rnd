@@ -147,12 +147,12 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
@@ -171,12 +171,12 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
@@ -195,12 +195,12 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_090,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_090,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
@@ -717,12 +717,12 @@ setup_BotAndController_Func()
     }
     if (true) {
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArmBeam_Left,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_Func(
-        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArmBeam_Right,
+        quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
@@ -1254,7 +1254,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    " (v2.14.2: 25-0709-1000)"
+    " (v2.15.0: 25-0720-2300)"
     )
     quest_Note_1.quest_Show_String_For_Note_Small_Func(
     "©️ 2025 Quest Institute. All rights reserved."
