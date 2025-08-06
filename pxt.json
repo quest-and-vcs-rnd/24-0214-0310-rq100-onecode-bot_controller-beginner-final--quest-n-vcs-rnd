@@ -1,5 +1,5 @@
 {
-    "name": "robot100_200-RemoteControl-Beginner (v2.17.0: 25-0806-0330)",
+    "name": "robot100_200-RemoteControl-Beginner (v2.18.0: 25-0806-0340)",
     "version": "2.17.0",
     "description": "",
     "dependencies": {
@@ -9,7 +9,7 @@
         "joystickbit": "github:tinkertanker/pxt-joystickbit#v1.0.2",
         "microbit-pxt-rotate": "github:bsiever/microbit-pxt-rotate#v0.1.6",
         "25-0805-1750-Makecode_microbit-Comments-Extension": "github:jasonc1025-333/25-0805-1750-makecode_microbit-comments-extension#v0.0.2",
-        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (v0.28.3, 25-0805-2030)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.28.3"
+        "23-1006-1820-RQ100-QuestCustomBlocks-Wukong-Oled (v0.28.4, 25-0806-0100)": "github:jasonc1025-333/23-1006-1820-rq100-questcustomblocks-wukong-oled#v0.28.4"
     },
     "files": [
         "main.blocks",
