@@ -132,7 +132,7 @@ function bot_Servo_Motors_Basic_Fn (network_ReceivedString_FromControllerJoystic
     }
 }
 function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_ParamIn: string) {
-    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_000_deg") {
+    if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_000__down") {
         images.createImage(`
             . . . . .
             . . . . .
@@ -146,17 +146,23 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Below Moddable: S7_ServoArm_Left"
+        )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Below Moddable: S6_ServoArm_Right"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
-    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_045_deg") {
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_045__up_half") {
         images.createImage(`
             # . . . #
             . # . # .
@@ -170,17 +176,23 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Below Moddable: S7_ServoArm_Left"
+        )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045_Up_Half,
         quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Below Moddable: S6_ServoArm_Right"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045_Up_Half,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
-    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_090_deg") {
+    } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_090__up_full") {
         images.createImage(`
             . # . # .
             . # . # .
@@ -194,10 +206,16 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "GeekServo-360-Degrees-2kg:360-degrees(not 180-degrees)"
         )
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Below Moddable: S7_ServoArm_Left"
+        )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
         quest_Debug_Show_Enum.Dashboard_OLED
+        )
+        quest_Note_2.quest_Show_String_For_Note_Big_Func(
+        "Below Moddable: S6_ServoArm_Right"
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
@@ -314,7 +332,7 @@ input.onGesture(Gesture.LogoUp, function () {
             . . . . .
             . . . . .
             `).showImage(0, 0)
-        radio.sendString("arm_090_deg")
+        radio.sendString("arm_090__up_full")
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "Following 0-Reset to Allow Idle/Stop Afterwards"
         )
@@ -1280,7 +1298,7 @@ basic.forever(function () {
                     . . . . .
                     . . . . .
                     `).showImage(0, 0)
-                radio.sendString("arm_000_deg")
+                radio.sendString("arm_000__down")
                 if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following 0-Reset to Allow Idle/Stop Afterwards"
@@ -1296,7 +1314,7 @@ basic.forever(function () {
                     . . . . .
                     . . . . .
                     `).showImage(0, 0)
-                radio.sendString("arm_045_deg")
+                radio.sendString("arm_045__up_half")
                 if (true) {
                     quest_Note_1.quest_Show_String_For_Note_Small_Func(
                     "Following 0-Reset to Allow Idle/Stop Afterwards"
