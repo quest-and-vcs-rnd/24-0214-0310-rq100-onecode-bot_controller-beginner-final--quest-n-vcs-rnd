@@ -1,5 +1,5 @@
 {
-    "name": "robot100_200-RemoteControl-Beginner (v2.20.0: 25-0809-1520)",
+    "name": "robot100_200-RemoteControl-Beginner (v2.21.0: 25-0909-1100)",
     "version": "2.20.0",
     "description": "",
     "dependencies": {
@@ -24,7 +24,7 @@
         "branch": "v6.0.19",
         "tag": "v6.0.19",
         "commits": "https://github.com/microsoft/pxt-microbit/commits/19507cc84a19f2a882b2fbe58b4ae3a5cb79cbf9",
-        "target": "8.0.15",
+        "target": "8.0.16",
         "pxt": "9.0.12",
         "targetId": "microbit"
     },

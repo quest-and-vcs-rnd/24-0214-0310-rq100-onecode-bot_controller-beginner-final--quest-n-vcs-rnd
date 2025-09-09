@@ -8,13 +8,13 @@
 ### [( Educator Resource Guide Separate Web-Page )](https://quest-and-vcs-rnd.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/)
 
 # Table of Contents
-### **Basic**: Lesson 2 ~ Joy Ride
+### **Basic*: For Any Lesson (e.g. Lesson 2 ~ Joy Ride)
 #### * A. Coding-Editor Setup
 #### * B. Mod: Bot-Id (Group-Channel-Num)
 #### * C. Flash/Download Code to 'micro:bit'
 #### * D. Quick-Start: Network-Pairing
 #### * E. Troubleshooting: Network-Pairing
-### **Intermediate**: Lesson 5 ~ Sumo
+### **Intermediate**: For Any Lesson (e.g. Lesson 5 ~ Sumo)
 #### * AA. Mod: Motor-Power-%
 ### **Bonus**: 4-Wheel Drive 'Combo-Bot'!
 #### * BB.  Transform 2-Bots into a 4-Wheel-Drive 'Combo-Bot'!
@@ -29,9 +29,11 @@
 
 --- 
 # B. Can Mod the Code-Block Right After A Bright-Green Comment-Block:
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-52-01.png-LookForBrightGreenComment_Block.png?raw=true)
+<!-- ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-52-01.png-LookForBrightGreenComment_Block.png?raw=true) -->
+![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/11i-Media-24-0710-1300/2025-09-09_09-35-15.png?raw=true)
 # B-1. ___Basic Required:___ Modding/Coding ~ 'Lesson 02: Joy Ride' & 'Lesson 05: Sumo':
-![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/2024-12-06_15-01-20-GroupChannelNum_Mod.png?raw=true)
+<!-- ![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/2024-12-06_15-01-20-GroupChannelNum_Mod.png?raw=true) -->
+![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/11i-Media-24-0710-1300/2025-09-09_09-45-57.png?raw=true)
 # B-2.
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-03_09-12-45-Label_GroupChannel%23_Microbit_PermanentMarker-03.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
@@ -86,7 +88,8 @@
 # E. ___Troubleshooting:___ Network-Pairing ~ Any Lesson:
 
 # * E-1. Check Bot's Battery is 3-of-4 Bars & Controller-Joystick's Power Light (Next to Power Switch) is On
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-40-19-IoExpansionBoard_Wukong-Power_Minimum-3-out-of-4.png?raw=true)
+<!-- ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_15-40-19-IoExpansionBoard_Wukong-Power_Minimum-3-out-of-4.png?raw=true) -->
+![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/11i-Media-24-0710-1300/2025-09-09_09-57-53.png?raw=true)
 
 # * E-2. If Network-Pairing still Failing, Then...
 ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/2024-10-02_14-50-24-TurnBothOff_3Sec-ThenBothOn.png?raw=true)
@@ -96,12 +99,13 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-# AA-1. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Only for: 'Lesson 05: Sumo':
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true)
+# AA-1. ___Intermediate Only-As-Instructed:___ Modding/Coding ~ Any Lesson (e.g. 'Lesson 05: Sumo'):
+<!-- ![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-12_06-41-19-Moddable_ServoMotor_PowerPercent-V2Pt1.png?raw=true) -->
+![](https://github.com/quest-and-vcs-rnd/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/blob/master/11i-Media-24-0710-1300/2025-09-09_10-15-30.png?raw=true)
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-# AA-2. Go Back for Steps C: Flash/Downlaod, D: Quick-Start -&- E: Troubleshooting
+# AA-2. Go Back for Steps ~ C: Flash/Download, D: Quick-Start, & E: Troubleshooting
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
@@ -118,6 +122,28 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+# ZZZZ. FOR STAFF USE:
+
+# * ZZZZ-1. Staff: Chrome (Web) Browser ~ One-Time Setup 
+![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
+
+# [* ZZZZ-2. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
+
+# [* ZZZZ-3 Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
+![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
+
+# THE END (For Staff)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
+
+---
+# YYYY. FOR R&D USE:
+
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
@@ -141,20 +167,10 @@
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
-# ZZZZ. FOR STAFF USE:
+# THE END (For R&D)
+<!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
-
-# * ZZZZ-1. Staff: Chrome (Web) Browser ~ One-Time Setup 
-![](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/11i-Media-24-0710-1300/2024-07-08_12-24-16-ChromeBrowser-OneTimeSetup.png?raw=true)
-
-# [* ZZZZ-2. Staff: Educator Training & Resource Guide (Quick Version): tinyurl.com/roboquest](https://sites.google.com/warriorlife.net/roboquest/home#h.qlnqac9aiv20)
-
-# [* ZZZZ-3 Staff: Educator Resource Guide (Detailed Version) ~ 1) Mod & Flash/Download Code, 2) Quick-Start & Troubleshoot Guide, & 3) Misc](https://prezi.com/view/FAS9L5Lf4o6THzCeSVEs/)
-![AltTag_24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen](https://github.com/jasonc1025-333/24-0214-0310-rq100-onecode-bot_controller-beginner-final/blob/master/24-0505-0112-21-RnDTutorial_08-PreziMapGuide-FrontScreen.png?raw=true)
-
-# THE END (For Staff)
-
-
+---
 <!--- Need following dummy blank line above for this upcoming divider_line to work --->
 
 ---
