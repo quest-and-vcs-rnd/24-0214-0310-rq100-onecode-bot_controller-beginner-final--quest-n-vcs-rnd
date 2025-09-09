@@ -8,7 +8,7 @@
 ### [( Educator Resource Guide Separate Web-Page )](https://quest-and-vcs-rnd.github.io/24-0214-0310-rq100-onecode-bot_controller-beginner-final--quest-n-vcs-rnd/)
 
 # Table of Contents
-### **Basic*: For Any Lesson (e.g. Lesson 2 ~ Joy Ride)
+### **Basic**: For Any Lesson (e.g. Lesson 2 ~ Joy Ride)
 #### * A. Coding-Editor Setup
 #### * B. Mod: Bot-Id (Group-Channel-Num)
 #### * C. Flash/Download Code to 'micro:bit'
