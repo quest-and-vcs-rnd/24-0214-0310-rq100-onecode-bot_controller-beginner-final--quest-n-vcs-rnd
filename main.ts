@@ -149,7 +149,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below Moddable: S7_ServoArm_Left"
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
@@ -157,7 +157,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below Moddable: S6_ServoArm_Right"
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
@@ -179,7 +179,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below Moddable: S7_ServoArm_Left"
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045_Up_Half,
         quest_Debug_Show_Enum.Dashboard_OLED
@@ -187,7 +187,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below Moddable: S6_ServoArm_Right"
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_045_Up_Half,
         quest_Debug_Show_Enum.Dashboard_OLED
@@ -209,7 +209,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below Moddable: S7_ServoArm_Left"
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
         quest_Debug_Show_Enum.Dashboard_OLED
@@ -217,7 +217,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
         "Below Moddable: S6_ServoArm_Right"
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
         quest_Debug_Show_Enum.Dashboard_OLED
@@ -734,12 +734,12 @@ setup_BotAndController_Func()
         )
     }
     if (true) {
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
-        quest_Motors.quest_Set_AutoDegrees_ForServoArm_BIG_Func(
+        quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
         quest_ServoArm_DegreesInDirection_Enum.Degree_000_Down,
         quest_Debug_Show_Enum.Dashboard_OLED
