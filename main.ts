@@ -337,6 +337,7 @@ input.onGesture(Gesture.LogoUp, function () {
         "Following 0-Reset to Allow Idle/Stop Afterwards"
         )
         controller__Polar_OriginAtCenter__IdleCount_Int = 0
+        controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT
     }
 })
 // BUG FIX: Switch from BlockCode vs TextCode
@@ -786,8 +787,6 @@ setup_BotAndController_Func()
         )
     }
 }
-let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = 0
-let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__PreviousCycle__Int = 0
 let servoArm_DEFAULT_DEGREES_INT = 0
 let network_GroupChannel_MyBotAndController_Base0__Digit_Ones__Int = 0
@@ -816,6 +815,8 @@ let controller__Polar_OriginAtCenter__AngleDegree__AsIncremented_By__Int = 0
 let controller__Polar_OriginAtCenter__AngleDegree__Int = 0
 let controller__Polar_OriginAtCenter__MagnitudePixel__IdleDeadzone_Max512__INT = 0
 let _system_Hw_DeviceType__Bot__ID_INT = 0
+let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_ADD_INT = 0
+let controller__Polar_OriginAtCenter__IdleCount_ModulusNetworkThrottle_Now_Int = 0
 let controller__Polar_OriginAtCenter__IdleCount_Int = 0
 let _system_Sw_ModeState__Run__AndShow_01_DeviceType__ID_INT = 0
 let _system_Sw_ModeState__Run__AndShow_02_GroupChannelNum__ID_INT = 0
