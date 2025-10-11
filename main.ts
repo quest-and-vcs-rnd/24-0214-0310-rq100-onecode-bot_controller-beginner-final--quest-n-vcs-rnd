@@ -136,9 +136,9 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         images.createImage(`
             . . . . .
             . . . . .
-            # # . # #
-            . . . . .
-            . . . . .
+            . # . # .
+            . # . # .
+            . # . # .
             `).showImage(0, 0)
         quest_Note_1.quest_Show_String_For_Note_Small_Func(
         "If [0|360] is jittery, insure battery at 75% power min."
@@ -164,9 +164,9 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_045__up_half") {
         images.createImage(`
-            # . . . #
-            . # . # .
             . . . . .
+            . . . . .
+            # # . # #
             . . . . .
             . . . . .
             `).showImage(0, 0)
@@ -196,7 +196,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         images.createImage(`
             . # . # .
             . # . # .
-            . . . . .
+            . # . # .
             . . . . .
             . . . . .
             `).showImage(0, 0)
@@ -328,7 +328,7 @@ input.onGesture(Gesture.LogoUp, function () {
         images.createImage(`
             . # . # .
             . # . # .
-            . . . . .
+            . # . # .
             . . . . .
             . . . . .
             `).showImage(0, 0)
@@ -1295,9 +1295,9 @@ basic.forever(function () {
                 images.createImage(`
                     . . . . .
                     . . . . .
-                    # # . # #
-                    . . . . .
-                    . . . . .
+                    . # . # .
+                    . # . # .
+                    . # . # .
                     `).showImage(0, 0)
                 radio.sendString("arm_000__down")
                 if (true) {
@@ -1309,9 +1309,9 @@ basic.forever(function () {
                 }
             } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
                 images.createImage(`
-                    # . . . #
-                    . # . # .
                     . . . . .
+                    . . . . .
+                    # # . # #
                     . . . . .
                     . . . . .
                     `).showImage(0, 0)
