@@ -181,7 +181,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Half,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
@@ -189,7 +189,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Full,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_090_Up_Half,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     } else if (network_ReceivedString_FromControllerJoystick_Str_ParamIn == "arm_180") {
@@ -211,7 +211,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S7_ServoArm_Left,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_180,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_180_Up_Full,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
         quest_Note_2.quest_Show_String_For_Note_Big_Func(
@@ -219,7 +219,7 @@ function bot_Servo_Arms_Fn (network_ReceivedString_FromControllerJoystick_Str_Pa
         )
         quest_Motors.quest_Set_AutoDegrees_ForServoArm_SMALL_Func(
         quest_PortSingle_ServoArmBeam_PortId_Enum.S6_ServoArm_Right,
-        quest_ServoArm_DegreesInDirection_Enum.Degree_180,
+        quest_ServoArm_DegreesInDirection_Enum.Degree_180_Up_Full,
         quest_Debug_Show_Enum.Dashboard_OLED
         )
     }
@@ -1235,14 +1235,6 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    " (v2.15.0: 25-0720-2300)"
-    )
-    quest_Note_1.quest_Show_String_For_Note_Small_Func(
-    "©️ 2025 Quest Institute. All rights reserved."
-    )
-})
-basic.forever(function () {
     if (true) {
         quest_Note_3.quest_Show_String_For_Note_Big_Func(
         "Send Network Message to 'B'ot:: Controller_Joystick: Buttons"
@@ -1307,6 +1299,14 @@ basic.forever(function () {
         "Level 2.1: Variables_n_Constants_Yes"
         )
     }
+})
+basic.forever(function () {
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    " (v2.15.0: 25-0720-2300)"
+    )
+    quest_Note_1.quest_Show_String_For_Note_Small_Func(
+    "©️ 2025 Quest Institute. All rights reserved."
+    )
 })
 basic.forever(function () {
     if (false) {
